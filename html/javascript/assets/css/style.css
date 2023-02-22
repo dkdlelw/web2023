@@ -76,7 +76,6 @@ ul, li, ol {
         margin: 3px 1px;
         font-size: 14px;
     }
-
 }
 
 /* 메인 영역 */
@@ -84,14 +83,13 @@ ul, li, ol {
     padding: 40px 0;
     border-bottom: 1px dashed #dcdcdc;
 }
-.main__sample {
-    padding-top: 40px;  
-}
-.main_menu {
+.main__menu {
     padding-bottom: 40px;
     border-bottom: 1px dashed #dcdcdc;
 }
-
+.main__sample {
+    padding-top: 40px;  
+}
 .main__sample .sample {
     margin-top: 100px;
 }

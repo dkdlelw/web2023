@@ -228,6 +228,26 @@ table += "&lt;/table&gt;"
 document.write(table)
 </code></pre>
                 </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <script>
+                            let table = "<table border='1'>"
+
+                            for(let i=1; i<=10; i++){
+                                table += "<tr>";
+
+                                    for(let j=1; j<=10; j++){
+                                        table += "<td>"+j+"</td>";
+                                    }
+                                table += "</tr>";
+                            }
+                            table += "</table>"
+
+                            document.write(table)
+                        </script>
+                    </details>
+                </div>
                 <!-- //smaple06 -->   
 
                 <div id="sample07" class="sample">
@@ -241,9 +261,26 @@ document.write(table)
         document.write("&lt;br&gt;")
     }
 
-    document.write("&lt;br>&lt;br>");
+    document.write("&lt;br&gt;,&lt;br&gt;");
 }
 </code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <script>
+                            for(let i=2; i<=9; i++){
+                                document.write(i + "단","<br>");
+
+                                for(let j=1; j<=9; j++){
+                                    document.write(i + "*" + j + "=" + i*j);
+                                    document.write("<br>");
+                                }
+
+                                document.write("<br><br>");
+                            }
+                        </script>
+                    </details>
                 </div>
                 <!-- //smaple07 -->   
 

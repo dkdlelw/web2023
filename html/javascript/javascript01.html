@@ -159,7 +159,6 @@
                             </div>
                         </details>
                     </div>
-
                     <div class="notice">
                         <h4>연산자 : 변수로 연산이 가능하다.</h4>
                         <p>변수를 이용해서 연산이 가능하고, 연산에는 산술 연산자, 대입 연산자, 비교 연산자, 논리 연산자, 비트 연산자, 삼항 연산자가 있다.</p>
@@ -208,7 +207,7 @@
                     </p>
                     <div class="script">
 <pre><code class="language-js">{
-    const arr = new Array();
+    const arr = new Array( );
     arr[0] = 100;
     arr[1] = 200;
     arr[2] = "javascript";
@@ -263,7 +262,7 @@
                     <p>배열은 데이터를 여러개 저장 할 수 있습니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
-    const arr = [];
+    const arr = [ ];
     arr[0] = 100;
     arr[1] = 200;
     arr[2] = "javascript";
@@ -321,7 +320,7 @@
                     </p>
                     <div class="script">
 <pre><code class="language-js"> {
-    const obj = new Object();
+    const obj = new Object( );
     obj[0] = 100;
     obj[1] = 200;
     obj[2] = "javascript";
@@ -351,7 +350,7 @@
                     </p>
                     <div class="script">
 <pre><code class="language-js">{
-    const obj = new Object();
+    const obj = new Object( );
     obj.a = 100;
     obj.b = 200;
     obj.c = "javascript";
@@ -377,10 +376,10 @@
 
                 <div id="sample11" class="sample">
                     <h3>11. 객체 : 데이터 저장(키와값) : 표현방법3</h3>
-                    <p>[]는 배열 {}는 객체로 표시합니다.</p>
+                    <p>[ ]는 배열 { }는 객체로 표시합니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
-    const obj = {};
+    const obj = { };
     obj.a = 100;
     obj.b = 200;
     obj.c = "javascript";
@@ -466,7 +465,7 @@
                 <div id="sample14" class="sample">
                     <h3>14. 객체 : 데이터 저장(키와값) : 표현방법6</h3>
                     <p>객체 안에 배열<br>
-                        배열은 [] 객체는.를 사용합니다.</p>
+                        배열은 [ ] 객체는 .를 사용합니다.</p>
                     <div class="script">
 <pre><code class="language-js">{
 const obj = {
@@ -535,45 +534,6 @@ const obj = {
                     <h3>16. 객체 : 데이터 저장(키와값) : 표현방법8</h3>
                     <p>객체 안에 실행문(함수)이 들어갈 수 있습니다.</p>
                     <div class="script">
-<pre><code class="language-js">{
-    const obj = {
-        a: 100,
-        b: [200,300],
-        c: "javascript",
-        d: function(){
-            console.log("javascript가 실행되었습니다.")
-    }
-}
-
-    console.log(obj.a);
-    console.log(obj.b[0]);
-    console.log(obj.b[1]);
-    console.log(obj.b[2]); //undifined
-    console.log(obj.c);
-    console.log(obj.d); //모두 문자열로 인식하기 때문에 X
-    obj.d();
-}
-</pre></code>
-                    </div>
-                    <div class="result">
-                        <details>
-                         <summary>결과 확인하기</summary>
-                         <div>
-                            100<br>
-                            200<br>
-                            300<br>
-                            undefined //모두 문자열로 인식하기 때문에 X<br>
-                            javascript
-                         </div>
-                        </details>
-                    </div>
-                </div>
-                <!-- //sample16 -->   
-
-                <div id="sample17" class="sample">
-                    <h3>17. 객체 : 데이터 저장(키와값) : 표현방법9</h3>
-                    <p>설명</p>
-                    <div class="script">
 <pre><code class="language-js"> {   
     const j = "javascript";
 
@@ -581,27 +541,29 @@ const obj = {
         a: 100,
         b: [200,300],
         c: "javascript",
-        d: function(){
+        d: function( ){
             console.log("javascript가 실행되었습니다.")
         },
-        e: function(){
+        e: function( ){
         console.log(obj.c + "가 실행되었습니다.")
         } // 문자와 객체를 합쳐주는 방식
-        e: function(){
-            console.log(j + "가 실행되었습니다.");
+        e: function( ){
+        console.log(j + "가 실행되었습니다.");
         },
-        f: function() {
+        f: function( ) {
                 console.log(this.c + "가 실행되었습니다.");
-        } //this는 자기자신한테만 쓸 수 있음
+        }  //this는 자기자신한테만 쓸 수 있음
     }
 
     console.log(obj.a);
     console.log(obj.b[0]);
     console.log(obj.b[1]);
+    console.log(obj.b[2]); //undifined
     console.log(obj.c);
-    obj.d();
-    obj.e();
-    obj.f();
+    console.log(obj.d); //모두 문자열로 인식하기 때문에 X
+    obj.d( );
+    obj.e( );
+    obj.f( );
 }
 </pre></code>
                     </div>
@@ -612,7 +574,9 @@ const obj = {
                             100<br>
                             200<br>
                             300<br>
+                            undefined<br>
                             javascript<br>
+                            undefined //모두 문자열로 인식하기 때문에 X<br>
                             javascript가 실행되었습니다.<br>
                             javascript가 실행되었습니다.<br>
                             javascript가 실행되었습니다.<br>
@@ -620,9 +584,7 @@ const obj = {
                         </details>
                     </div>
                 </div>
-                <!-- //sample17 -->    
-
-
+                <!-- //sample16 -->                                     
             </div>
         </div>
     </main>
@@ -775,43 +737,38 @@ const obj = {
 
         // }
         //12. 객체 : 데이터 저장(키와값) : 표현방법8 함수 객체 안에 실행문이 들어갈 수 있다.
-        {   
-            const j = "javascript";
+        // {   
+        //     const j = "javascript";
 
-            const obj = {
-                a: 100,
-                b: [200,300],
-                c: "javascript",
-                d: function(){
-                    console.log("javascript가 실행되었습니다.")
-                },
-                // e: function(){
-                //     console.log(obj.c + "가 실행되었습니다.")
-                // } //e 같은 방식도 활용 가능
-                e: function(){
-                    console.log(j + "가 실행되었습니다.");
-                },
-                f: function() {
-                        console.log(this.c + "가 실행되었습니다.");
-                }  
-            }
+        //     const obj = {
+        //         a: 100,
+        //         b: [200,300],
+        //         c: "javascript",
+        //         d: function(){
+        //             console.log("javascript가 실행되었습니다.")
+        //         },
+        //         // e: function(){
+        //         //     console.log(obj.c + "가 실행되었습니다.")
+        //         // } //e 같은 방식도 활용 가능
+        //         e: function(){
+        //             console.log(j + "가 실행되었습니다.");
+        //         },
+        //         f: function() {
+        //                 console.log(this.c + "가 실행되었습니다.");
+        //         }  
+        //     }
 
-            console.log(obj.a);
-            console.log(obj.b[0]);
-            console.log(obj.b[1]);
-            // console.log(obj.b[2]); //undifined
-            console.log(obj.c);
-            // console.log(obj.d); //모두 문자열로 인식하기 때문에 X
-            obj.d();
-            obj.e();
-            obj.f();
+        //     console.log(obj.a);
+        //     console.log(obj.b[0]);
+        //     console.log(obj.b[1]);
+        //     // console.log(obj.b[2]); //undifined
+        //     console.log(obj.c);
+        //     // console.log(obj.d); //모두 문자열로 인식하기 때문에 X
+        //     obj.d();
+        //     obj.e();
+        //     obj.f();
 
-        }
-        
-        
-
-       
-
+        // }
     </script>
 </body>
 </html>

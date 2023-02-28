@@ -7,6 +7,8 @@
     <title>JavaScript : 데이터 실행하기</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/default.min.css">
+
     <link rel="shortcut icon" href="assets/ico/javascript.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">
@@ -83,10 +85,11 @@
                     <li><a href="#">01. 클래스 상속</a></li>
                 </ul>
             </div>
-            <div id="sample01" class="sample">
-                <h3>01. 선언적 함수</h3>
-                <p>함수를 호출할 때 함수의 앞 또는 뒤에서 호출 가능합니다.</p>
-                <div class="script">
+            <div class="main__sample">
+                <div id="sample01" class="sample">
+                    <h3>01. 선언적 함수</h3>
+                    <p>함수를 호출할 때 함수의 앞 또는 뒤에서 호출 가능합니다.</p>
+                    <div class="script">
 <pre><code class="language-js"> {
     function func(){
         document.write("실행되었습니다.<br>");   
@@ -94,47 +97,47 @@
     func();
 }
 </code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                "실행되었습니다."
+                            </div>
+                        </details>
+                    </div>
                 </div>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                            "실행되었습니다."
-                        </div>
-                    </details>
-                </div>
-            </div>
-            <!-- //sample01 -->
+                <!-- //sample01 -->
 
-            <div id="sample02" class="sample">
-                <h3>02. 익명 함수</h3>
-                <p>함수 데이터를 저장하여 변수를 마치 함수처럼 사용할 수 있도록 만들어 줍니다.<br>
-                    변수 선언 이후에 호출 해야합니다..</p>
-                <div class="script">
-<pre><code class="language-js"> {
+                <div id="sample02" class="sample">
+                    <h3>02. 익명 함수</h3>
+                    <p>함수 데이터를 저장하여 변수를 마치 함수처럼 사용할 수 있도록 만들어 줍니다.<br>
+                        변수 선언 이후에 호출 해야합니다..</p>
+                    <div class="script">
+<pre><code class="language-js">{
     const func = function(){
         document.write("실행되었습니다.<br>");
     }
     func();
 }
 </code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                "실행되었습니다."
+                            </div>
+                        </details>
+                    </div>
                 </div>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                            "실행되었습니다."
-                        </div>
-                    </details>
-                </div>
-            </div>
-            <!-- //sample02 -->
+                <!-- //sample02 -->
 
-            <div id="sample03" class="sample">
-                <h3>03. 매개 함수</h3>
-                <p>함함수를 호출할때 전달하는 변수가 있는 함수를 매개 함수라고 합니다.<br>
-                    매개변수로 전달되는 함수 속성값을 다 전달시킬 수 있습니다.</p>
-                <div class="script">
+                <div id="sample03" class="sample">
+                    <h3>03. 매개 함수</h3>
+                    <p>함함수를 호출할때 전달하는 변수가 있는 함수를 매개 함수라고 합니다.<br>
+                        매개변수로 전달되는 함수 속성값을 다 전달시킬 수 있습니다.</p>
+                    <div class="script">
 <pre><code class="language-js"> {
     function func(str){
         document.write(str);
@@ -142,24 +145,24 @@
     func("실행되었습니다.");
 }
 </code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                "실행되었습니다."
+                            </div>
+                        </details>
+                    </div>
                 </div>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                            "실행되었습니다."
-                        </div>
-                    </details>
-                </div>
-            </div>
-            <!-- //sample03 -->
+                <!-- //sample03 -->
 
-            <div id="sample04" class="sample">
-                <h3>04. 리턴값 함수</h3>
-                <p>함수를 통해 처리된 결과를 반환시켜주는 명령어 입니다.<br>
-                    함수 내부에서 값을 계산하고 그 값을 함수 외부에 반환할 수 있습니다.<br>
-                    반환된 값은 함수를 호출한 곳에서 변수에 할당하거나 다른 함수의 인수로 사용될 수 있습니다.</p>
-                <div class="script">
+                <div id="sample04" class="sample">
+                    <h3>04. 리턴값 함수</h3>
+                    <p>함수를 통해 처리된 결과를 반환시켜주는 명령어 입니다.<br>
+                        함수 내부에서 값을 계산하고 그 값을 함수 외부에 반환할 수 있습니다.<br>
+                        반환된 값은 함수를 호출한 곳에서 변수에 할당하거나 다른 함수의 인수로 사용될 수 있습니다.</p>
+                    <div class="script">
 <pre><code class="language-js">  {
     function func(){
         const str = "함수가 실행되었습니다."
@@ -168,22 +171,22 @@
     document.write(func());
 }
 </code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                "함수가 실행되었습니다."
+                            </div>
+                        </details>
+                    </div>
                 </div>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                            "실행되었습니다."
-                        </div>
-                    </details>
-                </div>
-            </div>
-            <!-- //sample04 -->
+                <!-- //sample04 -->
 
-            <div id="sample05" class="sample">
-                <h3>05. 화살표 함수 : 선언적 함수</h3>
-                <p>선언적 함수의 function을 생략한 약식입니다.</p>
-                <div class="script">
+                <div id="sample05" class="sample">
+                    <h3>05. 화살표 함수 : 선언적 함수</h3>
+                    <p>선언적 함수의 function을 생략한 약식입니다.</p>
+                    <div class="script">
 <pre><code class="language-js">   {
     func = () => {
         document.write("실행되었습니다.<br>");
@@ -191,22 +194,22 @@
     func();
 }
 </code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                "실행되었습니다."
+                            </div>
+                        </details>
+                    </div>
                 </div>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                            "실행되었습니다."
-                        </div>
-                    </details>
-                </div>
-            </div>
-            <!-- //sample05 -->
+                <!-- //sample05 -->
             
-            <div id="sample06" class="sample">
-                <h3>06. 화살표 함수 : 익명 함수</h3>
-                <p>익명 함수의 function을 생략한 약식입니다.</p>
-                <div class="script">
+                <div id="sample06" class="sample">
+                    <h3>06. 화살표 함수 : 익명 함수</h3>
+                    <p>익명 함수의 function을 생략한 약식입니다.</p>
+                    <div class="script">
 <pre><code class="language-js">  {
     const func = () => {
         document.write("실행되었습니다.<br>");
@@ -215,21 +218,21 @@
 }
 </code></pre>
                 </div>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                            "실행되었습니다."
-                        </div>
-                    </details>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                "실행되었습니다."
+                            </div>
+                        </details>
+                    </div>
                 </div>
-            </div>
-            <!-- //sample06 -->
+                <!-- //sample06 -->
 
-            <div id="sample07" class="sample">
-                <h3>07. 화살표 함수 : 매개변수 함수</h3>
-                <p>매개변수 함수의 function을 생략한 약식입니다.</p>
-                <div class="script">
+                <div id="sample07" class="sample">
+                    <h3>07. 화살표 함수 : 매개변수 함수</h3>
+                    <p>매개변수 함수의 function을 생략한 약식입니다.</p>
+                    <div class="script">
 <pre><code class="language-js">  {
     func = (str) => {
         document.write(str);
@@ -237,22 +240,22 @@
     func("실행되었습니다.");
 }
 </code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                "실행되었습니다."
+                            </div>
+                        </details>
+                    </div>
                 </div>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                            "실행되었습니다."
-                        </div>
-                    </details>
-                </div>
-            </div>
-            <!-- //sample07 -->
+                <!-- //sample07 -->
 
-            <div id="sample08" class="sample">
-                <h3>08. 화살표 함수 : 리턴값 함수</h3>
-                <p>리턴값 함수의 function을 생략한 약식입니다.</p>
-                <div class="script">
+                <div id="sample08" class="sample">
+                    <h3>08. 화살표 함수 : 리턴값 함수</h3>
+                    <p>리턴값 함수의 function을 생략한 약식입니다.</p>
+                    <div class="script">
 <pre><code class="language-js">{
     func = () => {
         const str = "실행되었습니다.<br>";
@@ -262,17 +265,17 @@
     func();
 }
 </code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                "실행되었습니다."
+                            </div>
+                        </details>
+                    </div>
                 </div>
-                <div class="result">
-                    <details>
-                        <summary>결과 확인하기</summary>
-                        <div>
-                            "실행되었습니다."
-                        </div>
-                    </details>
-                </div>
-            </div>
-            <!-- //sample08 -->
+                <!-- //sample08 -->
 
             
         </div>

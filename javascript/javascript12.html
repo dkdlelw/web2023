@@ -234,6 +234,7 @@ document.write(table)
                     <details>
                         <summary>결과 확인하기</summary>
                         <script>
+                        {
                             let table = "<table border='1'>"
 
                             for(let i=1; i<=10; i++){
@@ -247,7 +248,7 @@ document.write(table)
                             table += "</table>"
 
                             document.write(table)
-                        
+                        }
                         </script>
                     </details>
                 </div>
@@ -288,7 +289,7 @@ document.write(table)
                 <!-- //smaple07 -->   
 
                 <div id="sample08" class="sample">
-                    <h3>08. 08. 데이터 이펙트 : 테이블 25칸(짝수:빨간색, 홀수/파란색)</h3>
+                    <h3>08. 데이터 이펙트 : 테이블 25칸(짝수:빨간색, 홀수/파란색)</h3>
                     <p>테이블 안에 짝수는 빨강, 홀수는 파랑색으로 표시됩니다.</p>
 <pre class="line-numbers"><code class="language-js">{
     let table = "&lt;table border='1&gt;";
@@ -314,27 +315,77 @@ document.write(table)
                     <details>
                         <summary>결과 확인하기</summary>
                         <script>
-                            // let table = "<table border='1'>";
-                            // let num = 1;
-                            //     for(let i=0; i<5; i++){
-                            //         table += "<tr>";
-                            //             for(let j=0; j<5; j++){
-                            //                 if (num % 2 == 0) {
-                            //                     table += "<td><span style='color: red'>" + num + "</span></td>";
-                            //                 } else {
-                            //                     table += "<td><span style='color: blue'>" + num + "</span></td>";
-                            //                 }
-                            //                 num++;
-                            //             }
-                            //         table += "</tr>"
-                            //     }
-                            //         table += "</table>";
-                            //         document.write(table);
-                        
+                        {
+                            let table = "<table border='1'>";
+                            let num = 1;
+                                for(let i=0; i<5; i++){
+                                    table += "<tr>";
+                                        for(let j=0; j<5; j++){
+                                            if (num % 2 == 0) {
+                                                table += "<td><span style='color: red'>" + num + "</span></td>";
+                                            } else {
+                                                table += "<td><span style='color: blue'>" + num + "</span></td>";
+                                            }
+                                            num++;
+                                        }
+                                    table += "</tr>"
+                                }
+                                    table += "</table>";
+                                    document.write(table);
+                        }
                         </script>
                     </details>
                 </div>
                 <!-- //smaple08 -->   
+
+                <div id="sample09" class="sample">
+                    <h3>09. 데이터 이펙트 : 테이블 25칸(3의 배수 (5의배수는 빨간색)</h3>
+                    <p>3의 배수만 안에 있고 3에 배수에 포함하는 5의 배수는 빨간색으로 나옵니다..</p>
+<pre class="line-numbers"><code class="language-js">let table = "&lt;table border='1'&gt;";
+    let num = 1;
+    for (let i = 0; i&lt;5; i++) {
+      table += "&lt;tr&gt;";
+      for (let j = 0; j&lt;5; j++) {
+        if (num % 3 === 0 && num % 5 === 0) {
+          table += "&lt;td&gt;&lt;span style='color: red'&gt;" + num + "&lt;/span&gt;&lt;/td&gt;";
+        } else {
+          table += "&lt;td&gt;" + num + "&lt;/td&gt;";
+        }
+        num++;
+      }
+      table += "&lt;/tr&gt;";
+    }
+    table += "&lt;/table&gt;";
+    document.write(table);
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <script>
+                        {
+                            let table = "<table border='1'>";
+                            let num = 3;
+                            for(let i=0; i<5; i++){
+                                table += "<tr>";
+                                for(let j=0; j<5; j++){
+                                    if (num % 5 === 0) {
+                                        table += "<td><span style='color: red'>" + num + "</span></td>";
+                                    } else {
+                                        table += "<td>" + num + "</td>";
+                                    }
+                                    num += 3;
+                                }
+                                table += "</tr>"
+                            }
+                            table += "</table>";
+                            document.write(table);
+                        }
+                        </script>
+                    </details>
+                </div>
+                <!-- //smaple09 -->   
+
 
             </div>
         </div>

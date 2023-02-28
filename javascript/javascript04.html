@@ -52,14 +52,15 @@
                     <li><a href="#">01. if문</a></li>
                     <li><a href="#">02. if문 생략</a></li>
                     <li><a href="#">03. 삼항 연산자</a></li>
-
                     <li><a href="#">04. 다중 if (else if)</a></li>
                     <li><a href="#">05. 중첩 if</a></li>
+
                     <li><a href="#">06. switch문</a></li>
                     <li><a href="#">07. while문</a></li>
                     <li><a href="#">08. do while문</a></li>
                     <li><a href="#">09. for문</a></li>
                     <li><a href="#">10. 중첩 for문</a></li>
+
                     <li><a href="#">11. break문</a></li>
                     <li><a href="#">12. continue문</a></li>
                 </ul>
@@ -212,6 +213,103 @@
                     </div>
                 </div>
                 <!-- //sample05 -->
+
+                <div id="sample06" class="sample">
+                    <h3>06. switch문</h3>
+                    <p>break를 쓰면 맞는 결과에서 멈추기 때문에 무한으로 빠지지 않으며 데이터를 덜 쓸 수 있습니다.
+                    </p>
+                    <div class="script">
+<pre><code class="language-js">{
+    const num = 100;
+
+    switch(num){
+        case 90:
+            document.write("실행90");
+            break;
+        case 80:
+            document.write("실행80");  
+            break;
+        case 70:
+            document.write("실행70");  
+            break;
+        case 60:
+            document.write("실행60");  
+            break;
+        case 50:
+            document.write("실행50");  
+            break; 
+        default:
+            document.write("0") 
+    }
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                       <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                           0
+                        </div>
+                       </details>
+                    </div>
+                </div>
+                <!-- //sample06 -->
+
+                <div id="sample07" class="sample">
+                    <h3>07. while문</h3>
+                    <p>while은 조건이 한번이라도 안맞으면 실행되지 않습니다.
+                    </p>
+                    <div class="script">
+<pre><code class="language-js">{
+    for(let i=0; i&lt;5; i++){
+        document.write(i);
+    }
+    let num = 0;
+    while(num&lt;5){
+        document.write(num);
+        num++;
+    }
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                       <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                           012340123401234
+                        </div>
+                       </details>
+                    </div>
+                </div>
+                <!-- //sample07 -->
+
+                <div id="sample08" class="sample">
+                    <h3>08. do while문</h3>
+                    <p>do while은 조건이 한번이라도 맞으면 실행됩니다.
+                    </p>
+                    <div class="script">
+<pre><code class="language-js">{
+    let num2 = 0;
+    do {
+        document.write(num2);
+        num2++;
+    } while (num2&lt;5) ; 
+
+} 
+</code></pre>
+                    </div>
+                    <div class="result">
+                       <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                           01234
+                        </div>
+                       </details>
+                    </div>
+                </div>
+                <!-- //sample08 -->
+
+                
                 
                 <div id="sample09" class="sample">
                     <h3>09. for문</h3>
@@ -239,6 +337,72 @@
                        </details>
                     </div>
                 </div>
+
+                <div id="sample10" class="sample">
+                    <h3>10. 중첩 for문</h3>
+                    <p>설명
+                    </p>
+                    <div class="script">
+<pre><code class="language-js">{
+    for(let i=1; i&lt;=10; i++){
+        document.write(i,"<br>");
+        for(let j=1; j&lt;=10; j++){
+            document.write(j);
+        }
+    }
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                       <details>
+                        <summary>결과 확인하기</summary>
+                        <script>
+                           {
+                                for(let i=1; i<=10; i++){
+                                    document.write(i);
+                                    for(let j=1; j<=10; j++){
+                                        document.write(j);
+                                    }
+                                }
+                            }
+                        </script>
+                       </details>
+                    </div>
+                </div>
+                <!-- //sample10 -->
+
+                <div id="sample11" class="sample">
+                    <h3>11. 중첩 for문</h3>
+                    <p>설명
+                    </p>
+                    <div class="script">
+<pre><code class="language-js">{
+    for(let i=1; i&lt;=10; i++){
+        document.write(i,"<br>");
+        for(let j=1; j&lt;=10; j++){
+            document.write(j);
+        }
+    }
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                       <details>
+                        <summary>결과 확인하기</summary>
+                        <script>
+                           {
+                                for(let i=1; i<=10; i++){
+                                    document.write(i);
+                                    for(let j=1; j<=10; j++){
+                                        document.write(j);
+                                    }
+                                }
+                            }
+                        </script>
+                       </details>
+                    </div>
+                </div>
+                <!-- //sample11 -->
         </div>
     </main>
     
@@ -253,111 +417,6 @@
     <script>hljs.highlightAll();</script>
      
     <script>
-        // 02.if문 생략
-        // {
-        //     const num = 100;
-        //     if(num){
-        //         document.write("실행되었습니다.(true)");
-        //     } else {
-        //         document.write("실행되었습니다.(false)");
-        //     }
-
-        //     if(num) document.write("실행되었습니다.(true)");
-        //     else document.write("실행되었습니다.(false)");
-        // }
-
-        //03. 삼항 연산자 
-        // 메모리 차지를 많이하므로 삼항을 쓰면 더 메모리 관리하기 쉽다
-        // {
-        //     const num = 100;
-
-        //     // if(num == 100){
-        //     //     document.write("true");
-        //     // } else {
-        //     //     document.write("false");
-        //     // }
-
-        //     (num == 100) ? document.write("true") : document.write("false");
-        // }
-
-        // // 04. 다중 if
-        // // ===은 // 숫자인지 문자인지 구별
-
-        // {
-        //     const num = 100;
-        //     if(num == 90){
-        //         document.write("실행되었습니다.(num == 90)")
-        //     } else if (num == 100){
-        //         document.write("실행되었습니다.(num == 100)")
-        //     } else if (num == 110){
-        //         document.write("실행되었습니다.(num == 110)")
-        //     } else if (num == 120){
-        //         document.write("실행되었습니다.(num == 120)")
-        //     } else {
-        //         document.write("실행되었습니다.")
-        //     }
-        // }
-        
-        // // 05. 중첩 if문
-        // {
-        //     const num = 100;
-
-        //     if(num == 100){
-        //         document.write("실행되었습니다.(1)");
-        //         if(num == 100){
-        //             document.write("실행되었습니다.(2)");
-        //             if(num == 100){
-        //             document.write("실행되었습니다.(3)");
-        //             }
-        //         } 
-        //     } else {
-        //         document.write("실행되었습니다.(4)")
-        //     }
-        // }
-
-        //09. for문
-        //1-100
-        // for(let i=1; i<=100; i++){
-        //     document.write(i);
-        // }
-
-        // const arr = [1,2,3,4,5,6,7,8,9]
-
-        // // for(let i=1; i<=arr.length; i++){
-        // //     document.write(arr[i]);
-        // // }
-        // for(let i=0; i<arr.length; i++){
-        //     document.write(arr[i]);
-        // }
-        // document.write("<br>")
-        // for(let i=0; i<arr.length; i+=2){
-        //     document.write(arr[i],);
-        // }
-        // document.write("<br>")
-        // for(let i=1; i<arr.length; i+=2){
-        //     document.write(arr[i]);
-        // }
-        // document.write("<br>")
-        // //if
-        // for(let i=1; i<arr.length; i++){
-        //     if(i % 2 == 0){
-        //         document.write("<span style='color:red'>"+i+"</span>");
-        //     } else {
-        //         document.write(`<span style='color:blue'>${i}</span>`);
-        //     }
-        // }
-        
-        //table 10
-        // let table = "<table border='1'>";
-        // for(let i=0; i<5; i++){
-        //     table += "<tr>";
-        //     for(let j=0; j<5; j++){
-        //         table += "<td>"+j+"</td>"
-        //     }
-        //     table += "</tr>";
-        // }
-        // table += "</table>";
-        // document.write(table);
 
         //1-25
         // let num = 1;
@@ -369,23 +428,211 @@
         //     document.write(num)
 
         // //!숙제 table에 응용해서 안에 숫자가1,2,3,4,5,,, 짝수는 빨 홀은 파 1-25
-        let table = "<table border='1'>";
-        let num = 1;
-            for(let i=0; i<5; i++){
-                table += "<tr>";
-                    for(let j=0; j<5; j++){
-                        if (num % 2 === 0) {
-                            table += "<td><span style='color: red'>" + num + "</span></td>";
-                        } else {
-                            table += "<td><span style='color: blue'>" + num + "</span></td>";
-                        }
-                        num++;
-                    }
-                table += "</tr>"
-            }
-            table += "</table>";
-            document.write(table);
+        // let table = "<table border='1'>";
+        // let num = 1;
+        //     for(let i=0; i<5; i++){
+        //         table += "<tr>";
+        //             for(let j=0; j<5; j++){
+        //                 if (num % 2 === 0) {
+        //                     table += "<td><span style='color: red'>" + num + "</span></td>";
+        //                 } else {
+        //                     table += "<td><span style='color: blue'>" + num + "</span></td>";
+        //                 }
+        //                 num++;
+        //             }
+        //         table += "</tr>"
+        //     }
+        //     table += "</table>";
+        //     document.write(table);
 
+        //자바스크립트 12번에 9번으로 정리하기
+        //table 1-25(3의 배수만 25칸(5의 배수는 빨간색))
+            // let table ="<table border='1'>";
+            // let num = 1;
+            //     for(let i=0; i<5; i++){
+            //         table += "<tr>";
+            //             for(let j=0; j<5; j++){
+            //                 if(num % 3 == 0){
+            //                     table += "<td>"+ num + "</td>";
+            //                 } else {
+            //                     table += "<td><span style='color: red'>" + num + "</span></td>";
+            //                     }
+            //                 }
+            //                 num++;
+            //             }
+            //             table += "</tr>"
+            //     table += "</table>";
+            //     document.write(table);
+        
+        //01.if문
+        // {
+        //     //null.undefined,"",0,flase
+        //     ("") ? document.write("실행되었습니다.(true)") : document.write("실행되었습니다.(false)");
+        // }
+
+        // {
+        //     for(let i=0; i<5; i++) document.write(i)
+        // }
+        // // 04. 다중 if ==switch문 
+        // {
+        //     const num = 100;
+
+        //     if(num == 90){
+        //         document.write("실행90");
+        //     } else if(num == 80){
+        //         document.write("실행80");
+        //     } else if(num == 70){
+        //         document.write("실행70");
+        //     } else if(num == 60){
+        //         document.write("실행60");
+        //     } else if(num == 50){
+        //         document.write("실행50");
+        //     } else {
+        //         document.write("0");
+        //     }
+        // }
+        // // 05. 중첩 if문 
+
+        // // 06. switch문
+        // //break를 쓰면 맞는 결과에서 멈추기 때문에 무한으로 빠지지 않으며 데이터를 덜 쓸 수 있다.
+        // //break 안쓰면 무한
+        // {
+        //     const num = 100;
+
+        //     switch(num){
+        //         case 90:
+        //             document.write("실행90");
+        //             break;
+        //         case 80:
+        //             document.write("실행80");  
+        //             break;
+        //         case 70:
+        //             document.write("실행70");  
+        //             break;
+        //         case 60:
+        //             document.write("실행60");  
+        //             break;
+        //         case 50:
+        //             document.write("실행50");  
+        //             break; 
+        //         default:
+        //             document.write("0") 
+        //     }
+        // }
+
+        //07.while문
+        //do while과의 차이
+        //do는 조건이 맞으면 한번이라도 실행
+        //while은 조건이 안맞으면 실행 X
+        // {
+        //     for(let i=0; i<5; i++){
+        //         document.write(i);
+        //     }
+        //     let num = 0;
+        //     while(num<5){
+        //         document.write(num);
+        //         num++;
+        //     }
+        //08. do while문
+        // {
+        //     let num2 = 0;
+        //     do {
+        //         document.write(num2);
+        //         num2++;
+        //     } while (num2<5) ; 
+
+        // } 
+        // 09.
+        // {
+        //     for(let i=1; i<100; i++){
+        //         document.write(i);
+        //     }
+            
+        //     document.write("<br>")
+
+        //     let num =[1,2,3,4,5,6,7,8,9];
+        //     let sum=0;
+
+        //     for(let i=0; i<num.lenght; i++){
+        //         document.write(num[i]);
+        //         sum += num[i];
+        //     }
+        //     document.write("<br>")
+        //     document.write(sum) //sum 변수 이용해서 합계구함
+
+        // }
+
+        // //10.중첩 for
+        // {
+        //     for(let i=1; i<=10; i++){
+        //         document.write(i,"<br>");
+        //         for(let j=1; j<=10; j++){
+        //             document.write(j);
+        //         }
+        //     }
+        // }
+
+            //자바스크립트 12번에 9번으로 정리하기
+            //table 1-25(3의 배수만 25칸(5의 배수는 빨간색))
+        //     let table = "<table border='1'>";
+        //     let count = 0;
+
+        //     for(let i=0; i<5; i++){
+        //         table += "<tr>"; 
+        //         for(let j=0; j<5; j++){
+        //             count++;
+        //             if(count % 2 == 0){
+        //                 table += "<td style='color:red'>"+count+"</td>";  
+        //             } else {
+        //                 table += "<td style='color:blue'>"+count+"</td>";  
+        //             }
+        //         }
+        //         table += "</tr>"; 
+        //     } 
+        //     table += "</table>";
+
+        //     document.write(table)
+        // }
+        
+        //11. break문
+        //1-9까지 나옴
+        // {
+        //     for(let i=1; i<20; i++){
+        //         if(i == 10){
+        //             break;
+        //         }
+        //         document.write(i);
+        //     }
+        // }
+        //1-10이 나옴
+        // {
+        //     for(let i=1; i<20; i++){
+        //         document.write(i);    
+        //             if(i == 10){
+        //                 break;
+        //             }  
+        //         }
+        // }
+        // document.write("<br>");
+        //12.continue
+        //11부터 나옴
+        //  {
+        //     for(let i=1; i<20; i++){
+        //         if(i == 10){
+        //             continue;
+        //         }
+        //         document.write(i);
+        //     }
+        // }
+        //1-19
+        // {
+        //     for(let i=1; i<20; i++){
+        //         document.write(i);
+        //         if(i == 10){
+        //             continue;
+        //         }
+        //     }
+        // }
     </script>
 
 </body>

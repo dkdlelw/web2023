@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃04 - float 유형</title>
+    <title>레이아웃19 - flex 유형 - 반응형</title>
     <style>
         * {
             margin: 0;
@@ -24,7 +24,7 @@
             height: 300px;
             background-color: #80CBC4;
         }
-        #section {
+        #main {
             width: 100%;
             height: 580px;
             background-color: #26A69A;
@@ -32,26 +32,45 @@
         #footer {
             width: 100%;
             height: 100px;
-            background-color: #00796B;
+            background-color: #00897B;
         }
-        .container{
+        .container {
             width: 1200px;
             height: inherit;
             background-color: rgba(0, 0, 0, 0.2);
             margin: 0 auto;
         }
+        @media (max-width: 1220px){
+            #wrap {
+                width: 96%;
+            }
+        }
+        @media (max-width: 768px){
+            #wrap {
+                width: 100%;
+            }
+        }
+        @media (max-width: 480px){
+            #wrap {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <div id="wrap">
-        <div id="header"></div>
-        <div id="nav"></div>
-        <div id="section">
-            <div class="container">
-                <div class="aside"></div>
-            </div>
-        </div>
-        <div id="footer"></div>
+        <header id="header">
+            <div class="container"></div>
+        </header>
+        <nav id="nav">
+            <div class="container"></div>
+        </nav>
+        <main id="main">
+            <div class="container"></div>
+        </main>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
     </div>
 </body>
 </html>

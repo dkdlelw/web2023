@@ -51,7 +51,8 @@
                     <li><a href="#">01. 변수 : 데이터 저장</a></li>
                     <li><a href="#">02. 변수 : 데이터 저장 + 데이터 변경</a></li>
                     <li><a href="#">03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가</a></li>
-                    <li><a href="#">04. 상수 : 데이터 변경(X)</a></li>
+                    <li><a href="#">04. 변수 : 지역 변수 + 전역 변수(스코프)</a></li>
+                    <li><a href="#">04. 상수 : 데이터 저장 + 데이터 변경(X)</a></li>
                     <li><a href="#">05. 배열 : 데이터 저장(여러개) : 표현방법1</a></li>
                     <li><a href="#">06. 배열 : 데이터 저장(여러개) : 표현방법2</a></li>
                     <li><a href="#">07. 배열 : 데이터 저장(여러개) : 표현방법3</a></li>
@@ -64,6 +65,9 @@
                     <li><a href="#">14. 객체 : 데이터 저장(키와값) : 표현방법6 </a></li>
                     <li><a href="#">15. 객체 : 데이터 저장(키와값) : 표현방법7 </a></li>
                     <li><a href="#">16. 객체 : 데이터 저장(키와값) : 표현방법8 </a></li>
+                    <li><a href="#">++ 식별자, 예약자</a></li>
+                    <li><a href="#">++ 연산자(전치, 후치)</a></li>
+                    <li><a href="#">++ 형변환, typeof</a></li>
                 </ul>
                 <ul>
                     <li>형변화, typeof()</li>
@@ -792,6 +796,87 @@ const obj = {
         //     obj.f();
 
         // }
+        //전치 후치 연산자
+        {
+                // var score = 10;
+                // // ++score;    //11
+                // // score++;    //12
+                // var result = ++score; //11
+                // var result = score++; // 우선순위가 달라서 값이 다르게 나온다.
+
+                // console.log(result,score);
+        }
+        {
+                let hap, j, k, l;
+                j = k = l = 1;
+                hap = ++j + k++ + ++l       //후치가 되면 우선순위가 낮아서 hap에서는 계산이 안된다.(나중에 연산됨)
+
+                console.log(hap);
+                console.log(j);
+                console.log(k);
+                console.log(l);
+        }
+        {
+                let sum = 0;
+                for(let i=0; i<10; i++){
+                    sum += i
+                }
+
+                for(let i=10; i>0; i--){
+                    sum += i
+                }
+        }
+        {
+            let a = 1, b = 2, c = 3, result;
+            result = ++a + b++ + ++c;
+
+            console.log(result);
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+        {
+            let x =7, y=7, result;
+
+            result = x > y ? ++x : y--;        //true면 true만 false면 flase만 해석
+            
+            console.log(result);
+            console.log(x);
+            console.log(y);
+        }
+        {
+            let a, b, c, result;
+            a = 20, b = 30, c = 30;
+
+            result = a < b ? b++ : --c;
+
+            console.log(result);
+            console.log(a);
+            console.log(b + c);
+            console.log(c);
+        }
+        //04. 변수 : 지역변수+전역변수  //변수의 위치에 따라 값이 달라짐-스코프
+        {
+            let x = 100;    //전역 변수
+            let y = 200;    //전역 변수
+
+
+            function func(){
+                x = 300;    //전역 변수 
+                let y = 400;    //지역 변수 //함수 안에 있어서 에러가 안남
+                z = "javascript"    //위에서 생략했다고 생각해서 값이 나온다.
+
+                console.log("함수안"+x);
+                console.log("함수안"+y);
+                console.log("함수안"+z);
+            }
+            func();         //블록화 시켜줘도 함수가 있어서 값이 나옴(전역변수)
+            
+            console.log("함수밖"+x);
+            console.log("함수밖"+y);
+            console.log("함수밖"+z);
+        }
+
     </script>
 </body>
 </html>

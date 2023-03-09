@@ -727,19 +727,11 @@
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <script>
-                            {
-                                const obj = [
-                                    {a: 100, b:300, c: "javascript"}
-                                ];
-
-                                obj.map((el) => {
-                                   document.write(el.a,"<br>");        
-                                   document.write(el.b,"<br>");        
-                                   document.write(el.c);        
-                                });
-                            }
-                        </script>
+                        <div>
+                            100<br>
+                            300<br>
+                            javascript
+                        </div>
                     </details>
                 </div>
             </div>
@@ -774,26 +766,16 @@
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <script>
-                            {
-                                {
-                                    const obj = {
-                                        a : 100,
-                                        b : 200,
-                                        c : "javascript",
-                                    }
-                                    document.write(obj.hasOwnProperty("a"),"<br>"); //true
-                                    document.write(obj.hasOwnProperty("b"),"<br>"); //true
-                                    document.write(obj.hasOwnProperty("c"),"<br>"); //true
-                                    document.write(obj.hasOwnProperty("d"),"<br>"); //false
-
-                                    document.write("a"in obj,"<br>");
-                                    document.write("b"in obj,"<br>");
-                                    document.write("c"in obj,"<br>");
-                                    document.write("d"in obj);
-                                }
-                            }
-                        </script>
+                        <div>
+                            true<br>
+                            true<br>
+                            true<br>
+                            false<br>
+                            true<br>
+                            true<br>
+                            true<br>
+                            false
+                        </div>
                     </details>
                 </div>
             </div>
@@ -842,40 +824,16 @@
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <script>
-                            {
-                                {
-                                    const obj = {
-                                        a : 100,
-                                        b : 200,
-                                        c : "javascript",
-                                    }
-                                    const spread = {...obj, d:"react"}
-
-                                    document.write(spread.a,"<br>");
-                                    document.write(spread.b,"<br>");
-                                    document.write(spread.c,"<br>");
-                                    document.write(spread.d,"<br>");
-                                }
-                            }
-                            {
-                                const obj = {
-                                        a : 100,
-                                        b : 200,
-                                }
-                                const obj2 ={ 
-                                    c : "javascript",
-                                    d: "react"
-                                }
-                                const spread = {...obj, ...obj2}
-
-                                document.write(spread.a,"<br>");
-                                document.write(spread.b,"<br>");
-                                document.write(spread.c,"<br>");
-                                document.write(spread.d);
-                            
-                            }
-                        </script>
+                        <div>
+                            100<br>
+                            200<br>
+                            javascript<br>
+                            react<br>
+                            100<br>
+                            200<br>
+                            javascript<br>
+                            react<br>
+                        </div>
                     </details>
                 </div>
             </div>
@@ -917,32 +875,14 @@
                 <div class="result">
                     <details>
                         <summary>결과 확인하기</summary>
-                        <script>
-                                {
-                                    const obj = {
-                                        a : 100,
-                                        b : 200,
-                                        c : "javascript",
-                                    }
-                                    const {a,b,c} = obj;
-
-                                    document.write(a,"<br>");
-                                    document.write(b,"<br>");
-                                    document.write(c,"<br>");
-                                }
-                                {
-                                    const obj = {
-                                        a : 100,
-                                        b : 200,
-                                        c : "javascript",
-                                    }
-                                    const {a:name1,b:name2,c:name3} = obj;
-
-                                    document.write(name1,"<br>");
-                                    document.write(name2,"<br>");
-                                    document.write(name3);
-                                }
-                        </script>
+                        <div>
+                            100<br>
+                            200<br>
+                            javascript<br>
+                            100<br>
+                            200<br>
+                            javascript
+                        </div>
                     </details>
                 </div>
             </div>

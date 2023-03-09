@@ -636,40 +636,45 @@ const obj = {
                 
                 <div id="sample18" class="sample">
                     <h3>++ 식별자, 예약자</h3>
-                    <p>설명</p>
+                    <p>식별자는 변수, 함수, 클래스, 모듈 등의 이름을 정의하는데 사용되는 단어입니다.자바스크립트 코드에서 사용하는 이름을 의미합니다.<br>
+                        예약어는 자바스크립트에서 특별한 용도로 예약된 단어입니다.
+                    </p>
                     <div class="script">
-<pre><code class="language-js"> {   
-    
+<pre><code class="language-js">{
+    { 
+        //식별자 예시 여기서 a,b,c는 식별자 입니다.
+        let a = 1;
+        function b() {}
+        class c {}
+    }
+    {   
+        // 예약어는 변수, 함수, 클래스 이름으로 사용할 수 없음
+        let if = 10;      // SyntaxError: Unexpected token 'if'
+        function else() {} // SyntaxError: Unexpected token 'else'
+        class while {}    // SyntaxError: Unexpected token 'while'
+
+    }    
 }
 </pre></code>
                     </div>
-                    <div class="result">
-                        <details>
-                            <summary>결과 확인하기</summary>
-                            <div>
-                            
-                            </div>
-                        </details>
+                    <div class="notice">
+                        <h4>자바스크립트에서 사용할 수 있는 식별자 규칙</h4>
+                        <p>식별자는 반드시 문자, 숫자, 밑줄(_), 달러 기호($)로 시작해야 합니다.<br>
+                            식별자는 예약어가 아니어야 합니다.<br>
+                            식별자는 대소문자를 구분합니다.<br>
+                            식별자는 최대 255자까지 사용할 수 있습니다.</p>
                     </div>
                 </div>
                 <!-- //sample18 -->    
 
                 <div id="sample19" class="sample">
                     <h3>++ 연산자(전치, 후치)</h3>
-                    <p>설명</p>
+                    <p>전치 연산자는 변수의 값을 1 증가시킨 후, 그 값을 반환합니다. <br>
+                        후치 연산자는 변수의 값을 반환한 후, 값을 1 증가시킵니다.<br>
+                        전치 연산자는 변수의 값을 먼저 증가시킨 후, 그 값을 반환합니다. <br>
+                        전치 연산자는 먼저 실행되고, 그 다음에 다른 연산이 수행되지만 후치 연산자는 다른 연산이 먼저 수행되고, 그 다음에 변수의 값을 증가시킵니다.<br>
+                    </p>
                     <div class="script">
-<pre><code class="language-js">{
-    {
-        var score = 10;
-        // ++score;    //11
-        // score++;    //12
-        var result = ++score; //11
-        var result = score++; // 우선순위가 달라서 값이 다르게 나온다.
-
-        console.log(result,score);
-    }
-}
-</pre></code>
 <pre><code class="language-js">{
     {
         var score = 10;

@@ -614,10 +614,10 @@
             a : 100,
             b : 200,
             c : "javascript",
-        }
-        console.log(Object.keys(obj));
-        console.log(Object.values(obj));
-        console.log(Object.entries(obj));
+    }
+    console.log(Object.keys(obj));
+    console.log(Object.values(obj));
+    console.log(Object.entries(obj));
 }
 </code></pre>
                 </div>
@@ -644,14 +644,14 @@
             a : 100,
             b : 200,
             c : "javascript",
-        }
-        const name1 = obj.a;
-        const name2 = obj.b;
-        const name3 = obj.c;
+    }
+    const name1 = obj.a;
+    const name2 = obj.b;
+    const name3 = obj.c;
 
-        console.log(name1);
-        console.log(name2);
-        console.log(name3);
+    console.log(name1);
+    console.log(name2);
+    console.log(name3);
 }
 </code></pre>
                 </div>
@@ -744,22 +744,21 @@
                 </p>
                 <div class="script">
 <pre><code>{
-    {
-        const obj = {
-            a : 100,
-            b : 200,
-            c : "javascript",
-        }
-        console,log(obj.hasOwnProperty("a")); //true
-        console,log(obj.hasOwnProperty("b")); //true
-        console,log(obj.hasOwnProperty("c")); //true
-        console,log(obj.hasOwnProperty("d")); //false
 
-        console.log("a"in obj); //약식
-        console.log("b"in obj);
-        console.log("c"in obj);
-        console.log("d"in obj);
+    const obj = {
+        a : 100,
+        b : 200,
+        c : "javascript",
     }
+    console,log(obj.hasOwnProperty("a")); //true
+    console,log(obj.hasOwnProperty("b")); //true
+    console,log(obj.hasOwnProperty("c")); //true
+    console,log(obj.hasOwnProperty("d")); //false
+
+    console.log("a"in obj); //약식
+    console.log("b"in obj);
+    console.log("c"in obj);
+    console.log("d"in obj);
 }
 </code></pre>
                 </div>
@@ -789,19 +788,17 @@
                 </p>
                 <div class="script">
 <pre><code>{
-    {
-        const obj = {
-            a : 100,
-            b : 200,
-            c : "javascript",
-        }
-        const spread = {...obj, d:"react"}
-
-        console.log(spread.a);
-        console.log(spread.b);
-        console.log(spread.c);
-        console.log(spread.d);
+    const obj = {
+        a : 100,
+        b : 200,
+        c : "javascript",
     }
+    const spread = {...obj, d:"react"}
+
+    console.log(spread.a);
+    console.log(spread.b);
+    console.log(spread.c);
+    console.log(spread.d);
 }
 {
     const obj = {

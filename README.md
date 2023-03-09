@@ -3,10 +3,12 @@
 
 나의 블로그 : https://zheldqmffhrm.tistory.com/
 
-# HTML
-블록구조와 인라인구조
-시멘틱 태그
-
 # JAVASCRIPT
-퀴즈 게임01 :
+퀴즈 게임01 : http://dkdlelw.github.io/web2023/javascript/quiz/quizEffect01.html
+
+#사이트
+이미지 유형01 : http://dkdlelw.github.io/web2023/javascript/quiz/quizEffect01.html
+카드 유형 01 : http://dkdlelw.github.io/web2023/javascript/quiz/quizEffect01.html
+테스트 유형 01 : http://dkdlelw.github.io/web2023/javascript/quiz/quizEffect01.html
+슬라이드 유형 01 : http://dkdlelw.github.io/web2023/javascript/quiz/quizEffect01.html
 

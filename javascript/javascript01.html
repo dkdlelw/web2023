@@ -658,17 +658,16 @@ const obj = {
                     <h3>++ 연산자(전치, 후치)</h3>
                     <p>설명</p>
                     <div class="script">
-<pre><code class="language-js"> {   
-    
-}
+<pre><code class="language-js">{
+    }
 </pre></code>
                     </div>
                     <div class="result">
                         <details>
-                         <summary>결과 확인하기</summary>
-                         <div>
-                            
-                         </div>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                
+                            </div>
                         </details>
                     </div>
                 </div>
@@ -676,20 +675,48 @@ const obj = {
 
                 <div id="sample20" class="sample">
                     <h3>++ 비트연산자</h3>
-                    <p>설명</p>
+                    <p>2진수로 표현된 값에 대해 비트(bit) 단위로 연산을 수행합니다.</p>
                     <div class="script">
-<pre><code class="language-js"> {   
-    
+<pre><code class="language-js">{
+    //비트 연산자의 종류
+    &: AND 연산자 : 두 비트가 모두 1인 경우 1을 반환하고, 그 외에는 0을 반환합니다.
+    |: OR 연산. 두 비트 중 하나 이상이 1인 경우 1을 반환하고, 그 외에는 0을 반환합니다.
+    ^: XOR 연산. 두 비트가 서로 다른 경우 1을 반환하고, 그 외에는 0을 반환합니다.
+    ~: NOT 연산. 단항 연산자로, 비트를 반전시킵니다. 0은 1로, 1은 0으로 바뀝니다.
+    &lt;&lt;: 왼쪽 시프트(shift) 연산. 이진수를 왼쪽으로 지정된 비트 수만큼 이동시킵니다. 오른쪽으로 이동 시 왼쪽 끝자리는 0이 됩니다.
+    &gt;&gt;: 오른쪽 시프트(shift) 연산. 이진수를 오른쪽으로 지정된 비트 수만큼 이동시킵니다. 오른쪽으로 이동 시 왼쪽 끝자리는 0이 됩니다.
 }
 </pre></code>
                     </div>
                     <div class="result">
                         <details>
-                         <summary>결과 확인하기</summary>
-                         <div>
-                            
-                         </div>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                    
+                            </div>
                         </details>
+                    </div>
+                    <div class="notice">
+                        <script>
+                            // 예시
+                            {
+                                {       
+                                    let a = 9;
+                                    let b = 11;
+                                    let c =a^b;     //비트연산자 10진수를 2진수로 바꾸고 계산
+
+                                    console.log(c)  // 2
+                                }
+                                {
+                                    let num1 =16, num2 = 80;
+                                    let result;
+
+                                    result = num1 > num2 ? num1 & num2 : num1 ^ num2; // 조건연산자
+
+                                    console.log(result) // 64
+                                }
+                            }
+                        </script>
                     </div>
                 </div>
                 <!-- //sample20 -->    
@@ -771,15 +798,15 @@ const obj = {
         
         
         //전치 후치 연산자
-        {
-                // var score = 10;
-                // // ++score;    //11
-                // // score++;    //12
-                // var result = ++score; //11
-                // var result = score++; // 우선순위가 달라서 값이 다르게 나온다.
+        // {
+        //         // var score = 10;
+        //         // // ++score;    //11
+        //         // // score++;    //12
+        //         // var result = ++score; //11
+        //         // var result = score++; // 우선순위가 달라서 값이 다르게 나온다.
 
-                // console.log(result,score);
-        }
+        //         // console.log(result,score);
+        // }
         // {
         //         let hap, j, k, l;
         //         j = k = l = 1;
@@ -830,24 +857,24 @@ const obj = {
         //     console.log(c);
         // }
         
+        {   
+    {
+        let a = 9;
+        let b = 11;
+        let c =a^b;     //비트연산자 10진술를 2진수로 바꾸고 계산
 
-        {
-            {
-            let a = 9;
-            let b = 11;
-            let c =a^b;     //비트연산자 10진술를 2진수로 바꾸고 계산
+        console.log(c)
+    }
+    {
+        let num1 =16, num2 = 80;
+        let result;
 
-            console.log(c)
-        }
-        {
-            let num1 =16, num2 = 80;
-            let result;
+        result = num1 &gt; num2 ? num1 & num2 : num1 ^ num2; 
 
-            result = num1 > num2 ? num1 & num2 : num1 ^ num2; 
-
-            console.log(result)
-        }
-        }
+        console.log(result)
+    }
+}
+        
     </script>
 </body>
 </html>

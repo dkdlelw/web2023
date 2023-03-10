@@ -7,53 +7,60 @@
     <title>test</title>
 </head>
 <body>
-    
-</body>
-<script>
-    //for문 이용해서 1-8
-    for(let i=0; i<=8; i++){
-        document.write(i)
-        document.write("<br>")
-    }
-
-    //for문 이용해서 100까지 짝수
-    for(let i=0; i<=100; i += 2 ){
-        document.write(i)
-        document.write("<br>")
-    }
-    //for문 이용해서 100까지 4의 배수
-    for(let i=0; i<100; i++){
-       if(i % 4 == 0){
-        document.write(i,"<br>")
-        }
-    }
-    //for문 이용해서 8단 구구단
-    for(let i=8; i<9; i++){
-        document.write(i + "단","<br>");
-        
-        for(let j=1; j<=9; j++){
-            document.write(i + "*" + j + "=" + i*j)
-            document.write("<br>")
-        }
-        document.write("<br>","<br>")
-    }
-    
-    //for문 이용해서 15칸테이블
-    let table ="<table border='1'>"
-    
-    for(let i=1; i<=15; i++){
-        table += "<tr>"
-
-            for(let j=1; j<=15; j++){
-                table += "<td>"+j+"</td>"
+    <script>
+        //for 0-100
+        {
+            for(let i=0;  i<=100; i++){
+                document.write(i);
             }
-            
-        table += "</tr>"
-    }
-    table += "</table>"
-    document.write(table)
+        }
+        //100칸 테이블
+        {
+            let table = "<table border = '1'>"
+                for(let i=1; i<=10; i++){
+                    table += "<tr>"
+                    for(let j=1; j<=10; j++){
+                        table += "<td>"+j+"</td>"
+                    }
+                    table += "</tr>"
+                }
+                table += "</table>"
+                document.write(table)
+        }
+      
+        //99단 20단만
+        {
+            for(let i=20; i<=20; i++){
+                for(let j=1; j<=9; j++){
+                    document.write(i+"*"+j+"="+i*j,"<br>")
+                }
+            }
+        }
+        //1~100 짝수 합
+        {
+            num = 0;
+            for(let i=1; i<=100; i++){
+                if(i % 2 == 0){
+                    num +=i;
+                }
+            }
+            document.write(num);
+        }
+        document.write("<br>")
+        //5. 1-100까지 출력(짝수는 파란색 홀수는 빨간색)
+        {
+            for(let i=1; i<=100; i++){
+                if(i % 2 == 0){
+                    document.write("<span style ='color:blue'>" + i + "</span>");
+                } else {
+                    document.write("<span style ='color:red'>" + i + "</span>");
+                }
+            }
+        }
+        //6. 배열안에 1-10까지 데이터가 있음 (forEach문을 통해 출력하시오)
+        {
 
-
-
-</script>
+        }
+    </script>
+</body>
 </html>

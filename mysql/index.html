@@ -345,6 +345,9 @@ INSERT INTO member(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES
 
                     <h4>youName 이름만 불러오기</h4>
 <pre><code class="language-js">SELECT youName FROM member;</code></pre>
+                    <h4>youName 이름 갯수 불러오기</h4>
+<pre><code class="language-js">SELECT count(youName) FROM member;</code></pre>
+<pre><code class="language-js">SELECT count(*) FROM member;</code></pre>
                     <h4>youName 이름과 나이 불러오기</h4>
 <pre><code class="language-js">SELECT youName, youAge FROM member;</code></pre>
                     <h4>youName 30살 이상만 이름과 나이 불러오기 </h4>

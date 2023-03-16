@@ -4,63 +4,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+    <title>Document</title>
 </head>
 <body>
     <script>
-        //for 0-100
+        //선언적 함수
+        //함수가 실행되었습니다.1
         {
-            for(let i=0;  i<=100; i++){
-                document.write(i);
+            function func(){
+                document.write("함수가 실행되었습니다.1<br>");
             }
+            func();
         }
-        //100칸 테이블
+        //익명함수
+        //함수가 실행되었습니다.2
         {
-            let table = "<table border = '1'>"
-                for(let i=1; i<=10; i++){
-                    table += "<tr>"
-                    for(let j=1; j<=10; j++){
-                        table += "<td>"+j+"</td>"
-                    }
-                    table += "</tr>"
-                }
-                table += "</table>"
-                document.write(table)
-        }
-      
-        //99단 20단만
-        {
-            for(let i=20; i<=20; i++){
-                for(let j=1; j<=9; j++){
-                    document.write(i+"*"+j+"="+i*j,"<br>")
-                }
+            const func = function(){
+                document.write("함수가 실행되었습니다.2<br>")
             }
+            func();
         }
-        //1~100 짝수 합
+        //매개변수 함수
+        //함수가 실행되었습니다.3
         {
-            num = 0;
-            for(let i=1; i<=100; i++){
-                if(i % 2 == 0){
-                    num +=i;
-                }
+            function func(str){
+                document.write(str);
             }
-            document.write(num);
+            func("함수가 실행되었습니다.3<br>")
         }
-        document.write("<br>")
-        //5. 1-100까지 출력(짝수는 파란색 홀수는 빨간색)
+        //리턴값 함수
+        //함수가 실행되었습니다.4
         {
-            for(let i=1; i<=100; i++){
-                if(i % 2 == 0){
-                    document.write("<span style ='color:blue'>" + i + "</span>");
-                } else {
-                    document.write("<span style ='color:red'>" + i + "</span>");
-                }
+            function func(){
+                const str = "함수가 실행되었습니다.4<br>"
+                return str;
             }
+            document.write(func());
+            func();
         }
-        //6. 배열안에 1-10까지 데이터가 있음 (forEach문을 통해 출력하시오)
+        //선언적 함수(화살표함수)
+        //함수가 실행되었습니다.5
         {
+            func = () => {
+                document.write("함수가 실행되었습니다.5<br>");
+            }
+            func();
+        }
+        //익명함수(화살표함수)
+        //함수가 실행되었습니다.6
+        {
+            const func = () => {
+                document.write("함수가 실행되었습니다.6<br>")
+            }
+            func();
+        }
+        //매개변수 함수(화살표함수)
+        //함수가 실행되었습니다.7
+        {
+            func = (str) => {
+                document.write(str);
+            }
+            func("함수가 실행되었습니다.7<br>")
+        }
+        //리턴값 함수(화살표함수)
+        //함수가 실행되었습니다.8
+        {
+            func = () => {
+                const str = "함수가 실행되었습니다.8<br>"
+                return str;
+            }
+            document.write(func());
+            func();
+        }
+        //익명함수 + 매개변수 + 리턴값(화살표 함수)
+        //함수가 실행되었습니다.9
+        {
+            const func = (str) => {
+                return str;
+            }
+            func(document.write("함수가 실행되었습니다.9<br>"));
+        }
+        //익명함수 + 매개변수 + 리턴값 + 괄호생략(화살표 함수)
+        //함수가 실행되었습니다.10
+        {
+            const func = str => {
+                return str;
+            }
+            func(document.write("함수가 실행되었습니다.10<br>"));
+        }
+        //익명함수 + 매개변수 + 리턴값 + 괄호생략 + 리턴 생략(화살표 함수)
+        //함수가 실행되었습니다.11
+        {
+            const func = str => str;
 
+            document.write(func("함수가 실행되었습니다.11<br>"))
         }
+        //선언적함수 + 매개변수 + 리턴값 + 괄호생략 + 리턴 생략(화살표 함수)
+        //함수가 실행되었습니다.12
+        {
+            func = str => str;
+            document.write(func("함수가 실행되었습니다.12<br>"))
+        }
+        
     </script>
 </body>
 </html>

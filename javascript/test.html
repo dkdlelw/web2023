@@ -8,104 +8,50 @@
 </head>
 <body>
     <script>
-        //선언적 함수
-        //함수가 실행되었습니다.1
-        {
-            function func(){
-                document.write("함수가 실행되었습니다.1<br>");
-            }
-            func();
+      //for 1-10
+      {
+        for(let i=1; i<=10; i++){
+            document.write(i,"<br>");
         }
-        //익명함수
-        //함수가 실행되었습니다.2
-        {
-            const func = function(){
-                document.write("함수가 실행되었습니다.2<br>")
+      }
+      document.write("<br>")
+      //for 1-10 짝
+      {
+        for(let i=1; i<=10; i++){
+            if(i % 2 == 0){
+                document.write(i,"<br>");
             }
-            func();
         }
-        //매개변수 함수
-        //함수가 실행되었습니다.3
-        {
-            function func(str){
-                document.write(str);
+      }
+     c
+      //1-10 홀 빨 짝파
+      {
+        for(let i=1; i<=10; i++){
+            if(i % 2 == 1){
+                document.write("<span style=color:red>"+i+"</span>")
+            } 
+            if(i % 2 == 0){
+                document.write("<span style=color:blue>"+i+"</span>")
             }
-            func("함수가 실행되었습니다.3<br>")
         }
-        //리턴값 함수
-        //함수가 실행되었습니다.4
-        {
-            function func(){
-                const str = "함수가 실행되었습니다.4<br>"
-                return str;
-            }
-            document.write(func());
-            func();
+      }
+   
+      {
+        let num = [100,200,300,400,500,600,700,800,900]
+        for(let i=0; i<num.length; i++){
+            document.write(num[i]);
         }
-        //선언적 함수(화살표함수)
-        //함수가 실행되었습니다.5
-        {
-            func = () => {
-                document.write("함수가 실행되었습니다.5<br>");
-            }
-            func();
+        num.forEach(function(el){
+            document.write(el);
+        })
+        for(let i in num){
+            document.write(num[i])
         }
-        //익명함수(화살표함수)
-        //함수가 실행되었습니다.6
-        {
-            const func = () => {
-                document.write("함수가 실행되었습니다.6<br>")
-            }
-            func();
+        for(let i of num){
+            document.write([i])
         }
-        //매개변수 함수(화살표함수)
-        //함수가 실행되었습니다.7
-        {
-            func = (str) => {
-                document.write(str);
-            }
-            func("함수가 실행되었습니다.7<br>")
-        }
-        //리턴값 함수(화살표함수)
-        //함수가 실행되었습니다.8
-        {
-            func = () => {
-                const str = "함수가 실행되었습니다.8<br>"
-                return str;
-            }
-            document.write(func());
-            func();
-        }
-        //익명함수 + 매개변수 + 리턴값(화살표 함수)
-        //함수가 실행되었습니다.9
-        {
-            const func = (str) => {
-                return str;
-            }
-            func(document.write("함수가 실행되었습니다.9<br>"));
-        }
-        //익명함수 + 매개변수 + 리턴값 + 괄호생략(화살표 함수)
-        //함수가 실행되었습니다.10
-        {
-            const func = str => {
-                return str;
-            }
-            func(document.write("함수가 실행되었습니다.10<br>"));
-        }
-        //익명함수 + 매개변수 + 리턴값 + 괄호생략 + 리턴 생략(화살표 함수)
-        //함수가 실행되었습니다.11
-        {
-            const func = str => str;
+      }
 
-            document.write(func("함수가 실행되었습니다.11<br>"))
-        }
-        //선언적함수 + 매개변수 + 리턴값 + 괄호생략 + 리턴 생략(화살표 함수)
-        //함수가 실행되었습니다.12
-        {
-            func = str => str;
-            document.write(func("함수가 실행되었습니다.12<br>"))
-        }
-        
     </script>
 </body>
 </html>

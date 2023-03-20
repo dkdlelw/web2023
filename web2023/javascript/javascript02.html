@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript : 데이터 불러오기</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/default.min.css">
+    <link rel="shortcut icon" href="assets/ico/javascript.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/javascript192x192.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/javascript192x192.png">
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="index.html">javascript</a></h1>
+        <nav>
+            <ul>
+                <li><a href="javascript01.html">데이터 저장하기</a></li>
+                <li class="active"><a href="javascript02.html">데이터 불러오기</a></li>
+                <li><a href="javascript03.html">데이터 실행하기</a></li>
+                <li><a href="javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="javascript05.html">문자열 객체</a></li>
+                <li><a href="javascript06.html">배열 객체</a></li>
+                <li><a href="javascript07.html">수학 객체</a></li>
+                <li><a href="javascript08.html">숫자 객체</a></li>
+                <li><a href="javascript09.html">브라우저 객체</a></li>
+                <li><a href="javascript10.html">요소 객체</a></li>
+                <li><a href="javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul class="last">
+                <li><a href="javascript12.html">데이터 효과</a></li>
+                <li><a href="javascript13.html">검색 효과</a></li>
+                <li><a href="javascript14.html">퀴즈 효과</a></li>
+                <li><a href="javascript15.html">마우스 효과</a></li>
+                <li><a href="javascript16.html">슬라이스</a></li>
+                <li><a href="javascript17.html">패럴랙스 효과</a></li>
+                <li><a href="javascript18.html">게임효과</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="container">
+            <div class="main__menu">
+                <ul>
+                    <li><a href="#">01. 변수 : 데이터 불러오기</a></li>
+                    <li><a href="#">02. 상수 : 데이터 불러오기</a></li>
+
+                    <li><a href="#">03. 배열 : 데이터 불러오기 : 기본</a></li>
+                    <li><a href="#">04. 배열 : 데이터 불러오기 : 2차 배열</a></li>
+                    <li><a href="#">05. 배열 : 데이터 불러오기 : 갯수 구하기</a></li>
+                    <li><a href="#">06. 배열 : 데이터 불러오기 : for()문</a></li>
+                    <li><a href="#">07. 배열 : 데이터 불러오기 : 중첩 for()문</a></li>
+                    <li><a href="#">08. 배열 : 데이터 불러오기 : forEach()</a></li>
+                    <li><a href="#">09. 배열 : 데이터 불러오기 : for of</a></li>
+                    <li><a href="#">10. 배열 : 데이터 불러오기 : for in</a></li>
+                    <li><a href="#">11. 배열 : 데이터 불러오기 : map()</a></li>
+
+                    <li><a href="#">12. 배열 : 데이터 불러오기 : 배열 펼침 연산자</a></li>
+                    <li><a href="#">13. 배열 : 데이터 불러오기 : 배열구조분해할당</a></li>
+
+                    <li><a href="#">14. 객체 : 데이터 불러오기 : 기본</a></li>
+                    <li><a href="#">15. 객체 : 데이터 불러오기 : Object</a></li>
+                    <li><a href="#">16. 객체 : 데이터 불러오기 : 변수</a></li>
+                    <li><a href="#">17. 객체 : 데이터 불러오기 : for in</a></li>
+                    <li><a href="#">18. 객체 : 데이터 불러오기 : map()</a></li>
+                    <li><a href="#">19. 객체 : 데이터 불러오기 : hasOwnProperty()</a></li>
+                    <li><a href="#">20. 객체 : 데이터 불러오기 : 객체 펼침연산자 </a></li>
+                    <li><a href="#">21. 객체 : 데이터 불러오기 : 객체구조분해할당</a></li>
+                </ul>
+            </div>
+            <div class="main__sample">
+                <div id="sample01" class="sample">
+                    <h3>01. 변수 : 데이터 불러오기</h3>
+                    <p>변수안에 저장된 데이터를 불러오는 방법입니다.</p>
+                    <div class="script">
+<pre><code>{
+    let x = 100, y = 200, z = "javascript";
+
+    console.log(x ,y, z);
+}   
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                100<br>
+                                200<br>
+                                javascript
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample01 -->
+
+                <div id="sample02" class="sample">
+                    <h3>02. 상수 : 데이터 불러오기</h3>
+                    <p>상수안에 저장된 데이터를 불러오는 방법입니다.</p>
+                    <div class="script">
+<pre><code>{
+    const x = 100, y = 200, z = "javascript"
+
+    console.log(x ,y, z);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100<br>
+                            200<br>
+                            javascript
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample02 -->
+
+            <div id="sample03" class="sample">
+                <h3>03.배열 : 데이터 불러오기 : 기본</h3>
+                <p>상수안에 저장된 데이터를 불러오는 방법입니다.</p>
+                <div class="script">
+<pre><code>{
+    const arr =[100, 200, "javascript"];
+
+    console.log(arr[0], arr[1], arr[2]);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100<br>
+                            200<br>
+                            javascript
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample03 -->
+
+            <div id="sample04" class="sample">
+                <h3> 04. 배열 : 데이터 불러오기 : 2차 배열</h3>
+                <p>여러 개로 배열된 데이터를 불러오는 방법입니다.</p>
+                <div class="script">
+<pre><code>{
+    const arr = [100, 200 ["javascript","react"]];
+
+    console.log(arr[0]);
+    console.log(arr[1]);
+    console.log(arr[2][0]);
+    console.log(arr[2][1]);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100<br>
+                            200<br>
+                            javascript<br>
+                            react
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample04 -->
+
+            <div id="sample05" class="sample">
+                <h3> 05.배열 : 데이터 불러오기 : 갯수 구하기 </h3>
+                <p>여러 개로 배열된 데이터를 불러오는 값의 갯수를 구하는 방법입니다.</p>
+                <div class="script">
+<pre><code>{
+    const arr = [100, 200, "javascript"];
+
+    console.log(arr.length)
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            3
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample05 -->
+
+            <div id="sample06" class="sample">
+                <h3>06. 배열 : 데이터 불러오기 : for( )문 </h3>
+                <p>형식 : for(초기값; 조건식; 증감식;){실행문}<br>
+                    조건식이 true가 나올 때 까지만 값이 나옵니다.<br>
+                    for (시작하는 값, i가 9보다 작을때까지 트루가 나와야 값이 나옴, ++는 i가 1씩증가)
+                </p>
+                <div class="script">
+<pre><code>{
+    const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900]
+
+    for(let i=0; i&lt;9; i++){
+        console.log(arr[i]);
+    }
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                100<br>
+                                200<br>
+                                300<br>
+                                400<br>
+                                500<br>
+                                600<br>
+                                700<br>
+                                800<br>
+                                900
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <div class="notice">
+                    <h4>for( )문 연산</h4>
+                    <p> i=0; 0&lt;9; console.log(arr[0]) i++ //100<br>
+                        i=1; 1&lt;9; console.log(arr[1]) i++ //200<br>
+                        i=2; 2&lt;9; console.log(arr[2]) i++ //300<br>
+                        i=3; 3&lt;9; console.log(arr[3]) i++ //400<br>
+                        ~~~<br>
+                        i=8; 8&lt;9; console.log(arr[9]) i++ //900<br>
+                        i=9; 9&lt;9; END //9는 9보다 작지 않으므로 8까지 구해집니다.<br>
+                    </p>
+                </div>
+                <!-- //sample06 -->
+
+                <div id="sample07" class="sample">
+                    <h3>07. 배열 : 데이터 불러오기 : 중첩 for()문 </h3>
+                    <p>반복문 안에 반복문이 중첩 되어있는 형태입니다.
+                    </p>
+                    <div class="script">
+<pre><code>{
+    for(let i=1; i&lt;=10; i++){
+        document.write(i,"&lt;br&gt;");
+        for(let j=1; j&lt;=10; j++){
+            document.write(j);
+        }
+    }
+}
+</code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                1<br>
+                                1 2 3 4 5 6 7 8 9 10<br>
+                                2<br>
+                                1 2 3 4 5 6 7 8 9 10<br>
+                                3<br>
+                                1 2 3 4 5 6 7 8 9 10<br>
+                                4<br>
+                                1 2 3 4 5 6 7 8 9 10<br>
+                                5<br>
+                                1 2 3 4 5 6 7 8 9 10<br>
+                                6<br>
+                                1 2 3 4 5 6 7 8 9 10<br>
+                                7<br>
+                                1 2 3 4 5 6 7 8 9 10<br>
+                                8<br>
+                                1 2 3 4 5 6 7 8 9 10<br>
+                                9<br>
+                                1 2 3 4 5 6 7 8 9 10<br>
+                                10<br>
+                                1 2 3 4 5 6 7 8 9 10<br>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- //sample07 -->
+
+                <div id="sample08" class="sample">
+                    <h3>08. 배열 : 데이터 불러오기 : forEach( )</h3>
+                    <p>배열에서 사용할 수 있는 자바스크립트 함수 중 하나로입니다.<br>
+                        배열의 각 요소에 대해 콜백 함수(함수 안에 불러오는 함수)를 실행합니다.
+                    </p>
+                    <div class="script">
+<pre><code>{
+    const num = [100,200,300,400,500];
+
+    document.write(num[0]);
+    document.write(num[1]);
+    document.write(num[2]);
+    document.write(num[3]);
+    document.write(num[4]);
+    
+    //for
+    for(let i=0; i&lt;num.length; i++){
+        document.write(num[i]);
+    }
+
+    //forEach
+    //배열의 데이터 반복
+    num.forEach(function(el){
+        document.write(el);
+    });
+
+    //forEach : 화살표 함수
+    num.forEach((el)=&gt;{
+        document.write(el);
+    });
+    
+    //forEach : 화살표 함수 : 괄호생략
+    num.forEach(el=&gt;{
+        document.write(el);
+    });
+
+        //forEach : 화살표 함수 : 중괄호생략
+    num.forEach(el =&gt; document.write(el));
+
+
+        //forEach (값, 인덱스, 배열)
+    num.forEach(function (element, index, array){
+        document.write(element);
+        document.write(index);
+        document.write(array);
+    })
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100<br>
+                            200<br>
+                            300<br>
+                            400<br>
+                            500<br>
+                            <br>
+                            100<br>
+                            200<br>
+                            300<br>
+                            400<br>
+                            500<br>
+                            <br>
+                            100<br>
+                            200<br>
+                            300<br>
+                            400<br>
+                            500<br>
+                            <br>
+                            100<br>
+                            200<br>
+                            300<br>
+                            400<br>
+                            500<br>
+                            <br>
+                            100<br>
+                            200<br>
+                            300<br>
+                            400<br>
+                            500<br>
+                            <br>
+                            100<br>
+                            0<br>
+                            100,200,300,400,500<br>
+                            200<br>
+                            1<br>
+                            100,200,300,400,500<br>
+                            300<br>
+                            2<br>
+                            100,200,300,400,500<br>
+                            400<br>
+                            3<br>
+                            100,200,300,400,500<br>
+                            500<br>
+                            4<br>
+                            100,200,300,400,500<br>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample08 -->
+
+            <div id="sample09" class="sample">
+                <h3>09. 배열 : 데이터 불러오기 : for of</h3>
+                <p>배열에서 쓰는 반복문 입니다.
+                </p>
+                <div class="script">
+<pre><code>{
+    const arr = [100, 200, 300, 400, 500];
+
+    for(let i of arr){
+        document.write(i);
+    }
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100<br>
+                            200<br>
+                            300<br>
+                            400<br>
+                            500<br>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample09 -->
+
+            <div id="sample10" class="sample">
+                <h3>10. 배열 : 데이터 불러오기 : for in</h3>
+                <p>객체 때문에 만들어졌습니다.<br>
+                객체는 배열의 성질이 있어서 for in문으로 배열도 불러올 수 있습니다.
+                </p>
+                <div class="script">
+<pre><code>{
+    const arr = [100, 200, 300, 400, 500];
+
+    for(let i in arr){
+        document.write(arr[i]);
+    }
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100<br>
+                            200<br>
+                            300<br>
+                            400<br>
+                            500<br>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample10 -->
+
+            <div id="sample11" class="sample">
+                <h3>배열 : 데이터 불러오기 : map()</h3>
+                <p> 배열의 각 요소에 대해 콜백 함수를 실행하고, 그 결과를 새로운 배열로 반환합니다.<br>
+                원본 배열을 변경하지 않으며, 반환되는 새로운 배열의 길이는 원본 배열과 같습니다.   
+                </p>
+                <div class="script">
+<pre><code>{
+    const num = [100, 200, 300, 400, 500];
+
+    num.forEach(function(el, i,a){
+        document.write(el);
+        document.write(i);
+        document.write(a);
+    });
+
+    num.map(function(el, i, a){
+        document.write(el);
+        document.write(i);
+        document.write(a);
+       
+    });
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100<br>
+                            0<br>
+                            100,200,300,400,500<br>
+                            200<br>
+                            1<br>
+                            100,200,300,400,500<br>
+                            300<br>
+                            2<br>
+                            100,200,300,400,500<br>
+                            400<br>
+                            3<br>
+                            100,200,300,400,500<br>
+                            500<br>
+                            4<br>
+                            100,200,300,400,500<br>
+                            100<br>
+                            0<br>
+                            100,200,300,400,500<br>
+                            200<br>
+                            1<br>
+                            100,200,300,400,500<br>
+                            300<br>
+                            2<br>
+                            100,200,300,400,500<br>
+                            400<br>
+                            3<br>
+                            100,200,300,400,500<br>
+                            500<br>
+                            4<br>
+                            100,200,300,400,500
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample11 -->
+
+            <div id="sample12" class="sample">
+                <h3>12. 배열 : 데이터 불러오기 : 배열 펼침 연산자</h3>
+                <p>배열, 객체, 문자열등의 요소를 펼처서 개별 요소로 분리하는 연산자입니다.
+                </p>
+            <div class="script">
+<pre><code>{
+    let arr1 = [100, 200, 300, 400, 500];
+    let arr2 = [600, 700]
+
+    console.log(arr1);     // 배열 출력
+    console.log(...arr1,);      // 요소들만 출력
+    console.log(...arr1, ...arr2); //두 개의 배열을 합침
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100,200,300,400,500<br>
+                            100,200,300,400,500<br>
+                            100,200,300,400,500,600,700
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample12 -->
+
+            <div id="sample13" class="sample">
+                <h3>13. 배열 : 데이터 불러오기 : 배열구조분해할당</h3>
+                <p>배열의 요소를 개별 변수에 할당하는 방법 중 하나입니다.<br>
+                    배열의 각 요소를 개별 변수에 분리하여 사용할 수 있습니다.
+                </p>
+            <div class="script">
+<pre><code>{
+    let a, b, c;
+    [a,b,c] = [100, 200, "javascript"];
+
+    console.log(a);
+    console.log(b);
+    console.log(c);     
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100<br>
+                            200<br>
+                            javascript
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample13 -->
+
+            <div id="sample14" class="sample">
+                <h3>14. 객체 : 데이터 불러오기 : 기본</h3>
+                <p> 객체는 키(key)와값(value)을 저장할 수 있는 구조입니다.
+                </p>
+                <div class="script">
+<pre><code> {
+    const obj = {
+        a : 100,
+        b : 200,
+        c : "javascript",
+    }
+    console.log(obj.a);
+    console.log(obj.b);
+    console.log(obj.c);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100<br>
+                            200<br>
+                            javascript
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample14 -->
+
+            <div id="sample15" class="sample">
+                <h3>15. 객체 : 데이터 불러오기 : Object</h3>
+                <p> 객체의 속성 키(key), 값(value), 키-값 쌍(entry)을 각각 배열로 변환합니다.
+                </p>
+                <div class="script">
+<pre><code>{
+    const obj = {
+            a : 100,
+            b : 200,
+            c : "javascript",
+    }
+    console.log(Object.keys(obj));
+    console.log(Object.values(obj));
+    console.log(Object.entries(obj));
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            a,b,c<br>
+                            100,200,javascript<br>
+                            a,100,b,200,c,300
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample15 -->
+
+            <div id="sample16" class="sample">
+            <h3>16. 객체 : 데이터 불러오기 : 변수</h3>
+            <p> 객체의 속성을 이용해 변수의 데이터를 불러오는 방법입니다.
+            </p>
+            <div class="script">
+<pre><code>{
+    const obj = {
+            a : 100,
+            b : 200,
+            c : "javascript",
+    }
+    const name1 = obj.a;
+    const name2 = obj.b;
+    const name3 = obj.c;
+
+    console.log(name1);
+    console.log(name2);
+    console.log(name3);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100<br>
+                            200<br>
+                            javascript
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample16 -->
+
+
+            <div id="sample17" class="sample">
+                <h3>17. 객체 : 데이터 불러오기 : for in</h3>
+                <p>for in문을 사용해서 객체의 모든 속성을 순회하면서 속성 이름과 값을 출력합니다.<br>
+                    
+                </p>
+                <div class="script">
+<pre><code>{
+    const obj = {
+        a : 100,
+        b : 200,
+        c : "javascript",
+    }
+
+    for(let key in obj){
+        console.log(key);
+        console.log(obj[key]);//속성값 불러옴
+    } 
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            a<br>
+                            100<br>
+                            b<br>
+                            200<br>
+                            c<br>
+                            javascript
+                        </div>
+                        </script>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample17 -->
+
+            <div id="sample18" class="sample">
+                <h3>18. 객체 : 데이터 불러오기 : map()</h3>
+                <p>map() 메소드를 사용해서 배열의 요소를 순회하면서 각 요소의 이름과 값을 출력합니다. 
+                </p>
+                <div class="script">
+<pre><code>{
+    const obj = [
+        {a: 100, b:300, c: "javascript"}
+    ]
+
+    obj.map((el) =&lt; {
+        console.log(el.a);        //여기서 el은 obj를 뜻함
+        console.log(el.b);        
+        console.log(el.c);        
+    });
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100<br>
+                            300<br>
+                            javascript
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample18 -->
+
+            <div id="sample19" class="sample">
+                <h3>19. 객체 : 데이터 불러오기 : hasOwnProperty()</h3>
+                <p> hasOwnProperty() 메소드는 객체가 특정 속성을 직접 가지고 있는지 확인하는 메소드입니다.<br>
+                    이 메소드는 인수로 속성 이름을 받아서, 해당 속성이 객체에 직접 정의되어 있는지 여부를 불리언 값으로 반환합니다.
+                </p>
+                <div class="script">
+<pre><code>{
+
+    const obj = {
+        a : 100,
+        b : 200,
+        c : "javascript",
+    }
+    console,log(obj.hasOwnProperty("a")); //true
+    console,log(obj.hasOwnProperty("b")); //true
+    console,log(obj.hasOwnProperty("c")); //true
+    console,log(obj.hasOwnProperty("d")); //false
+
+    console.log("a"in obj); //약식
+    console.log("b"in obj);
+    console.log("c"in obj);
+    console.log("d"in obj);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            true<br>
+                            true<br>
+                            true<br>
+                            false<br>
+                            true<br>
+                            true<br>
+                            true<br>
+                            false
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample19 -->
+
+            <div id="sample20" class="sample">
+                <h3>20. 객체 : 데이터 불러오기 : 객체 펼침연산자</h3>
+                <p> 객체 펼침 연산자(spread operator)는 ... 기호를 사용하여 객체의 속성을 전개하는 연산자입니다. <br>
+                    이 연산자를 사용하면 객체의 속성을 새로운 객체에 복사하거나, 함수 호출에서 인수로 전달할 수 있습니다.
+                    
+                </p>
+                <div class="script">
+<pre><code>{
+    const obj = {
+        a : 100,
+        b : 200,
+        c : "javascript",
+    }
+    const spread = {...obj, d:"react"}
+
+    console.log(spread.a);
+    console.log(spread.b);
+    console.log(spread.c);
+    console.log(spread.d);
+}
+{
+    const obj = {
+            a : 100,
+            b : 200,
+    }
+    const obj2 ={ 
+        c : "javascript",
+        d: "react"
+    }
+    const spread = {...obj, ...obj2}
+
+    console.log(spread.a);
+    console.log(spread.b);
+    console.log(spread.c);
+    console.log(spread.d);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100<br>
+                            200<br>
+                            javascript<br>
+                            react<br>
+                            100<br>
+                            200<br>
+                            javascript<br>
+                            react<br>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample20 -->
+
+            <div id="sample21" class="sample">
+                <h3>21. 객체 : 데이터 불러오기 : 객체구조분해할당</h3>
+            <p> 객체의 속성을 변수에 할당하는 방법 중 하나입니다. <br>
+                이 기능은 ES6부터 도입되었습니다. <br>
+                객체 구조 분해 할당을 사용하면, 객체의 속성 값을 변수에 바로 할당할 수 있습니다.
+            </p>
+            <div class="script">
+<pre><code>     {
+    const obj = {
+        a : 100,
+        b : 200,
+        c : "javascript",
+    }
+    const {a,b,c} = obj;
+
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+{
+    const obj = {
+        a : 100,
+        b : 200,
+        c : "javascript",
+    }
+    const {a:name1,b:name2,c:name3} = obj;
+
+    console.log(name1);
+    console.log(name2);
+    console.log(name3);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            100<br>
+                            200<br>
+                            javascript<br>
+                            100<br>
+                            200<br>
+                            javascript
+                        </div>
+                    </details>
+                </div>
+            </div>
+           <!-- //sample21 -->
+                            
+
+            </div>
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="1346zany@gmail.com">1346zany@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    <script src="assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    <script>
+        //
+    //    {
+    //         const arr = [100,200,300,400,[500,600]];
+
+    //         console.log(arr[4][0]);
+
+    //         //500
+    //         //개수
+    //         console.log(arr.length);
+
+    //         //for문 배열 안 데이터 하나씩
+            
+    //         for(let i=0; i<arr.lenght; i++){
+    //             console.log(arr[i]);
+    //         };
+    //         //forEach
+    //         arr.forEach(function (el){
+    //             document.write(el);
+    //         });
+    //         //화살표
+    //         arr.forEach = ((el) => {
+    //             document.write(el);
+    //         });
+            
+    //         arr.forEach = (el => {
+    //             document.write(el);
+    //         });
+    //         //for of 배열
+    //         for(let e of arr){
+    //             document.write(e);
+    //         }
+    //         //for in 객체
+    //         for(let e in arr){
+    //             document.write(e);
+    //         }
+    //         //map()
+    //         arr.map(function(el){
+    //             console.log(el);
+    //         });
+    //         arr.map = ((el) => {
+    //             console.log(el);
+    //         });
+    //         arr.map = (el => {
+    //             console.log(el);
+    //         });
+    //         arr.map = (el =>  console.log(el));
+    //    }
+            // // 12.배열 펼침 연산자(Spread Operator)
+            // //배열, 객체, 문자열등의 요소를 펼처서 개별 요소로 분리
+            // //
+            // {
+            //     let arr1 = [100, 200, 300, 400, 500];
+            //     let arr2 = [600, 700]
+
+            //     console.log(arr1, "<br>");     // 배열 출력
+            //     console.log(...arr1,);      // 요소들만 출력
+            //     console.log(...arr1, ...arr2); //두 개의 배열을 합침
+            // }
+           
+            //13. 배열 구조분해할당 (Destructuring assignment)
+            //배열의 요소를 개별 변수에 할당하는 방법 중 하나.
+            //배열의 각 요소를 개별 변수에 분리하여 사용할 수 있다
+            // {
+            //     let a, b, c;
+            //     [a,b,c] = [100, 200, "javascript"];
+
+            //     console.log(a)
+            //     console.log(b)
+            //     console.log(c)      
+            // }
+            // //14
+
+            // {
+            //     const obj = {
+            //         a : 100,
+            //         b : 200,
+            //         c : "javascript",
+            //     }
+            //     console.log(obj.a);
+            //     console.log(obj.b);
+            //     console.log(obj.c);
+            // }
+            // //15
+            // {
+            // const obj = {
+            //         a : 100,
+            //         b : 200,
+            //         c : "javascript",
+            //     }
+            //     console.log(Object.keys(obj));
+            //     console.log(Object.values(obj));
+            //     console.log(Object.entries(obj));
+            // }
+            // //16
+            // {
+            // const obj = {
+            //         a : 100,
+            //         b : 200,
+            //         c : "javascript",
+            //     }
+            //     const name1 = obj.a;
+            //     const name2 = obj.b;
+            //     const name3 = obj.c;
+
+            //     console.log(name1);
+            //     console.log(name2);
+            //     console.log(name3);
+            // }
+            // //17
+            // {
+            //     const obj = {
+            //         a : 100,
+            //         b : 200,
+            //         c : "javascript",
+            //     }
+
+            //     for(let key in obj){
+            //         console.log(key);
+            //         console.log(obj[key]);//속성값 불러옴
+            //     } 
+            // }
+
+            // //18. //배열 안 객체
+            // {
+            //     const obj = [
+            //         {a: 100, b:300, c: "javascript"}
+            //     ]
+
+            //     obj.map((el) => {
+            //         console.log(el.a);        //여기서 el은 obj를 뜻함
+            //         console.log(el.b);        
+            //         console.log(el.c);        
+            //     });
+            // }
+            // //19. 
+            // {
+            //     {
+            //         const obj = {
+            //             a : 100,
+            //             b : 200,
+            //             c : "javascript",
+            //         }
+            //         console,log(obj.hasOwnProperty("a")); //true
+            //         console,log(obj.hasOwnProperty("b")); //true
+            //         console,log(obj.hasOwnProperty("c")); //true
+            //         console,log(obj.hasOwnProperty("d")); //false
+
+            //         console.log("a"in obj); //약식
+            //         console.log("b"in obj);
+            //         console.log("c"in obj);
+            //         console.log("d"in obj);
+            //     }
+            // }
+            //     //20.
+                // {
+                //     {
+                //         const obj = {
+                //             a : 100,
+                //             b : 200,
+                //             c : "javascript",
+                //         }
+                //         const spread = {...obj, d:"react"}
+
+                //         console.log(spread.a);
+                //         console.log(spread.b);
+                //         console.log(spread.c);
+                //         console.log(spread.d);
+                //     }
+                // }
+                // {
+                //     const obj = {
+                //             a : 100,
+                //             b : 200,
+                //     }
+                //     const obj2 ={ 
+                //         c : "javascript",
+                //         d: "react"
+                //     }
+                //     const spread = {...obj, ...obj2}
+
+                //     console.log(spread.a);
+                //     console.log(spread.b);
+                //     console.log(spread.c);
+                //     console.log(spread.d);
+                
+                // }
+
+            //     //21.
+                // {
+                //     const obj = {
+                //         a : 100,
+                //         b : 200,
+                //         c : "javascript",
+                //     }
+                //     const {a,b,c} = obj;
+
+                //     console.log(a);
+                //     console.log(b);
+                //     console.log(c);
+                // }
+                // {
+                //     const obj = {
+                //         a : 100,
+                //         b : 200,
+                //         c : "javascript",
+                //     }
+                //     const {a:name1,b:name2,c:name3} = obj;
+
+                //     console.log(name1);
+                //     console.log(name2);
+                //     console.log(name3);
+                // }
+    </script>
+
+</body>
+
+</html>

@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이미지 텍스트 유형 01</title>
+    <title>이미지/텍스트 유형 01</title>
 
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
     <style>
@@ -24,6 +25,17 @@
             vertical-align: top;
             width: 100%;
         }
+        li {
+            list-style: none;
+        }
+        .blind{
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
         .mt10 {margin-top: 10px !important;}
         .mt20 {margin-top: 20px !important;}
         .mt30 {margin-top: 30px !important;}
@@ -31,7 +43,7 @@
         .mt50 {margin-top: 50px !important;}
         .mt60 {margin-top: 60px !important;}
         .mt70 {margin-top: 70px !important;}
-        
+
         .mb10 {margin-bottom: 10px !important;}
         .mb20 {margin-bottom: 20px !important;}
         .mb30 {margin-bottom: 30px !important;}
@@ -39,6 +51,7 @@
         .mb50 {margin-bottom: 50px !important;}
         .mb60 {margin-bottom: 60px !important;}
         .mb70 {margin-bottom: 70px !important;}
+
         /* common */
         .container {
             width: 1160px;
@@ -51,8 +64,7 @@
             font-weight: 400;
         }
         .section {
-            padding: 120px 0;
-            
+            padding: 120px 0;            
         }
         .section.center {
             text-align: center;
@@ -60,12 +72,13 @@
         .section__small {
             font-size: 14px;
             border-radius: 50px;
-            background-color: #0083FD;
+            background-color: #FF0000;
             color: #fff;
             padding: 1px 23px;
             text-transform: uppercase;
             margin-bottom: 20px;
             display: inline-block;
+            line-height: 1.5;
         }
         .section__h2 {
             font-size: 50px;
@@ -81,35 +94,39 @@
             line-height: 1.5;
         }
 
-        /* imgtxt__wrap */
-        .imgtxt__inner {
+        /* imgtext__wrap */
+        .imgText__inner {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        .imgtxt__inner .imgtxt{
+        .imgText__inner article {
             width: 32.3333%;
-            background-color: #fff;
         }
-        .title {
-            font-size: 50px;
-            line-height: 1.2;
-            margin-bottom: 25px;
+        .imgText__inner .text span {
+            background-color: #0083FD;
+            font-size: 14px;
+            color: #fff;
+            padding: 1px 20px;
+            border-radius: 50px;
+            margin-bottom: 15px;
+            display: inline-block;
         }
-        .imgtxt__inner .text h3 {
+        .imgText__inner .text h3 {
             font-size: 50px;
             margin-bottom: 17px;
         }
-        .imgtxt__inner .text li {
+        .imgText__inner .text p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #666;
+            margin-bottom: 12px;
+        }
+        .imgText__inner .text li{
             position: relative;
             padding-left: 14px;
         }
-        .imgtxt__inner .text li a {
-            color: #666;
-            line-height: 1.6;
-            font-size: 16px;
-        }
-        .imgtxt__inner .text li::before {
+        .imgText__inner .text li::before {
             content: "";
             width: 4px;
             height: 4px;
@@ -119,14 +136,19 @@
             left: 0;
             top: 8px;
         }
-        .imgtxt__inner .img {
+        .imgText__inner .text li a {
+            color: #666;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        .imgText__inner .img {
             background-repeat: no-repeat;
             background-size: cover;
             height: 500px;
             border-radius: 10px;
             position: relative;
         }
-        .imgtxt__inner .img a {
+        .imgText__inner .img a {
             position: absolute;
             left: 20px;
             bottom: 20px;
@@ -135,46 +157,53 @@
             padding: 10px 20px;
             border-radius: 40px;
         }
-        .imgtxt__inner .img.i1 {
+        .imgText__inner .img.i1 {
             background-image: url(../assets/img/img_txtType01.jpg);
         }
-        .imgtxt__inner .img.i2 {
+        .imgText__inner .img.i2 {
             background-image: url(../assets/img/img_txtType02.jpg);
         }
-        .imgtxt__inner .img.i1 a {
-            background-color: #37150A;
+        .imgText__inner .img.i1 a {
+            background-color: #405792;
         }
-        .imgtxt__inner .img.i2 a {
-            background-color: #112C32;
+        .imgText__inner .img.i2 a {
+            background-color: #721C17;
+        }
+
+        @media only screen and (-webkit-min-device-pixel-ratio: 2),
+            only screen and (min-device-pixel-ratio: 2),
+            only screen and (min-resolution: 2dppx) {
+                .imgtext .imgtext__body {
+                    background-image: url(../asset/img/img_txtType01.jpg);
+                    background-image: url(../asset/img/img_txtType02.jpg);
+                }
         }
     </style>
 </head>
 <body>
-    <section class="imgtxt__wrap section nexon">
+    <section class="imgtext__wrap section nexon">
+        <h2 class="blind">300종 이상의 반려묘</h2>
         <div class="container">
-            <div class="imgtxt__inner">
-                <article class="imgtxt">
-                    <div class="text">
-                        <span class="section__small">notice</span>
-                        <h3 class="title">300종 이상의<br> 반려묘</h3>
-                        <p class="text__desc">세상에는 다양한 종류의 고양이가 있습니다. 일부 인기 있는 반려묘 종류는 다음과 같습니다.</p>
-                        <ul class="desc__list">
-                            <li><a href="#">스코티쉬 폴드 (Scottish Fold)</a></li>
-                            <li><a href="#"></a>샴 고양이 (Siamese)</a></li>
-                            <li><a href="#"></a>브리티쉬 숏헤어 (British Shorthair)</a></li>
-                            <li><a href="#"></a>먼치킨 (Munchkin)</a></li>
-                            <li><a href="#"></a>사바나 (Savannah)</a></li>
-                            <li><a href="#"></a>페르시안 (Persian)</a></li>
-                            <li><a href="#"></a>스노우슈 (Snowshoe)</a></li>
-                            <li><a href="#"></a>스픽스 (Sphynx)</a></li>
-                            <li><a href="#"></a>러시안 블루 (Russian Blue)</a></li>
-                            <li><a href="#"></a>아메리칸 숏헤어 (American Shorthair)</a></li>
-                        </ul>
-                    </div>
+            <div class="imgText__inner">
+                <article class="text">
+                    <span>NOTICE</span>
+                    <h3>300종 이상의 반려묘</h3>
+                    <p>세상에는 다양한 종류의 고양이가 있습니다.<br>일부 인기 있는 반려묘 종류는 다음과 같습니다.</p>
+                    <ul>
+                        <li><a href="#">스코티쉬 폴드 (Scottish Fold)</a></li>
+                        <li><a href="#">샴 고양이 (Siamese)</a></li>
+                        <li><a href="#">브리티쉬 숏헤어 (British Shorthair)</a></li>
+                        <li><a href="#">먼치킨 (Munchkin)</a></li>
+                        <li><a href="#">사바나 (Savannah)</a></li>
+                        <li><a href="#">페르시안 (Persian)</a></li>
+                        <li><a href="#">스노우슈 (Snowshoe)</a></li>
+                        <li><a href="#">스픽스 (Sphynx)</a></li>
+                        <li><a href="#">러시안 블루 (Russian Blue)</a></li>
+                        <li><a href="#">아메리칸 숏헤어 (American Shorthair)</a></li>
+                    </ul>
                 </article>
-                 </article>
                 <article class="img i1">
-                    <a href="#">인기있는 고양이</a>
+                    <a href="#">인기 많은 고양이</a>
                 </article>
                 <article class="img i2">
                     <a href="#">똑똑한 고양이</a>

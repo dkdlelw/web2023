@@ -88,82 +88,78 @@
             </div>
             <div class="main__sample">
                 <div id="sample06" class="sample">
-                    <h3> includes()</h3>
+                    <h3>06. includes()</h3>
                     <div class="notice">"문자열".include(검색값, [위치값])</div>
                     <ul>
                         <li>문자열 포함 여부를 검색하여, 불린(true, false)을 반환합니다.</li>
                         <li>대소문자를 구별합니다.</li>
                     </ul>
 <pre><code class="language-js">{
-    console.log("javascript reference".lastIndexOf("javascript"))
-    console.log("javascript reference".lastIndexOf("javascripts"))
-    console.log("javascript reference".lastIndexOf("j"))
-    console.log("javascript reference".lastIndexOf("a"))
-    console.log("javascript reference".lastIndexOf("jv"))
-    console.log("javascript reference".lastIndexOf("reference"))
-    console.log("javascript reference".lastIndexOf("r"))
-    console.log("javascript reference".lastIndexOf("javascript", 0))
-    console.log("javascript reference".lastIndexOf("javascript", 1))
-    console.log("javascript reference".lastIndexOf("reference", 0))
-    console.log("javascript reference".lastIndexOf("reference", 1))
-    console.log("javascript reference".lastIndexOf("reference", 11))
-    console.log("javascript reference".lastIndexOf("reference", 12))
+    "javascript reference".includes("javascript");      // true
+    "javascript reference".includes("j");               // true
+    "javascript reference".includes("J");               // false
+    "javascript reference".includes("a");               // true
+    "javascript reference".includes("reference");       // true
+    "javascript reference".includes("reference", 11);   // true
+    "javascript reference".includes("reference", 12);   // false
 }
 </code></pre>
         </div>
 
-                <div id="sample10" class="sample">
-                    <h3> indexOf()</h3>
-                    <div class="notice">"문자열".match(검색값)<br>"문자열".match(정규식표현)</div>
+                <div id="sample07" class="sample">
+                    <h3>07. indexOf()</h3>
+                    <div class="notice">"문자열".indexOf(검색값, [위치값])</div>
                     <ul>
                         <li>문자열을 검색하여, 주어진 값과 일치하는 첫 번째 위치값(index)을 반환합니다.</li>
                         <li>문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환한다.</li>
                         <li>대소문자를 구별한다.</li>
                     </ul>
-<pre><code class="language-js">{"javascript refercence".indexOf("javascript");   //0
-    "javascript refercence".indexOf("javascripts");   //-1(값이 없을 때)
-    "javascript refercence".indexOf("j");    //0
-    "javascript refercence".indexOf("J");    //-1
-    "javascript refercence".indexOf("a");    //1
-    "javascript refercence".indexOf("ja");  //0
-    "javascript refercence".indexOf("jv");   //-1
-    "javascript refercence".indexOf("refercence");  //빈칸 포함해서 11이 나옴
-    "javascript refercence".indexOf("r");    //6
-    "javascript refercence".indexOf("re");  //11
-    "javascript refercence".indexOf("javascript", 0);  //0  
-    "javascript refercence".indexOf("javascript", 1);  //-1
-    "javascript refercence".indexOf("refercence", 0);  //11
-    "javascript refercence".indexOf("refercence", 11);  //11
-    "javascript refercence".indexOf("refercence", 12);  //-1
-    "javascript refercence".indexOf("r", 7);  //11  (7번째 이후부터 나오는 r)
-    "javascript refercence".indexOf("r", 12);  //15
+<pre><code class="language-js">{
+    "javascript refercence".indexOf("javascript");      // 0
+    "javascript refercence".indexOf("javascripts");     // -1
+    "javascript refercence".indexOf("j");               // 0
+    "javascript refercence".indexOf("J");               // -1
+    "javascript refercence".indexOf("a");               // 1
+    "javascript refercence".indexOf("jv");              // -1
+    "javascript refercence".indexOf("refercence");      // 11
+    "javascript refercence".indexOf("r");               // 6
+    "javascript refercence".indexOf("re");              // 11
+    "javascript refercence".indexOf("javascript", 0);   // 0
+    "javascript refercence".indexOf("javascript", 1);   // -1
+    "javascript refercence".indexOf("refercence", 1);   // 11
+    "javascript refercence".indexOf("refercence", 11);  // 11
+    "javascript refercence".indexOf("refercence", 12);  // -1
+    "javascript refercence".indexOf("r", 7);            // 11
+    "javascript refercence".indexOf("r", 12);           // 15        
 }
 </code></pre>
         </div>
 
-        <div id="sample18" class="sample">
-            <h3> lastindexOf()</h3>
+        <div id="sample08" class="sample">
+            <h3>08. lastindexOf()</h3>
             <div class="notice">"문자열".search(검색값, [위치값])<br>"문자열".search(정규식표현)</div>
             <ul>
                 <li>문자열을 역순으로 검색하여, 주어진 값과 일치하는 첫 번째 위치값(index)을 반환합니다.</li>
                 <li>문자열을 역순으로 검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환한다.</li>
                 <li>대소문자를 구별한다.</li>
             </ul>
-<pre><code class="language-js">{console.log("javascript reference".lastIndexOf("javascript"))
-    console.log("javascript reference".lastIndexOf("javascripts"))
-    console.log("javascript reference".lastIndexOf("j"))
-    console.log("javascript reference".lastIndexOf("a"))
-    console.log("javascript reference".lastIndexOf("jv"))
-    console.log("javascript reference".lastIndexOf("reference"))
-    console.log("javascript reference".lastIndexOf("r"))
-    
+<pre><code class="language-js">{
+    "javascript reference".lastIndexOf("javascript");       // 0
+    "javascript reference".lastIndexOf("javascripts");      // -1
+    "javascript reference".lastIndexOf("j");                // 0
+    "javascript reference".lastIndexOf("a");                // 3
+    "javascript reference".lastIndexOf("jv");               // -1
+    "javascript reference".lastIndexOf("reference");        // 11
+    "javascript reference".lastIndexOf("r");                // 15
+
+    console.log("javascript reference".lastIndexOf("reference"));
 }
 </code></pre>
 </div>
 
-        <div id="sample18" class="sample">
-            <h3> match()</h3>
-            <div class="notice">"문자열".match(검색값, [위치값])</div>
+        <div id="sample10" class="sample">
+            <h3>10. match()</h3>
+            <div class="notice">"문자열".match(검색값)<br>"문자열".match(정규식표현)</div>
             <ul>
                 <li>문자열을 검색하고, 문자값(배열)을 반환한다.</li>
                 <li>문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 null을 반환한다.</li>
@@ -185,8 +181,8 @@
 </code></pre>
 </div>
 <div id="sample18" class="sample">
-    <h3> search()</h3>
-    <div class="notice">"문자열".search(검색값, [위치값])</div>
+    <h3>18. search()</h3>
+    <div class="notice">"문자열".search(검색값)<br>"문자열".search(정규식표현)</div>
     <ul>
         <li>문자열을 검색하고, 위치값(숫자)을 반환한다.</li>
          <li>문자열을 검색하여, 주어진 값과 일치하는 것이 없으면 -1을 반환한다.</li>

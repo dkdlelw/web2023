@@ -262,6 +262,14 @@
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
 }
+h4 {
+    text-align: center;
+    padding-top: 5px;
+    font-family: 'Suncheon';
+    font-size: 2vw;
+    color: #fff;
+    background-color: #80dbff;
+}
 /* dog_wrap */
 .dog .tail, 
 .dog .chin, 
@@ -281,6 +289,7 @@
 .dog_wrap{
     position: relative;
 }
+
 .dog_wrap .true {
     width: 120px;
     height: 120px;

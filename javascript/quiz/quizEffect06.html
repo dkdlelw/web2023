@@ -33,7 +33,7 @@
                     <div class="quiz__question"></div>
                     <div class="quiz__view">
                         <div class="dog_wrap">
-                            <div class="quiz__numcount"></div>
+                            <h4></h4>
                             <div class="true">정답입니다!</div>
                             <div class="false">틀렸습니다!</div>
                             <div class="card-container">
@@ -80,8 +80,6 @@
                         <button class="next">다음 문제</button>
                     </div>
                     <div class="quiz__desc"></div>
-                    <div class="quiz__info">??점</div>
-                    <div class="quiz__check">정답 확인</div>
                 </div>
             </div> 
         </div>
@@ -155,7 +153,7 @@
         const quizAnswer = quizWrap.querySelector(".quiz__answer");
         const quizNext = quizWrap.querySelector(".quiz__answer .next");
         const quizDesc = quizWrap.querySelector(".quiz__desc");
-        const quizNumcount= quizWrap.querySelector(".quiz__numcount");
+        const quizNumcount= quizWrap.querySelector(".dog_wrap h4");
         const quizCheck = quizWrap.querySelector(".quiz__check span");
 
         let quizCount = 0;

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이트 만들기1</title>
+
+    <!-- SEO -->
+    <meta name="author" content="이승연">
+    <meta name="descripton" content="이승연과 함께 만드는 사이트 튜토리얼 입니다.">
+    <meta name="descripton" content="이승연과 함께 만드는 사이트 튜토리얼 입니다.">
+    <meta name="keyword" content="이승연, 사이트, 사이트 만들기, 튜토리얼">
+    <meta name="robots" content="all">
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/ico/favicon.png"/>  
+    <link rel="apple-touch-icon" sizes="114x114" href="hassets/ico/favicon.png"/>
+    <link rel="apple-touch-icon" href="assets/ico/favicon.png"/>
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/font.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="skip">
+        <a href="#">헤더 영역 바로가기</a>
+        <a href="#">슬라이드 영역 바로가기</a>
+        <a href="#">이미지 영역 바로가기</a>
+        <a href="#">이미지/텍스트 영역 바로가기</a>
+        <a href="#">카드 영역 바로가기</a>
+        <a href="#">배너 영역 바로가기</a>
+        <a href="#">텍스트 영역 바로가기</a>
+        <a href="#">푸터 영역 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <header id="headerType" style="display: none">
+        <h1>사이트 로고</h1>
+    </header>
+    <!-- //headerType -->
+
+    <main id="mainType">
+        <section id="sliderType" class="nexon hide">
+            <h2 class="blind">메인 슬라이드 영역</h2>
+            <div class="slider__inner">
+                <div class="slider">
+                    <div class="slider__info container">
+                        <span class="small">event</span>
+                        <h1 class="title">냥집사들의 커뮤니티 Catt</h1>
+                        <p class="desc">고양이 케어, 고양이 목욕,고양이 산책. 고양이 패션, 집사 커뮤니티
+                            고양이와 관련된 모든 정보를 공유합니다.</p>
+                        <div class="btn">
+                            <a href="#">자세히 보기</a>
+                            <a href="#">상담 신청</a>
+                        </div>
+                    </div>
+                    <div class="slider__arrow">
+                        <a href="#"><span class="blind">이전 이미지</span></a>
+                        <a href="#"><span class="blind">다음 이미지</span></a>
+                    </div>
+                    <div class="slider__dot">
+                        <a href="#" class="dot active"><span class="blind">첫번째 이미지</span></a>
+                        <a href="#" class="dot"><span class="blind">두번째 이미지</span></a>
+                        <a href="#" class="dot"><span class="blind">세번째 이미지</span></a>
+                        <a href="#" class="play"><span class="blind">플레이</span></a>
+                        <a href="#" class="stop"><span class="blind">정지</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //sliderType -->
+        <section id="imageType" class="nexon section center">
+            <h2 class="section__h2">반려묘를 키우는 방법</h2>
+            <p class="section__desc">반려묘를 키우려면 돈도 많고 열정과 노력과 부모가 시간도 많아야 합니다.</p>
+
+            <div class="image__inner container">
+                <div class="image__inner">
+                    <article class="image">
+                        <figure class="image__header">
+                            <img src="../assets/img/imageType_01.jpg" alt="고양이키우기">
+                        </figure>
+                        <div class="image__body">
+                            <h3 class="title">고양이키우기</h3>
+                            <p class="desc">고양이에게는 균형 잡힌 식사와 깨끗한 물이 필요합니다
+                                물을 항상 제공하고, 그릇을 깨끗하게 유지해야 합니다.</p>
+                            <a href="#" class="btn">자세히 보기</a>   
+                        </div> 
+                    </article>
+                    <article class="image">
+                        <figure class="image__header">
+                            <img src="../assets/img/imageType_02.jpg" alt="사료가 중요">
+                        </figure>
+                        <div class="image__body">
+                            <h3 class="title">사료가 중요</h3>
+                            <p class="desc">고양이에게는 균형 잡힌 식사와 깨끗한 물이 필요합니다
+                                물을 항상 제공하고, 그릇을 깨끗하게 유지해야 합니다.</p>
+                            <a href="#" class="btn">자세히 보기</a> 
+                        </div>
+                    </article>
+                </div>
+        </section>
+        <!-- //imageType -->
+        <section id="imgTextType" class="nexon section gray">
+            <h2 class="blind">300종 이상의 반려묘</h2>
+            <div class="container">
+                <div class="imgText__inner">
+                    <article class="text">
+                        <span>NOTICE</span>
+                        <h3>300종 이상의 반려묘</h3>
+                        <p>세상에는 다양한 종류의 고양이가 있습니다.<br>일부 인기 있는 반려묘 종류는 다음과 같습니다.</p>
+                        <ul>
+                            <li><a href="#">스코티쉬 폴드 (Scottish Fold)</a></li>
+                            <li><a href="#">샴 고양이 (Siamese)</a></li>
+                            <li><a href="#">브리티쉬 숏헤어 (British Shorthair)</a></li>
+                            <li><a href="#">먼치킨 (Munchkin)</a></li>
+                            <li><a href="#">사바나 (Savannah)</a></li>
+                            <li><a href="#">페르시안 (Persian)</a></li>
+                            <li><a href="#">스노우슈 (Snowshoe)</a></li>
+                            <li><a href="#">스픽스 (Sphynx)</a></li>
+                            <li><a href="#">러시안 블루 (Russian Blue)</a></li>
+                            <li><a href="#">아메리칸 숏헤어 (American Shorthair)</a></li>
+                        </ul>
+                    </article>
+                    <article class="img i1">
+                        <a href="#">인기 많은 고양이</a>
+                    </article>
+                    <article class="img i2">
+                        <a href="#">똑똑한 고양이</a>
+                    </article>
+                </div>
+            </div>
+        </section> 
+        <!-- //imgTextType -->
+        <section id="cardType" class="nexon section">
+            <div class="container">
+                <h2 class="section__h2">반려묘를 키울때 팁</h2>
+                <p class="section__desc">고양이를 키우기 전에 충분한 연구를 하십시오. 고양이의 종류, 건강 문제, 올바른 사료와 함께 건강한 식습관 등을 이해하는 것이 중요합니다.</p>
+                <div class="card__inner">
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="../assets/img/cardType01_01.jpg" alt="입양하기">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">입양하기</h3>
+                            <p class="desc">고양이를 입양하기 전에 보호소나 유기동물 
+                                구조 기관을 방문하여 입양할 고양이를 선택하세요. 건강한 고양이를 선택하고 그들의 성격과 
+                                운동 수준과 맞는지를 확인하십시오.</p>
+                            <a href="#" class="btn">자세히 보기</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="../assets/img/cardType01_02.jpg" alt="입양하기">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">장비 갖추기</h3>
+                            <p class="desc">고양이의 행복과 건강을 위해 장비가 필요합니다. 고양이가 필요로 하는 모든 장비를 준비하세요. 고양이용 화장실, 사료 그릇, 물 그릇, 침대, 
+                                장난감 등이 필요합니다..</p>
+                            <a href="#" class="btn">자세히 보기</a>
+                        </div>
+                    </article>
+                    <article class="card">
+                        <figure class="card__header">
+                            <img src="../assets/img/cardType01_03.jpg" alt="입양하기">
+                        </figure>
+                        <div class="card__body">
+                            <h3 class="title">예방접종</h3>
+                            <p class="desc">고양이도 예방접종을 받아야 합니다. 고양이는 매우 활발한 동물로서 외부세균과 바이러스에 노출될 가능성이 높습니다. 반려동물 병원에서 전문적인 도움을 받으십시오.</p>
+                            <a href="#" class="btn">자세히 보기</a>
+                        </div>
+                    </article>
+                    </div>
+            </div>
+        </section> 
+        <!-- //cardType -->
+        <section id="bannerType" class="nexon section center">
+            <h2 class="blind">배너</h2>
+            <div class="banner__inner">
+                <h3>초보 집사들을 위한 유튜브 교육</h3>
+                <p>처음 고양이를 키우는 사람들을 위한 교육은<br>유튜브를 통해 더욱 자세히 확인하실 수 있습니다.</p>
+                <a href="#">youtube.com/cat</a>
+            </div>
+        </section> 
+        <!-- //bannerType -->
+        <section id="textType" class="nexon section center">
+            <div class="container">
+                <span class="section__small">notice</span>
+                <h2 class="section__h2 mb70">반려묘 키울때 주의할점</h2>
+                <div class="text__inner">
+                    <div class="text t1">
+                        <h3 class="text__title">건강 검진</h3>
+                        <p class="text__desc">고양이는 매우 활발한 동물로서 외부세균과 바이러스에 노출될 가능성이 높습니다.새로운 고양이를 입양하면 즉시 수의사에게 건강 검진을 받게 해야 합니다. </p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                    <div class="text t2">
+                        <h3 class="text__title">충분한 사랑과 관심</h3>
+                        <p class="text__desc">고양이는 충분한 사랑과 관심이 필요합니다. 주인의 사랑과 관심이 고양이의 건강과 행복에 큰 영향을 미칩니다. 따라서 일정한 시간을 투여하여 관심과 사랑을 나눠주어야 합니다..</p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                    <div class="text t3">
+                        <h3 class="text__title">적절한 먹이 제공</h3>
+                        <p class="text__desc">고양이는 적절한 먹이를 제공해야 합니다. 고양이의 나이, 체중, 건강 상태 등을 고려해 알맞은 양의 먹이를 제공하고, 식습관도 지속적으로 관찰하며 필요에 따라 조정해야 합니다.</p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                    <div class="text t4">
+                        <h3 class="text__title">적절한 운동과 활동</h3>
+                        <p class="text__desc">고고양이는 적절한 운동과 활동을 해야 합니다. 고양이 산책용 끈을 이용하여 집 주변을 돌아다니게 하거나, 장난감으로 놀아주는 등 다양한 방법으로 활동을 유도해야 합니다.
+                            </p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                    <div class="text t5">
+                        <h3 class="text__title">스크래칭 포스트 제공</h3>
+                        <p class="text__desc">고양이는 스크래칭을 하기 때문에 스크래칭 포스트를 제공해주어야 합니다. 스크래칭 포스트를 이용하면 가구 등을 파손하지 않고 고양이가 스크래칭을 할 수 있습니다.</p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                    <div class="text t6">
+                        <h3 class="text__title">예방접종과 내부 구충</h3>
+                        <p class="text__desc">고양이의 건강을 유지하기 위해서는 예방접종과 내부 구충을 꼭 시켜야 합니다. 수의사의 조언에 따라 필요한 예방접종과 내부 구충을 받게 해야 합니다.</p>
+                        <a href="#" class="text__btn">더보기</a>
+                    </div>
+                </div>
+            </div>
+        </section> 
+        <!-- //textType -->
+    </main>
+    <!-- //mainType -->
+
+    <footer id="footerType" class="nexon section gray">
+        <div class="container">
+            <h2 class="blind">푸터</h2>
+            <div class="footer__inner">
+                <div class="footer__menu">
+                    <div>
+                        <h3>반려묘 사이트</h3>
+                        <ul>
+                            <li><a href="#">소개하기</a></li>
+                            <li><a href="#">반려묘 이야기</a></li>
+                            <li><a href="#">유기묘 도움주기</a></li>
+                            <li><a href="#">분양받기</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>반려묘 훈련하기</h3>
+                        <ul>
+                            <li><a href="#">기본훈련</a></li>
+                            <li><a href="#">배변훈련하기</a></li>
+                            <li><a href="#">인내심 훈련하기</a></li>
+                            <li><a href="#">스크래칭 훈련하기</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>반려묘 노하우</h3>
+                        <ul>
+                            <li><a href="#">산책하는 법</a></li>
+                            <li><a href="#">목욕 시키는 법</a></li>
+                            <li><a href="#">츄르 종류</a></li>
+                            <li><a href="#">캣타워 종류</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>반려묘 주의점</h3>
+                        <ul>
+                            <li><a href="#">병원가기</a></li>
+                            <li><a href="#">접종 시기 주의점</a></li>
+                            <li><a href="#">홍역주의</a></li>
+                            <li><a href="#">동사무소 신고</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>반려묘 자랑하기</h3>
+                        <ul>
+                            <li><a href="#">소개하기</a></li>
+                            <li><a href="#">반려묘 이야기</a></li>
+                            <li><a href="#">유기묘 도움주기</a></li>
+                            <li><a href="#">사진 만들기</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>이용정보</h3>
+                        <ul>
+                            <li><a href="#">개인정보</a></li>
+                            <li><a href="#">반려묘 정보</a></li>
+                            <li><a href="#">유기묘 신고하기</a></li>
+                            <li><a href="#">반려묘 접종하기</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <address class="footer__right">
+                    2023 이승연 반려묘 사이트 Porfolio is Power<br>All Right Reserved
+                </address>
+            </div>
+       </div>
+    </footer>
+    <!-- //footerType -->
+
+</body>
+</html>

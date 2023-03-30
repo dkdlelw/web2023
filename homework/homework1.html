@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숙제1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .img__wrap {
+            width: 600px;
+            margin: 20px auto;
+           display: flex;
+           flex-wrap: wrap;
+          justify-content: center;
+        }
+        h1 {
+            font-size:1.5rem;
+            text-align:center;
+            margin-bottom:20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="img__wrap">
+        <h1>마우스 오버 이미지 변경</h1>
+        <div class="img1">
+            <img src="../homework/assets/img/i01.jpg" alt="사진1">
+        </div>
+        <div class="img2">
+            <img src="../homework/assets/img/i02.jpg" alt="사진2">
+        </div>
+    </div>
+
+    <script>
+        const imgMouse1 = document.querySelector(".img1");
+        const imgMouse2 = document.querySelector(".img2");
+        imgMouse2.style.display = "none";
+
+        document.querySelectorAll("img").forEach(img => {
+            img.addEventListener("mouseover",() => {
+                imgMouse1.style.display = "none";
+                imgMouse2.style.display = "block";
+            })
+            img.addEventListener("mouseout",() => {
+                imgMouse1.style.display = "block";
+                imgMouse2.style.display = "none";
+            });
+        });
+
+      
+    </script>
+</body>
+</html>

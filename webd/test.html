@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>코딩시험1</title>
+    <title>Document</title>
     <style>
         * {
             margin: 0;
@@ -46,9 +46,9 @@
             justify-content: space-between;
         }
         #notice .not1 {
-            width: 49%;
+            width: 45%;
             border: 1px solid #ccc;
-            padding: 25px 0 5px;
+            padding: 20px 10px;
             position: relative;
         }
         #notice .not1 h3 {
@@ -68,8 +68,12 @@
         }
         #notice .not1 .more {
             position: absolute;
-            right: 30px;
+            right: 10px;
             top: 35px;
+        }
+        #notice .not1 img {
+            width: 20px;
+            margin-top: 2px;
         }
         #notice .not2 {
             width: 49%;
@@ -77,7 +81,7 @@
         #card h2 {
             margin: 20px 0 10px;
         }
-        .card-inner {
+        #card .card-inner {
             display: flex;
             justify-content: space-between;
         }
@@ -107,18 +111,17 @@
 <body>
     <div id="wrap">
         <header id="header">
-            <h1><img src="img/logo.jpg" alt="롯데월드"></h1>
+            <h1><img src="img/logo.jpg" alt="롯데월드 어드벤쳐"></h1>
             <nav>
-                    <ul>
-                        <li><a href="#">즐길거리</a></li>
-                        <li><a href="#">요금/우대혜택</a></li>
-                        <li><a href="#">참여프로그램</a></li>
-                        <li><a href="#">이용가이드</a></li>
-                        <li><a href="#">소통서비스</a></li>
-                    </ul>
+                <ul>
+                    <li><a href="#">즐길거리</a></li>
+                    <li><a href="#">요금/우대혜택</a></li>
+                    <li><a href="#">참여프로그램</a></li>
+                    <li><a href="#">이용가이드</a></li>
+                    <li><a href="#">소통서비스</a></li>
+                </ul>
             </nav>
         </header>
-        <!-- // header -->
         <main>
             <section id="banner">
                 <img src="img/banner.jpg" alt="미라클있수마수">
@@ -132,7 +135,7 @@
                         <li><a href="#">드림스테이지 힘내 미라클</a><span>2022.09.03</span></li>
                         <li><a href="#">드림스테이지 힘내 소주한잔 미라클</a><span>2022.09.03</span></li>
                     </ul>
-                    <a href="#" class="more">더보기</a>
+                    <a href="#" class="more">더보기<img src="img/not.jpg" alt="더보기"></a>
                 </div>
                 <div class="not2">
                     <img src="img/banner02.jpg" alt="온종일 혜택 ON">

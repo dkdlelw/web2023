@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>퀴즈 이펙트07</title>
+    <title>2014년 01월 1회 웹디자인기능사</title>
     
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/quiz.css">
@@ -17,7 +17,7 @@
 </head>
 <body>
     <header id="header">
-        <h1><a href="../javascript14.html">Quiz</a> <em>객관식 확인 CBT 카드 유형</em></h1>
+        <h1><a href="../javascript14.html">Quiz</a> <em>2014년 01월 1회 웹디자인기능사</em></h1>
         <ul>
             <li><a href="quizEffect01.html">1</a></li>
             <li><a href="quizEffect02.html">2</a></li>
@@ -33,7 +33,7 @@
     <main id="main">
         <div class="quiz__wrap__cbt">
             <div class="cbt__header">
-                <h2>2020년 1회 정보처리기능사 기출문제</h2>
+                <h2>2014년 01회 웹디자인기능사 기출문제</h2>
             </div>
             <div class="cbt__conts">
                 <div class="cbt__quiz">
@@ -53,6 +53,7 @@
                         <div class="cbt__desc">객체지향언어는 이다. 객체지향언어는 이다. 객체지향언어는 이다. 객체지향언어는 이다. 객체지향언어는 이다. 객체지향언어는 이다.</div>
                         <div class="cbt__keyword">객체지향언어</div>
                     </div> -->
+                    <div id="image__container"></div>
                 </div>
             </div>
             <div class="cbt__aside">
@@ -107,7 +108,7 @@
 
         //데이터 가져오기
         const dataQuestion = () => {
-            fetch("json/gisa2020_01.json")      //fetch, then은 규칙(json파일 갖고 올거임) res는 변수 이름 (respons) , items도 변수 이름
+            fetch("json/gineungsaWD2014_01.json")      //fetch, then은 규칙(json파일 갖고 올거임) res는 변수 이름 (respons) , items도 변수 이름
             .then(res => res.json())        
             .then(items => {
                 // console.log(items);
@@ -121,6 +122,7 @@
                     console.log(Math.floor(Math.random()*answerChoices.length)+1)
                     answerChoices.splice(formattedQuestion.answer-1,0,item.correct_answer);//정답을 랜덤으로 추가
 
+            
                     //보기를 추가
                     answerChoices.forEach((choice, index) => {
                         formattedQuestion["choice" + (index+1)] = choice;
@@ -138,6 +140,7 @@
                     if(item.hasOwnProperty("desc")){
                         formattedQuestion.desc = item.desc;
                     }
+                   
                     // console.log(formattedQuestion);
                     return formattedQuestion;
                 });

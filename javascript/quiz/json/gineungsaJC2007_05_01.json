@@ -101,8 +101,8 @@
         "subject": "정보처리 기능사",
         "question": " 다음 그림의 논리회로에서 입력 A, B, C에 대한 출력 Y의 값은?",
         "question_img":"gineungsaJC2007_05_02",
-        "correct_answer":"Y = AB + <p style='text-decoration: overline;'>B</p>C",
-        "incorrect_answers": ["Y = A + B + C","Y = A<p style='text-decoration: overline;'>B</p> + BC","Y = A<p style='text-decoration: overline;'>B</p> + <p style='text-decoration: overline;'>B</p>C"],
+        "correct_answer":"Y = AB + <em style='text-decoration: overline;'>B</em>C",
+        "incorrect_answers": ["Y = A + B + C","Y = A<em style='text-decoration: overline;'>B</em> + BC","Y = A<em style='text-decoration: overline;'>B</em> + <em style='text-decoration: overline;'>B</em>C"],
         "desc": "왼쪽위는 단순한 AB 이며 아래쪽은 B'C 이므로 두개를 합하면 AB+B'C가 답입니다."
     },{
         "subject": "정보처리 기능사",

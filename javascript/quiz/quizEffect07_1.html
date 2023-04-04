@@ -91,6 +91,64 @@
                     </div> -->
                 </div>
             </div>
+            <div class="cbt__start">
+                <div class="cbt__modal1">
+                    <h2>기능사 시험 도전하기</h2>
+                    <div class="cbt__choice">
+                        <select name="cbtTime" id="cbtTime">
+                            <option value="gineungsaJC2005_02">정보처리기능사 2005년 2회</option>
+                            <option value="gineungsaJC2005_05">정보처리기능사 2005년 4회</option>
+                            <option value="gineungsaJC2005_05">정보처리기능사 2005년 5회</option>
+                            <option value="gineungsaJC2006_01">정보처리기능사 2006년 1회</option>
+                            <option value="gineungsaJC2006_03">정보처리기능사 2006년 2회</option>
+                            <option value="gineungsaJC2006_03">정보처리기능사 2006년 3회</option>
+                            <option value="gineungsaJC2006_05">정보처리기능사 2006년 5회</option>
+                            <option value="gineungsaJC2007_01">정보처리기능사 2007년 1회</option>
+                            <option value="gineungsaJC2007_02">정보처리기능사 2007년 2회</option>
+                            <option value="gineungsaJC2007_05">정보처리기능사 2007년 5회</option>
+                            <option value="gineungsaJC2008_01">정보처리기능사 2008년 1회</option>
+                            <option value="gineungsaJC2008_02">정보처리기능사 2008년 2회</option>
+                            <option value="gineungsaJC2008_04">정보처리기능사 2008년 4회</option>
+                            <option value="gineungsaJC2008_05">정보처리기능사 2008년 5회</option>
+                            <option value="gineungsaJC2009_01">정보처리기능사 2009년 1회</option>
+                            <option value="gineungsaJC2009_05">정보처리기능사 2009년 5회</option>
+                            <option value="gineungsaJC2010_02">정보처리기능사 2010년 2회</option>
+                            <option value="gineungsaJC2010_05">정보처리기능사 2010년 5회</option>
+                            <option value="gineungsaJC2011_01">정보처리기능사 2011년 1회</option>
+                            <option value="gineungsaJC2011_02">정보처리기능사 2011년 2회</option>
+                            <option value="gineungsaJC2011_04">정보처리기능사 2011년 4회</option>
+                            <option value="gineungsaJC2011_05">정보처리기능사 2011년 5회</option>
+                        </select>
+                        <select name="cbtTime" id="cbtTime">
+                            <option value="gineungsaWD2009_05">웹디자인기능사 2009년 5회</option>
+                            <option value="gineungsaWD2010_01">웹디자인기능사 2010년 1회</option>
+                            <option value="gineungsaWD2010_02">웹디자인기능사 2010년 2회</option>
+                            <option value="gineungsaWD2010_04">웹디자인기능사 2010년 4회</option>
+                            <option value="gineungsaWD2010_05">웹디자인기능사 2010년 5회</option>
+                            <option value="gineungsaWD2011_01">웹디자인기능사 2011년 1회</option>
+                            <option value="gineungsaWD2011_02">웹디자인기능사 2011년 2회</option>
+                            <option value="gineungsaWD2011_04">웹디자인기능사 2011년 4회</option>
+                            <option value="gineungsaWD2011_05">웹디자인기능사 2011년 5회</option>
+                            <option value="gineungsaWD2012_02">웹디자인기능사 2012년 2회</option>
+                            <option value="gineungsaWD2012_04">웹디자인기능사 2012년 4회</option>
+                            <option value="gineungsaWD2012_05">웹디자인기능사 2012년 5회</option>
+                            <option value="gineungsaWD2013_02">웹디자인기능사 2013년 2회</option>
+                            <option value="gineungsaWD2013_04">웹디자인기능사 2013년 4회</option>
+                            <option value="gineungsaWD2013_05">웹디자인기능사 2013년 5회</option>
+                            <option value="gineungsaWD2014_01">웹디자인기능사 2014년 1회</option>
+                            <option value="gineungsaWD2014_04">웹디자인기능사 2014년 4회</option>
+                            <option value="gineungsaWD2014_05">웹디자인기능사 2014년 5회</option>
+                            <option value="gineungsaWD2015_01">웹디자인기능사 2015년 1회</option>
+                            <option value="gineungsaWD2015_03">웹디자인기능사 2015년 3회</option>
+                            <option value="gineungsaWD2015_04">웹디자인기능사 2015년 4회</option>
+                            <option value="gineungsaWD2015_05">웹디자인기능사 2015년 5회</option>
+                            <option value="gineungsaWD2016_01">웹디자인기능사 2016년 1회</option>
+                            <option value="gineungsaWD2016_04">웹디자인기능사 2016년 4회</option>
+                        </select>
+                    </div>
+                    <button class='start__button'>시작하기</button>
+                </div>
+            </div>
         </div>
     </main>
     <!-- //main -->
@@ -105,12 +163,17 @@
         const cbtOmr = document.querySelector(".cbt__omr");
         const cbtSubmit = document.querySelector(".cbt__submit");
         const cbtRest = document.querySelector(".cbt__rest");
-        const cbtLength =  document.querySelector(".cbt__length")
+        const cbtLength =  document.querySelector(".cbt__length");
+        const cbtStart = document.querySelector(".cbt__start");
+        const starButton = document.querySelector(".start__button");
 
         let questionAll = [];               //모든 퀴즈 정보
         let questionLength = 0;             //전체 문제 수
         let questionRest = questionLength;  //남은 문제 수
 
+        starButton.addEventListener("click",() => {
+            cbtStart.style.display = "none";
+        })
 
         //데이터 가져오기
         const dataQuestion = () => {

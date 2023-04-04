@@ -173,11 +173,12 @@
 
         starButton.addEventListener("click",() => {
             cbtStart.style.display = "none";
+            const cbtName = document.querySelector(".cbt__name");
         })
 
         //데이터 가져오기
         const dataQuestion = () => {
-            fetch("json/gineungsaWD2014_01.json")      //fetch, then은 규칙(json파일 갖고 올거임) res는 변수 이름 (respons) , items도 변수 이름
+            fetch("json/gineungsaJC2007_05_01.json")      //fetch, then은 규칙(json파일 갖고 올거임) res는 변수 이름 (respons) , items도 변수 이름
             .then(res => res.json())        
             .then(items => {
                 // console.log(items);
@@ -231,7 +232,7 @@
                 exam.push(`
                     <div class="cbt">
                         <div class="cbt__question"><span>${question.number}</span>. ${question.question}</div>
-                        <div class="cbt__question__img">${question.question_img}</div>
+                        <div class="cbt__question__img"><img src="img/${question.question_img}.jpg" alt=""></div>
                         <div class="cbt__question__desc">${question.question_desc}</div>
                         <div class="cbt__selects">
                             <input type="radio" id="select${number}_1" name="select${number}" value="${number}_1" onclick="answerSelect2(this)">
@@ -262,6 +263,21 @@
             });
             cbtQuiz.innerHTML = exam.join('');
             cbtOmr.innerHTML = omr.join('');
+            const questionDesc = document.querySelectorAll(".cbt__question__desc");
+
+            questionDesc.forEach(el => {
+                if(el.innerHTML == "undefined"){
+                    el.style.display = "none";
+                }
+            });
+            const questionImg = document.querySelectorAll(".cbt__question__img img");
+
+            questionImg.forEach(el => {
+                if(el.innerHTML == "undefined"){
+                    el.style.display = "none";
+                }
+            }); 
+
         }
 
         //정답 확인

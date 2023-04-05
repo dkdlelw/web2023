@@ -2,7 +2,7 @@
     {
         "subject": "정보처리 기능사",
         "question": " 다음에 표시된 진리표가 나타내는 회로는?(단, 입력은 A, B이고 출력은 S(Sum)와 C(Carry) 이다.)",
-        "question_img":"gineungsaJC2007_05_01",
+        "question_img":"gineungsaJC2007_04_01",
         "correct_answer":"반가산기 회로",
         "incorrect_answers": ["AND 회로","OR 회로","전가산기 회로"],
         "desc": "입력이 A,B 2개 이고 출력이 S, C 2개 이므로 반가산기 입니다."
@@ -100,14 +100,14 @@
     },{
         "subject": "정보처리 기능사",
         "question": " 다음 그림의 논리회로에서 입력 A, B, C에 대한 출력 Y의 값은?",
-        "question_img":"gineungsaJC2007_05_02",
+        "question_img":"gineungsaJC2007_04_02",
         "correct_answer":"Y = AB + <em style='text-decoration: overline;'>B</em>C",
         "incorrect_answers": ["Y = A + B + C","Y = A<em style='text-decoration: overline;'>B</em> + BC","Y = A<em style='text-decoration: overline;'>B</em> + <em style='text-decoration: overline;'>B</em>C"],
         "desc": "왼쪽위는 단순한 AB 이며 아래쪽은 B'C 이므로 두개를 합하면 AB+B'C가 답입니다."
     },{
         "subject": "정보처리 기능사",
         "question": " 그림과 같은 논리회로에서 A의 값이 1010, B의 값이 1110일 때 출력 Y의 값은?",
-        "question_img":"gineungsaJC2007_05_03",
+        "question_img":"gineungsaJC2007_04_03",
         "correct_answer":"0100",
         "incorrect_answers": ["1111","1001","1010"],
         "desc": "A의 입력이 반대임을 주의해서 풀어야 합니다..단순한 AND 게이트 입니다."

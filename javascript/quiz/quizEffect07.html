@@ -172,10 +172,12 @@
         const cbtRest = document.querySelector(".cbt__rest");
         const cbtLength = document.querySelector(".cbt__length");
         const cbtViewSubject = document.querySelector(".cbt__view .subject");
+        const cbtViewName = document.querySelector(".cbt__view .name");
         const cbtHeader = document.querySelector(".cbt__header h2");
         const cbtStartBtn = document.querySelector(".cbt__start__btn");
         const cbtStart = document.querySelector(".cbt__start");
         const cbtTime = document.querySelector(".cbt__time");
+        const cbtName = document.querySelector(".cbt__name");
 
         let questionAll = [];                  //모든 퀴즈 정보
         let questionLength = 0;                //전체 문제수
@@ -189,8 +191,12 @@
 
             //시간 설정
             questionTime = setInterval(reduceTime, 1000);
+            
+            // 이름 넣기
+            const cbtViewNameValue = cbtViewName.value;
+            cbtName.innerHTML = cbtViewNameValue;
         }
- 
+
         //데이터 가져오기
         const dataQuestion = (value) => {
             fetch(`https://kebab000.github.io/web2023/gineungsaJSON/${value}.json`)
@@ -397,8 +403,11 @@
                 let minutes = Math.floor(questionTimeRemain / 60);
                 let seconds = questionTimeRemain % 60;
 
-                return minutes + "분 " + seconds + "초";
                 //초의 단위가 한자리 수가 되면 앞에 0을 붙여주기
+                if(seconds < 10) {
+                    seconds = "0" + seconds;
+                }
+                return minutes + "분 " + seconds + "초";
             }
         }
 

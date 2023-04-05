@@ -590,7 +590,8 @@
     width: 50%;
     height: 50vh;
     background-color: #deebfa;
-    border: 8px ridge #cacaca;
+    border: 8px ridge #88cdfb;
+    border-radius: 30px;
 }
 .cbt__modal1 {
     padding: 20px;
@@ -637,9 +638,11 @@
 .cbt__view input {
     border: 1px solid #b1e0ff;
     padding: 2px 10px;
-    font-family: 'PyeongChang';
+    font-family: 'JalpullineunHaru';
+    text-align: center;
     border-radius: 20px;
 }
+
 .cbt__view span {
     position: relative;
 }

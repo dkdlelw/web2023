@@ -59,7 +59,7 @@
                 <div class="cbt__info">
                     <div>
                         <button class="cbt__submit">제출하기</button>
-                        <span class="cbt__time">59분 10초</span>
+                        <span class="cbt__time">59분 59초</span>
                     </div>
                     <div>
                         <div class="cbt__title">수험자 : <em class="cbt__name">이승연</em></div>
@@ -190,7 +190,7 @@
         let questionLength = 0;                //전체 문제수
         let questionRest = questionLength;     //남은 문제수
         let questionTime = "";  
-        let questionTimeRemain = "1000";
+        let questionTimeRemain = "3600";
         let quizScore = 0;                  //점수
 
         //시작하기
@@ -198,7 +198,7 @@
             cbtStart.classList.add("hide"); //모달창 제거
 
             //시간 설정
-            questionTime = setInterval(reduceTime, 1000);
+            questionTime = setInterval(reduceTime, 3600);
             
             // 이름 넣기
             const cbtViewNameValue = cbtViewName.value;

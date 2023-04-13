@@ -116,7 +116,7 @@ body::after {
     z-index: -1;
 }
 body.bg01::after {
-    background: rgba(34, 5, 70, 0.87);
+    background: rgba(85, 69, 104, 0.87);
 }
 body.bg02::after {
     background: rgba(167, 53, 142, 0.87);
@@ -134,7 +134,7 @@ body.bg06::after {
     background: rgba(184, 83, 15, 0.87);
 }
 body.bg07::after {
-    background: rgba(39, 33, 128, 0.87);
+    background: rgba(124, 177, 221, 0.87);
 }
 body.bg08::after {
     background: rgba(109, 13, 45, 0.87);

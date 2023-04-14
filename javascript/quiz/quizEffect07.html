@@ -59,7 +59,7 @@
                 <div class="cbt__info">
                     <div>
                         <button class="cbt__submit">제출하기</button>
-                        <span class="cbt__time">59분 10초</span>
+                        <span class="cbt__time">59분 59초</span>
                     </div>
                     <div>
                         <div class="cbt__title">수험자 : <em class="cbt__name">이승연</em></div>
@@ -151,9 +151,16 @@
                         당신의 이름은 <input type="text" class="name">입니다.<br>
                         당신은 <span class="subject">웹디자인 기능사 시험</span>을 선택했습니다.
                     </div>
-                    <!-- <button class='start__button'>시작하기</button> -->
                     <button class='cbt__start__btn'>시작하기</button>
                 </div>
+            </div>
+            <div class="cbt__end">
+                <div class="cbt__modal2">
+                    <h2>수고하셨습니다!</h2>
+                    <div class="score"></div>
+                    <button class="cbt__end__btn">문제 확인하기</button>
+                </div>
+
             </div>
         </div>
     </main>
@@ -183,14 +190,15 @@
         let questionLength = 0;                //전체 문제수
         let questionRest = questionLength;     //남은 문제수
         let questionTime = "";  
-        let questionTimeRemain = "1000";
+        let questionTimeRemain = "3600";
+        let quizScore = 0;                  //점수
 
         //시작하기
         const startQuiz = () => {
             cbtStart.classList.add("hide"); //모달창 제거
 
             //시간 설정
-            questionTime = setInterval(reduceTime, 1000);
+            questionTime = setInterval(reduceTime, 3600);
             
             // 이름 넣기
             const cbtViewNameValue = cbtViewName.value;
@@ -319,6 +327,7 @@
                 if(numberAnswer == question.answer){
                     console.log("정답입니다.");
                     cbtSelects[number].parentElement.classList.add("good");
+                    quizScore++;
                 } else {
                     console.log("오답입니다.")
                     cbtSelects[number].parentElement.classList.add("bad");
@@ -337,6 +346,10 @@
                     quizDesc[number].classList.remove("hide");
                 }
             });
+            document.querySelector(".score").innerHTML = `점수는 ${Math.ceil((quizScore / questionAll.length) * 100)}점입니다.`;
+            cbtEnd.style.display = "block";
+            clearInterval(questionTime);
+
         }
 
         // 보기 체크
@@ -375,6 +388,14 @@
         //     let selectText = cbtIndex2.options[cbtIndex2.selectedIndex].text;
         // }
 
+        // 모달 창2 없애기
+        const cbtBtn2 = document.querySelector(".cbt__end__btn");
+        const cbtEnd = document.querySelector(".cbt__end");
+
+        cbtBtn2.addEventListener("click", () => {
+            cbtEnd.style.display = "none"; 
+        });
+
         // 문제 선택
         const changeSelect = (e) => {
             let selectValue = e.value;
@@ -409,18 +430,16 @@
                 }
                 return minutes + "분 " + seconds + "초";
             }
-        }
+        };
 
         // 시험 끝
         const endQuiz = () => {
             alert("시험이 끝났습니다")
-        }
+        };
 
         cbtStartBtn.addEventListener("click", startQuiz);
         cbtSubmit.addEventListener("click", answerQuiz);
         // dataQuestion();
-
     </script>
-  
 </body>
 </html>

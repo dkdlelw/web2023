@@ -157,14 +157,14 @@
             //         imageNodes[currentIndex].classList.add("active");
             //     });
             // }
-            // //forEach
+            //forEach
             thumnailNodes.forEach((e, index) => {
-                e.addEventListener("click", function() {
-                    slider.thumnails.querySelector("img.active").classList.remove("active");
-                    thumnailNodes[i].classList.add("active");
+                e.addEventListener("click", function(){
+                    thumnailNodes[currentIndex].classList.remove("active");
+                    thumnailNodes[index].classList.add("active");
 
                     imageNodes[currentIndex].classList.remove("active");
-                    currentIndex = i;
+                    currentIndex = index;
                     imageNodes[currentIndex].classList.add("active");
                 });
             });

@@ -76,7 +76,7 @@
         }
     </style>
 </head>
-<body class="img06 bg07 font09">
+<body class="img10 bg07 font09">
     <header id="header">
         <h1>JavaScript Slider Effect07</h1>
         <p>슬라이드 이펙트 : 썸네일 슬라이드(버튼, 썸네일)</p>
@@ -111,11 +111,11 @@
 
     <script>
         let images = [
-            "img/sliderEffect06-min.jpg",
-            "img/sliderEffect07-min.jpg",
-            "img/sliderEffect08-min.jpg",
-            "img/sliderEffect09-min.jpg",
-            "img/sliderEffect10-min.jpg"
+            "img/sliderEffect01-min.jpg",
+            "img/sliderEffect02-min.jpg",
+            "img/sliderEffect03-min.jpg",
+            "img/sliderEffect04-min.jpg",
+            "img/sliderEffect05-min.jpg"
         ];
 
         function imageSlider(parent, images){
@@ -147,8 +147,19 @@
             thumnailNodes[currentIndex].classList.add("active");
 
             //썸네일 이미지 클릭하기
-            for(let i=0; i<thumnailNodes.length; i++){
-                thumnailNodes[i].addEventListener("click", function(){
+            // for(let i=0; i<thumnailNodes.length; i++){
+            //     thumnailNodes[i].addEventListener("click", function(){
+            //         slider.thumnails.querySelector("img.active").classList.remove("active");
+            //         thumnailNodes[i].classList.add("active");
+
+            //         imageNodes[currentIndex].classList.remove("active");
+            //         currentIndex = i;
+            //         imageNodes[currentIndex].classList.add("active");
+            //     });
+            // }
+            // //forEach
+            thumnailNodes.forEach((e, index) => {
+                e.addEventListener("click", function() {
                     slider.thumnails.querySelector("img.active").classList.remove("active");
                     thumnailNodes[i].classList.add("active");
 
@@ -156,19 +167,7 @@
                     currentIndex = i;
                     imageNodes[currentIndex].classList.add("active");
                 });
-            }
-            //forEach
-            thumnailNodes.forEach(thumnails, index){
-                thumnailNodes[i].addEventListener("click", function(){
-                    slider.thumnails.querySelector("img.active").classList.remove("active");
-                    thumnailNodes[i].classList.add("active");
-
-                    imageNodes[currentIndex].classList.remove("active");
-                    currentIndex = i;
-                    imageNodes[currentIndex].classList.add("active");
-                });
-            }
-
+            });
 
             //왼쪽 버튼 클릭하기
             slider.prevBtn.addEventListener("click", function(){

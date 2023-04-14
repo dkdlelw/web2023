@@ -116,25 +116,25 @@ body::after {
     z-index: -1;
 }
 body.bg01::after {
-    background: rgba(85, 69, 104, 0.87);
+    background: rgba(96, 61, 138, 0.87);
 }
 body.bg02::after {
     background: rgba(167, 53, 142, 0.87);
 }
 body.bg03::after {
-    background: rgba(13, 98, 109, 0.97);
+    background: rgba(97, 157, 165, 0.87);
 }
 body.bg04::after {
-    background: rgba(64, 109, 13, 0.87);
+    background: rgba(47, 55, 93, 0.87);
 }
 body.bg05::after {
-    background: rgba(85, 80, 11, 0.87);
+    background: rgba(158, 158, 73, 0.87);
 }
 body.bg06::after {
     background: rgba(184, 83, 15, 0.87);
 }
 body.bg07::after {
-    background: rgba(124, 177, 221, 0.87);
+    background: rgba(158, 183, 204, 0.87);
 }
 body.bg08::after {
     background: rgba(109, 13, 45, 0.87);

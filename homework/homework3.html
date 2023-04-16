@@ -16,23 +16,21 @@
     </div>
 
     <script>
-        const quotesURL = "http://dummyjson.com/quotes";
+        const updateQuote = (value) => {
+            fetch(`http://dummyjson.com/quotes`)
 
-        function updateQuote() {
-            fetch(quotesURL)
-                .then(response => response.json())
-                .then(data => {
-                    const result = document.querySelector("#result");
-                    const random = Math.floor(Math.random() * 30);  // 0 ~ 29 사이의 수
-                    result.querySelector(".quote").innerHTML = data.quotes[random].quote;
-                    result.querySelector(".author").innerHTML = ` - ${data.quotes[random].author}`;
-                })
-                .catch(error => console.log(error));
+            .then(response => response.json())
+            .then(data => {
+                const result = document.querySelector("#result");
+                const random = Math.floor(Math.random() * 30);  // 0 ~ 29 사이의 수
+                result.querySelector(".quote").innerHTML = data.quotes[random].quote;
+                result.querySelector(".author").innerHTML = ` - ${data.quotes[random].author}`;
+            })
+            .catch(error => console.log(error));
         }
- 
+
         updateQuote();
         setInterval(updateQuote, 10000); 
     </script>
 </body>
-
 </html>

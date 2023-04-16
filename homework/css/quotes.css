@@ -1,43 +1,50 @@
 @import url('https://webfontworld.github.io/gonggames/EsaManru.css');
 @import url('https://webfontworld.github.io/sebang/SebangGothic.css');
+
 body {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    height: 100vh;
-    overflow: hidden;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
 body.bgimg {
-    background-image: url(../assets/img/sky-1-min.jpg);
+  background-image: url(../assets/img/sky-1-min.jpg);
 }
+
 body::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    background:rgba(166, 217, 240, 0.8);
-    z-index: -1;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(166, 217, 240, 0.8);
+  z-index: -1;
 }
+
 body.bgc::after {
-    background:rgba(166, 217, 240, 0.8);
+  background: rgba(166, 217, 240, 0.8);
 }
-  #result {
-    color: #fafdff;
-    padding: 20px;      
-  }  
-  .quote {
-    font-family: "EsaManru";
-    font-size: 2.3rem;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  .author {
-    font-size: 1.5rem;
-    margin-left: 1rem;
-    font-style: italic;
-    font-family: "SebangGothic";
-    text-align: center;
-  }
+
+#result {
+  color: #fafdff;
+  padding: 20px;
+}
+
+.quote {
+  font-family: "EsaManru";
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.author {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  font-style: italic;
+  font-family: "SebangGothic";
+  text-align: center;
+}

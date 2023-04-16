@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로또 번호 생성기</title>
+  <style>
+    @import url('https://webfontworld.github.io/Jalpullineun/JalpullineunHaru.css');
+
+    h1 {
+        font-family: "JalpullineunHaru";
+        color: cornflowerblue;
+    }
+
+    body::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(167, 221, 255, 0.8);
+    z-index: -1;
+    }
+
+    body.bgc::after {
+    background: rgba(166, 217, 240, 0.8);
+    }
+
+    #container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+    }
+    button {
+      width: 200px;
+      padding: 15px;
+      font-size: 1.2em;
+      color: #fff;
+      background-color: rgb(143, 205, 253);
+      border-radius: 30px;
+      border: 2px solid rgb(134, 194, 251);
+      font-family: "JalpullineunHaru";
+    }
+    button:hover {
+        cursor: pointer;
+        background-color: rgb(134, 194, 251);
+    }
+    #result {
+      padding: 20px;
+      font-size: 2.5em;
+      color: #fff;
+      font-family: "JalpullineunHaru";
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    <h1>로또 번호 생성기</h1>   
+    <button>번호 뽑기</button> 
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const result = document.querySelector('#result');
+    const button = document.querySelector('button');
+
+    const luckyNumber = {
+    numberDigit: 6, // 숫자 6개
+    maxNumber: 45, // 최대 숫자 45
+    };
+
+    button.addEventListener("click", () => {
+        let { numberDigit, maxNumber } = luckyNumber;
+        let myNumber = new Set(); // 숫자가 중복되지 않게 저장할 Set 생성
+        while (myNumber.size < numberDigit) { // 중복을 허용하지 않는 Set에 6개의 유일한 숫자가 저장될 때까지 반복
+        myNumber.add(Math.floor(Math.random() * maxNumber) + 1);
+        }
+        result.innerText = `${[...myNumber]}`;  // Set을 Array로 변환
+    });
+  </script>
+</body>
+</html>

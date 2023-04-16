@@ -16,7 +16,7 @@
     </div>
 
     <script>
-        const updateQuote = (value) => {
+        const Quote = (value) => {
             fetch(`http://dummyjson.com/quotes`)
 
             .then(response => response.json())
@@ -29,8 +29,8 @@
             .catch(error => console.log(error));
         }
 
-        updateQuote();
-        setInterval(updateQuote, 10000); 
+        Quote();
+        setInterval(Quote, 10000); 
     </script>
 </body>
 </html>

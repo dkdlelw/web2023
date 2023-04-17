@@ -25,6 +25,7 @@ body::after {
 }
 
 #result {
+    align-items: center;
     background-color: rgba(98, 98, 98, 0.632);
     color: #fafdff;
     padding: 20px;

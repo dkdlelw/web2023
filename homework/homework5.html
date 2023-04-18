@@ -29,7 +29,7 @@
         }
 
         const changeBackgroundImage = () => {
-            const backgroundImageUrl = `https://source.unsplash.com/random/?sky&t=${new Date().getTime()}`;
+            const backgroundImageUrl = `https://source.unsplash.com/random/?sky&t${new Date().getTime()}`;
             const img = new Image();
             img.onload = () => {
                 document.body.style.backgroundImage = `url(${backgroundImageUrl})`;

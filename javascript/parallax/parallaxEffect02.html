@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>페럴렉스 이펙트01</title>
+    <title>페럴렉스 이펙트02</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/parallax.css">
@@ -13,11 +13,11 @@
 
 <body class="img01 bg01 font01">
     <header id="header">
-        <h1>JavaScript Parallax Effect01</h1>
-        <p>페럴렉스 이펙트 : 메뉴 효과</p>
+        <h1>JavaScript Parallax Effect02</h1>
+        <p>페럴렉스 이펙트 : 사이드 메뉴</p>
         <ul>
-            <li class="active"><a href="parallaxEffect01.html">1</a></li>
-            <li><a href="parallaxEffect02.html">2</a></li>
+            <li><a href="parallaxEffect01.html">1</a></li>
+            <li class="active"><a href="parallaxEffect02.html">2</a></li>
             <li><a href="parallaxEffect03.html">3</a></li>
             <li><a href="parallaxEffect04.html">4</a></li>
             <li><a href="parallaxEffect05.html">5</a></li>
@@ -27,7 +27,7 @@
     </header>
     <!-- //header-->
 
-    <nav class="parallax__nav">
+    <nav class="parallax__dot">
         <ul>
             <li class="active"><a href="#section1">메뉴1</a></li>
             <li><a href="#section2">메뉴2</a></li>
@@ -40,6 +40,8 @@
             <li><a href="#section9">메뉴9</a></li>
         </ul>
     </nav>
+    <!-- // parallax__dot -->
+
     <main id="main">
         <div class="parallax__wrap">
             <section id="section1" class="parallax__item">
@@ -132,85 +134,56 @@
             </section>
             <!-- //section9 -->
         </div>
+        <div class="scrollBar">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br>
+        </div>
     </main>
     <!-- //main -->
 
     <aside class="parallax__info">
         <div class="scroll">scrollTop : <span>0</span>px</div>
-        <div class="info">
-            <ul>
-                <li>#section1 offest() : <span class="offset1">0</span>px</li>
-                <li>#section2 offest() : <span class="offset2">0</span>px</li>
-                <li>#section3 offest() : <span class="offset3">0</span>px</li>
-                <li>#section4 offest() : <span class="offset4">0</span>px</li>
-                <li>#section5 offest() : <span class="offset5">0</span>px</li>
-                <li>#section6 offest() : <span class="offset6">0</span>px</li>
-                <li>#section7 offest() : <span class="offset7">0</span>px</li>
-                <li>#section8 offest() : <span class="offset8">0</span>px</li>
-                <li>#section9 offest() : <span class="offset9">0</span>px</li>
-            </ul>
-        </div>
     </aside>
     <!-- //parallax__info -->
 
     <footer id="footer">
         <a href="mailto:1346zany@gmail.com">1346zany@gmail.com</a>
     </footer>
+
     <script>
+        document.querySelectorAll(".parallax__dot li a").forEach(dot => {
+            dot.addEventListener("click", e => {
+                e.preventDefault();
+                document.querySelector(dot.getAttribute("href")).scrollIntoView({behavior: "smooth"});
+            })
+        });
 
-        window.addEventListener("scroll", () => {
-            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
-
-            document.querySelectorAll(".parallax__item").forEach((item, index) => {
-                if (scrollTop >= item.offsetTop - 2) {
-                    document.querySelectorAll(".parallax__nav li").forEach((li) => {
+        window.addEventListener("scroll", ()=>{
+            let scrollTop = window.pageYOffset || window.scrollY;
+           
+            document.querySelector(".parallax__info .scroll span").innerText = parseInt(scrollTop);
+        
+            document.querySelectorAll(".parallax__item").forEach((item, num) => {
+                if(scrollTop > item.offsetTop){
+                    document.querySelectorAll(".parallax__dot li").forEach(li => {
                         li.classList.remove("active");
                     });
-                    document.querySelector(".parallax__nav li:nth-child(" + (index + 1) + ")").classList.add("active");
+                    document.querySelector(".parallax__dot li:nth-child("+(num+1)+")").classList.add("active");
                 }
-            });
-
-            document.querySelectorAll(".parallax__nav li a").forEach(li => {
-                li.addEventListener("click", (e) => {
-                    e.preventDefault();
-                    document.querySelector(li.getAttribute("href")).scrollIntoView({
-                        behavior: "smooth"
-                    })
-                })
             })
-
-            //info
-            document.querySelector(".scroll span").innerText = parseInt(scrollTop);
-
-            // document.querySelector(".info .offset1").innerText = document.getElementById("section1").offsetTop;
-            // document.querySelector(".info .offset2").innerText = document.getElementById("section2").offsetTop;
-            // document.querySelector(".info .offset3").innerText = document.getElementById("section3").offsetTop;
-            // document.querySelector(".info .offset4").innerText = document.getElementById("section4").offsetTop;
-            // document.querySelector(".info .offset5").innerText = document.getElementById("section5").offsetTop;
-            // document.querySelector(".info .offset6").innerText = document.getElementById("section6").offsetTop;
-            // document.querySelector(".info .offset7").innerText = document.getElementById("section7").offsetTop;
-            // document.querySelector(".info .offset8").innerText = document.getElementById("section8").offsetTop;
-            // document.querySelector(".info .offset9").innerText = document.getElementById("section9").offsetTop;
-
-            //for
-            // for(i=1; i<=9; i++){
-            //     document.querySelector(".info .offset"+i).innerText = document.getElementById("section" +i).offsetTop;
-            // }
-
-            //forEach
-            document.querySelectorAll(".info li").forEach((e, i) => {
-                document.querySelector(".info .offset" + (i + 1)).innerText = document.getElementById("section" + (i + 1)).offsetTop;
-            })
-            //for in
-            const infoList = document.querySelectorAll(".info li");
-            for (let i in infoList) {
-                document.querySelector(".info .offset" + (parseInt(i) + 1)).innerText = document.getElementById("section" + (parseInt(i) + 1)).offsetTop;
-            }
-            //for of
-            for (const [i, el] of document.querySelectorAll(".info ul li span").entries()){
-                el.innerHTML = document.getElementById("section"+(parseInt(i)+1)).offsetTop;
-            }
         });
+
+        // window.scroll(0, 10000);
+        // window.scroll({left:100, top: 4000});
+        // window.scroll({left:100, top: 4000, behavior: "smooth"});
+
+        // window.scrollTo(0, 1000);
+        // window.scrollTo({left:0, top: 1000});
+        // window.scrollTo({left:0, top: 1000, behavior: "smooth"});
+
+        // window.scrollBy(0, 1000);
+        // window.scrollBy({left:0, top: 1000});
+        // window.scrollBy({left:0, top: 1000, behavior: "smooth"});
     </script>
 </body>
 

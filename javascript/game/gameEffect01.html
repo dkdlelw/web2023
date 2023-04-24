@@ -57,13 +57,11 @@
                 $("#header").attr("class", "red");
             },
             drag: function() {
-                $(".info").html("지금은 <span style='color:rgba(220, 20, 60, 0.76)'>빨간색</span> 폴더를 드래그하고 있습니다.");
+                $(".info").html("현재 <span style='color:rgba(220, 20, 60, 0.76)'>빨간색</span> 폴더를 드래그하고 있습니다.");
                 $("#header").addClass("red");
             },
             stop: function() {
-                $(".info").html("드래그가 끝났습니다.");
-                setTimeout(os,3000);
-                setTimeout(classRemove,3000);
+                $(".info").html("드래그를 멈추었습니다.");
             }
         });
         $(".icon2").draggable({ 
@@ -73,13 +71,11 @@
                 $(".cursor img").attr("src", "img/game_mouse02.png");
                 $("#header").attr("class", "blue");
             },drag: function() {
-                $(".info").html("지금은 <span style='color:rgba(100, 148, 237, 0.76)'>파랑색</span> 폴더를 드래그하고 있습니다.");
+                $(".info").html("현재 <span style='color:rgba(100, 148, 237, 0.76)'>파랑색</span> 폴더를 드래그하고 있습니다.");
                 $("#header").addClass("blue");
             },
             stop: function() {
-                $(".info").html("드래그가 끝났습니다.");
-                setTimeout(os,3000);
-                setTimeout(classRemove,3000);
+                $(".info").html("드래그를 멈추었습니다.");
             }
         });
         $(".icon3").draggable({ 
@@ -91,13 +87,11 @@
 
             },
             drag: function() {
-                $(".info").html("지금은 <span style='color:rgba(168, 247, 65, 0.76)'>초록색</span> 폴더를 드래그하고 있습니다.");
+                $(".info").html("현재 <span style='color:rgba(168, 247, 65, 0.76)'>초록색</span> 폴더를 드래그하고 있습니다.");
                 $("#header").addClass("green");
             },
             stop: function() {
-                $(".info").html("드래그가 끝났습니다.");
-                setTimeout(os,3000);
-                setTimeout(classRemove,3000);
+                $(".info").html("드래그를 멈추었습니다.");
             }
         });
         $(".icon4").draggable({ 
@@ -109,13 +103,11 @@
 
             },
             drag: function() {
-                $(".info").html("지금은 <span style='color:rgba(247, 250, 54, 0.76)'>노란색</span> 폴더를 드래그하고 있습니다.");
+                $(".info").html("현재 <span style='color:rgba(247, 250, 54, 0.76)'>노란색</span> 폴더를 드래그하고 있습니다.");
                 $("#header").addClass("yellow");
             },
             stop: function() {
-                $(".info").html("드래그가 끝났습니다.");
-                setTimeout(os,3000);
-                setTimeout(classRemove,3000);
+                $(".info").html("드래그를 멈추었습니다.");
             }
         });
 

@@ -15,7 +15,7 @@
         <img src="img/game_mouse02.png" alt>
     </div>
     <header id="header">
-        <h1>CYBER GAME WORLD</h1>
+        <h1>👾CYBER GAME WORLD👾</h1>
         <div class="time">2023년 4월 24일 09시 30분 29초</div>
     </header>
 
@@ -56,6 +56,15 @@
                 $(".cursor img").attr("src", "img/game_mouse01.png");
                 $("#header").attr("class", "red");
             },
+            drag: function() {
+                $(".info").html("지금은 <span style='color:rgba(220, 20, 60, 0.76)'>빨간색</span> 폴더를 드래그하고 있습니다.");
+                $("#header").addClass("red");
+            },
+            stop: function() {
+                $(".info").html("드래그가 끝났습니다.");
+                setTimeout(os,3000);
+                setTimeout(classRemove,3000);
+            }
         });
         $(".icon2").draggable({ 
             containment: ".icon__box", scroll: false,
@@ -63,7 +72,15 @@
             start: function() {
                 $(".cursor img").attr("src", "img/game_mouse02.png");
                 $("#header").attr("class", "blue");
+            },drag: function() {
+                $(".info").html("지금은 <span style='color:rgba(100, 148, 237, 0.76)'>파랑색</span> 폴더를 드래그하고 있습니다.");
+                $("#header").addClass("blue");
             },
+            stop: function() {
+                $(".info").html("드래그가 끝났습니다.");
+                setTimeout(os,3000);
+                setTimeout(classRemove,3000);
+            }
         });
         $(".icon3").draggable({ 
             containment: ".icon__box", scroll: false,
@@ -73,6 +90,15 @@
                 $("#header").attr("class", "green");
 
             },
+            drag: function() {
+                $(".info").html("지금은 <span style='color:rgba(168, 247, 65, 0.76)'>초록색</span> 폴더를 드래그하고 있습니다.");
+                $("#header").addClass("green");
+            },
+            stop: function() {
+                $(".info").html("드래그가 끝났습니다.");
+                setTimeout(os,3000);
+                setTimeout(classRemove,3000);
+            }
         });
         $(".icon4").draggable({ 
             containment: ".icon__box", scroll: false,
@@ -82,6 +108,15 @@
                 $("#header").attr("class", "yellow");
 
             },
+            drag: function() {
+                $(".info").html("지금은 <span style='color:rgba(247, 250, 54, 0.76)'>노란색</span> 폴더를 드래그하고 있습니다.");
+                $("#header").addClass("yellow");
+            },
+            stop: function() {
+                $(".info").html("드래그가 끝났습니다.");
+                setTimeout(os,3000);
+                setTimeout(classRemove,3000);
+            }
         });
 
         window.onload = function(){
@@ -93,33 +128,40 @@
                 })
             });
             
-            printTime()   //오른쪽 상단 시간
-            printAgent();   //하단 중앙
-        }
-        function printTime() {
-            const clock = document.querySelector(".time");
+            function printTime() {
             const now = new Date();
-            let hour = now.getHours();
-            let minute = now.getMinutes();
-            let second = now.getSeconds();
-            if (hour > 12) hour = hour - 12;
-            if (hour < 10) hour = `0${hour}`;
-            if (minute < 10) minute = `0${minute}`;
-            if (second < 10) second = `0${second}`;
-            const nowTime =
-                now.getFullYear() + "년 " + (now.getMonth() + 1) + "월 " +
-                now.getDate() +
-                "일 " +
-                hour +
-                ":" +
-                minute +
-                ":" +
-                second;
-            clock.innerText = nowTime;
-            setTimeout("printTime()", 1000);
+            const year = now.getFullYear();
+            const month = now.getMonth() + 1;
+            const date = now.getDate();
+            const hour = now.getHours();
+            const minute = now.getMinutes();
+            const second = now.getSeconds();
+            const timeString = `${year}년 ${month}월 ${date}일 ${hour} : ${minute}: ${second}`;
+            $(".time").text(timeString);
+            setTimeout(printTime, 1000); // 1초마다 업데이트
+            }
+            $(document).ready(function() {
+                printTime();
+            });   //오른쪽 상단 시간
+            // printAgent();   //하단 중앙
         }
-
         // $( "#draggable3" ).draggable({ containment: "#containment-wrapper", scroll: false });
+
+        //운영체제
+        const os = navigator.userAgent.toLowerCase();
+        const screenWidth = window.innerWidth;
+        const screenHeight = window.innerHeight;
+        const Info = document.querySelector(".info");
+
+        if(os.indexOf("macintosh") > -1){
+            Info.innerHTML = "현재 맥을 사용하고 있으며, 화면 크기는" + screenWidth + "*" + screenHeight + "입니다. "
+        } else if(os.indexOf("windows") > -1){
+            Info.innerHTML = "현재 윈도우를 사용하고 있으며, 화면 크기는" + screenWidth + "*" + screenHeight + "입니다. "
+        } else if(os.indexOf("iphone") > -1){
+            Info.innerHTML = "현재 아이폰을 사용하고 있으며, 화면 크기는" + screenWidth + "*" + screenHeight + "입니다. "
+        } else if(os.indexOf("android") > -1){
+            Info.innerHTML = "현재 안드로이드를 사용하고 있으며, 화면 크기는" + screenWidth + "*" + screenHeight + "입니다. "
+        }
     </script>
 </body>
 </html>

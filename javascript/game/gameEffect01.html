@@ -15,7 +15,7 @@
         <img src="img/game_mouse02.png" alt>
     </div>
     <header id="header">
-        <h1>WEBS GAME WORLD</h1>
+        <h1>CYBER GAME WORLD</h1>
         <div class="time">2023년 4월 24일 09시 30분 29초</div>
     </header>
 
@@ -53,28 +53,34 @@
             containment: ".icon__box", scroll: false,
             
             start: function() {
-                $(".cursor img").attr("src", "img/game_mouse01.png")
+                $(".cursor img").attr("src", "img/game_mouse01.png");
+                $("#header").attr("class", "red");
             },
         });
         $(".icon2").draggable({ 
             containment: ".icon__box", scroll: false,
             
             start: function() {
-                $(".cursor img").attr("src", "img/game_mouse02.png")
+                $(".cursor img").attr("src", "img/game_mouse02.png");
+                $("#header").attr("class", "blue");
             },
         });
         $(".icon3").draggable({ 
             containment: ".icon__box", scroll: false,
             
             start: function() {
-                $(".cursor img").attr("src", "img/game_mouse03.png")
+                $(".cursor img").attr("src", "img/game_mouse03.png");
+                $("#header").attr("class", "green");
+
             },
         });
         $(".icon4").draggable({ 
             containment: ".icon__box", scroll: false,
             
             start: function() {
-                $(".cursor img").attr("src", "img/game_mouse04.png")
+                $(".cursor img").attr("src", "img/game_mouse04.png");
+                $("#header").attr("class", "yellow");
+
             },
         });
 
@@ -87,8 +93,30 @@
                 })
             });
             
-            function printTime()   //오른쪽 상단 시간
+            printTime()   //오른쪽 상단 시간
             printAgent();   //하단 중앙
+        }
+        function printTime() {
+            const clock = document.querySelector(".time");
+            const now = new Date();
+            let hour = now.getHours();
+            let minute = now.getMinutes();
+            let second = now.getSeconds();
+            if (hour > 12) hour = hour - 12;
+            if (hour < 10) hour = `0${hour}`;
+            if (minute < 10) minute = `0${minute}`;
+            if (second < 10) second = `0${second}`;
+            const nowTime =
+                now.getFullYear() + "년 " + (now.getMonth() + 1) + "월 " +
+                now.getDate() +
+                "일 " +
+                hour +
+                ":" +
+                minute +
+                ":" +
+                second;
+            clock.innerText = nowTime;
+            setTimeout("printTime()", 1000);
         }
 
         // $( "#draggable3" ).draggable({ containment: "#containment-wrapper", scroll: false });

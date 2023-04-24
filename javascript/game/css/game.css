@@ -28,6 +28,18 @@ body {
     justify-content: space-between;
     font-size: 14px;
 }
+#header.red {
+    background-color: rgba(220, 20, 60, 0.685);
+}
+#header.blue {
+    background-color: rgba(100, 148, 237, 0.685);
+}
+#header.green {
+    background-color: rgba(168, 247, 65, 0.76);
+}
+#header.yellow {
+    background-color: rgba(247, 250, 54, 0.822);
+}
 #header h1 {
     font-size: 14px;
     line-height: 1;

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/bg.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/music.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="cursor">
@@ -38,6 +40,50 @@
                 <span>뮤직 듣기</span>
             </div>
         </div>
+
+        <!-- 뮤직 플레이어 -->
+        <div class="music__wrap">
+            <div class="music__inner">
+                <div class="music__header">
+                    <span class="left"></span>
+                    <h2>MUSIC PLAY</h2>
+                    <span class="right"></span>
+                </div>
+                <div class="music__contents">
+                    <div class="music__view">
+                        <div class="image">
+                            <img src="img/music_view01.png" alt="음악">
+                        </div>
+                    </div>
+                    <div class="music__control">
+                        <div class="title">
+                            <h3>pixel Affection</h3>
+                            <p>yeule</p>
+                        </div>
+                        <div class="progress">
+                            <div class="bar">
+                                <audio src="audio/Old World Saga - Hanu Dixit.mp3"></audio>
+                            </div>
+                            <div class="timer">
+                                <span class="currnet">0:00</span>
+                                <span class="duration">3:55</span>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <span>전체 반복</span>
+                            <span>이전곡 재생</span>
+                            <span>재생</span>
+                            <span>다음곡 재생</span>
+                            <span>재생 목록</span>
+                            <!-- <span>한곡 반복</span>
+                            <span>랜덤 반복</span>
+                            <span>정지 반복</span> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="music__footer"></div>
+            </div>
+        </div>
     </main>
 
     <footer id="footer">
@@ -47,7 +93,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    
+    <script src="js/music.js"></script>
+
     <script>
         $(".icon1").draggable({ 
             containment: ".icon__box", scroll: false,
@@ -120,19 +167,32 @@
                 })
             });
             
+            // function printTime(){
+            //     const time = document.querySelector(".time");
+            //     const now = new Date();
+                 
+                
+            //     time.innerHTML =  clock.innerHTML = now.getFullYear() + "년 " +(now.getMonth()+1) + "월 " + now.getDate() + "일 " + now.getHours() + "시 " + now.getMinutes() + "분 " 
+            //     setTimeout("printTime()", 1000);
+            // }
+
+            // function printAgent(){
+                
+            // }
+
             function printTime() {
-            const now = new Date();
-            const year = now.getFullYear();
-            const month = now.getMonth() + 1;
-            const date = now.getDate();
-            const hour = now.getHours();
-            const minute = now.getMinutes();
-            const second = now.getSeconds();
-            const timeString = `${year}년 ${month}월 ${date}일 ${hour} : ${minute}: ${second}`;
-            $(".time").text(timeString);
-            setTimeout(printTime, 1000); // 1초마다 업데이트
+                const now = new Date();
+                const year = now.getFullYear();
+                const month = now.getMonth() + 1;
+                const date = now.getDate();
+                const hour = now.getHours();
+                const minute = now.getMinutes();
+                const second = now.getSeconds();
+                const timeString = `${year}년 ${month}월 ${date}일 ${hour} : ${minute}`;
+                $(".time").text(timeString);
+                setTimeout(printTime, 1000);
             }
-            $(document).ready(function() {
+            $(document).ready(function () {
                 printTime();
             });   //오른쪽 상단 시간
             // printAgent();   //하단 중앙

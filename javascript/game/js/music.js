@@ -3,12 +3,12 @@ const allMusic = [
         name : "1.PixelAffection",
         artist : "Yeule",
         img: "music_view01",
-        audio : "Pixel Affection"
+        audio : "music_audio01"
     }, {
         name : "2.The Future is Now",
         artist : "POiSON GiRL FRiEND",
         img: "music_view02",
-        audio : "The Future is Now"
+        audio : "music_audio02"
     }, {
         name : "3.음악제목",
         artist : "Yeule",
@@ -57,7 +57,8 @@ const musicName = musicWrap.querySelector(".music__control .title h3");
 const musicArtist = musicWrap.querySelector(".music__control .title p");
 const musicView = musicWrap.querySelector(".music__view .image img");
 const musicAudio = musicWrap.querySelector("#main-audio");
-let musicIndex = 1;     //현재 음악 인덱스
+let musicIndex = 2;     //현재 음악 인덱스
+
 // 음악 재생
 const loadMusic = (num) => {
     musicName.innerText = allMusic[num-1].name;             //뮤직 이름

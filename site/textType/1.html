@@ -1,0 +1,66 @@
+.text__wrap {
+    background-color: #F6F8FD;
+}
+.text__inner {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    flex-wrap: wrap;
+}
+.text__inner .text {
+    width: 32%;
+    background-color: #fff;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.text__desc {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 150%;
+    min-height: 220px;
+    border-bottom: 1px solid #F4F4F4;
+}
+.text__info {
+    padding: 25px 0 25px 65px;
+    border-bottom: 1px solid #F4F4F4;
+    position: relative;
+}
+.text__info h3 {
+    font-size: 26px;
+}
+.text__info h3::before {
+    content: '';
+    width: 54px;
+    height: 54px;
+    background: #FFEAEA url("data:image/svg+xml,%3Csvg width='33' height='31' viewBox='0 0 33 31' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.0802 19.4233C19.8824 20.532 18.2581 21.1549 16.5645 21.1549C14.8709 21.1549 13.2466 20.532 12.0488 19.4233M11.7742 12.2851H11.7902M21.3548 12.2851H21.3708M30.9355 15.2421C30.9355 16.9895 30.5638 18.7199 29.8416 20.3343C29.1193 21.9487 28.0608 23.4156 26.7263 24.6513C25.3919 25.8869 23.8076 26.8671 22.064 27.5358C20.3205 28.2045 18.4517 28.5487 16.5645 28.5487C14.6773 28.5487 12.8085 28.2045 11.065 27.5358C9.32141 26.8671 7.73717 25.8869 6.4027 24.6513C5.06823 23.4156 4.00968 21.9487 3.28747 20.3343C2.56526 18.7199 2.19354 16.9895 2.19354 15.2421C2.19354 11.713 3.70762 8.32837 6.4027 5.8329C9.09778 3.33743 12.7531 1.93549 16.5645 1.93549C20.3759 1.93549 24.0312 3.33743 26.7263 5.8329C29.4214 8.32837 30.9355 11.713 30.9355 15.2421Z' stroke='%234857EC' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat center ;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    border-radius: 50%;
+}
+.text__info em {
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 300;
+}
+.text__info .star span  {
+    width: 16px;
+    height: 16px;
+    background-color: yellow;
+    display: inline-block;
+}
+.text__info .star .fill {}
+.text__btn {
+    text-align: center;
+    padding-top: 20px;
+}
+.text__btn a {
+    background-color: #4857EC;
+    color: #fff;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 50px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}

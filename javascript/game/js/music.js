@@ -3,12 +3,12 @@ const allMusic = [
         name : "1.PixelAffection",
         artist : "Yeule",
         img: "music_view01",
-        audio : "music_audio01"
+        audio : "Pixel Affection"
     }, {
         name : "2.The Future is Now",
         artist : "POiSON GiRL FRiEND",
         img: "music_view02",
-        audio : "music_audio01"
+        audio : "The Future is Now"
     }, {
         name : "3.음악제목",
         artist : "Yeule",

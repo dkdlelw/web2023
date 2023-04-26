@@ -58,7 +58,7 @@ const musicArtist = musicWrap.querySelector(".music__control .title p");
 const musicView = musicWrap.querySelector(".music__view .image img");
 const musicAudio = musicWrap.querySelector("#main-audio");
 const musicPlay = musicWrap.querySelector("#control-play");
-let musicIndexd = 4; // 현재음악 인덱스
+let musicIndexd = 1; // 현재음악 인덱스
 // 음악재생
 const loadMusic = (num) => {
     musicName.innerText = allMusic[num-1].name;  //음악 이름

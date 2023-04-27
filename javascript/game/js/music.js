@@ -35,8 +35,8 @@ const allMusic = [
         img: "music_view07",
         audio : "music_audio07"
     }, {
-        name : "8.Monopoly",
-        artist : "EASYFUN",
+        name : "8.i9bonsai",
+        artist : "Mixd Up",
         img: "music_view08",
         audio : "music_audio08"
     }, {

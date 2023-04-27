@@ -1,10 +1,12 @@
 @import url('https://webfontworld.github.io/uto123RF/Uto123RF.css');
+@import url('https://webfontworld.github.io/gonggames/EsaManru.css');
+@import url('https://webfontworld.github.io/sebang/SebangGothic.css');
 /* reset */
 * {
     margin: 0;
     padding: 0;
     color: #fff;
-    font-family: "Uto123RF";
+    font-family: "SebangGothic";
 }
 *, *::before, *::after {
     box-sizing: border-box;

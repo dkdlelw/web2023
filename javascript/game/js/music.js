@@ -119,7 +119,7 @@ musicAudio.addEventListener("timeupdate", e => {
         let totalSec = Math.floor(audioDuration % 60);
         if(totalSec < 10) totalSec = `0${totalSec}`
         musicProgressDuration.innerText = `${totalMin}:${totalSec}`
-    })
+    });
     //진행시간 
     let currentMin = Math.floor(currentTime / 60);
     let currentSec = Math.floor(currentTime % 60);
@@ -133,7 +133,7 @@ musicProgress.addEventListener("click", (e) => {
     let clickedOffsetX = e.offsetX; //진행바를 기준으로 측정되는 X좌표값
     let songDuration = musicAudio.duration; //오디오 전체 길이
 
-    //백분위로 노눈 숫자에 다시 전체 길이를 곱해서 현재 재생값으로 바꿈
+    //백분위로 나눈 숫자에 다시 전체 길이를 곱해서 현재 재생값으로 바꿈
     musicAudio.currentTime = (clickedOffsetX / progressWidth) * songDuration;
     
 })
@@ -146,12 +146,11 @@ musicPlay.addEventListener("click", () => {
 //이전곡 버튼 클릭
 musicPrevBtn.addEventListener("click", () => {
     prevMusic();
-})
+});
 //다음곡 버튼 클릭
 musicNextBtn.addEventListener("click", () => {
     nextMusic();
-})
+});
 window.addEventListener("load", () => {
     loadMusic(musicIndex);
-    console.log(musicIndex);
 });

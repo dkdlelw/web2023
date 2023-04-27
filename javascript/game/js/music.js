@@ -91,7 +91,7 @@ const pauseMusic = () => {
 }
 //이전곡 듣기  
 const prevMusic = () => {
-    musicIndex == 1 ?  musicIndex == allMusic.length : musicIndex--;
+    musicIndex == 1 ? musicIndex = allMusic.length : musicIndex--;
     loadMusic(musicIndex);
     playMusic();
 }

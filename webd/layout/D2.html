@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #aside {
+            width: 200px;
+            height: 650px;
+            background-color: #1234;
+        }
+        #aside h1 {
+            width: 100%;
+            height: 100px;
+            background-color: #456;
+        }
+        #aside nav {
+            width: 100%;
+            height: 550px;
+            background-color: #aaa654;
+        }
+        #main {
+            width: calc(100% - 200px);
+            height: 650px;
+            background-color: #ccc;
+        }   
+        #slider__wrap {
+            height: 400px;
+            background-color: #654;
+            display: flex;
+        }
+        #slider {
+            width: calc(100% - 230px);
+            height: 100%;
+        }
+        #banner {
+            width: 230px;
+            height: 100%;
+            background-color: #000;
+        }
+        .contents {
+          
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #555;
+            display: flex;
+        }
+        .flogo {
+            width: 200px;
+            height: 100%;
+            background-color: #999;
+        }
+        .copyright {
+            width: calc(100% - 430px);
+            height: 100px;
+            background-color: #888;
+        }
+        .fmsite {
+            width: 230px;
+            height: 100%;
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+           <h1></h1>
+           <nav></nav>
+        </aside>
+        <main id="main">
+            <div id="slider__wrap">
+                <div id="slider"></div>
+                <div id="banner"></div>
+            </div>
+            <div id="contents">
+                <div class="notice"></div>
+                <div class="gallery"></div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="flogo"></div>
+            <div class="copyright"></div>
+            <div class="fmsite"></div>
+        </footer>
+    </div>
+</body>
+</html>

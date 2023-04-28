@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코딩시험</title>
+
+    <link rel="stylesheet" href="css/cookit.css">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1><img src="img/logo.jpg" alt="logo"></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">COOKIT소개</a></li>
+                    <li><a href="#">COOKIT메뉴</a></li>
+                    <li><a href="#">리뷰</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">MY쿡킷</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- header -->
+        <main>
+            <section id="slider__wrap">
+                <div class="slider__inner">
+                    <div class="slider__img">
+                        <div class="slider"><img src="img/banner01.jpg" alt="banner01"></div>
+                        <div class="slider"><img src="img/banner02.jpg" alt="banner02"></div>
+                        <div class="slider"><img src="img/banner03.jpg" alt="banner03"></div>
+                        <div class="slider"><img src="img/banner04.jpg" alt="banner04"></div>
+                        <div class="slider"><img src="img/banner05.jpg" alt="banner05"></div>
+                    </div>
+                </div>
+            </section>
+            <section id="content">
+                <div class="cont1">
+                    <h3>우리집도 COOKIT 배송이 되나요?</h3>
+                    <p>배송이 가능한지 알려드려요</p>
+                    <strong><img src="img/icon1.jpg" alt="위치">배송지 검색</strong>
+                </div>
+                <div class="cont2">
+                    <h3>7월 30일(화)에 받을 수 있어요</h3>
+                    <p>오전 7까지 주문하시면 다음날 배송됩니다.</p>
+                    <strong><img src="img/icon2.jpg" alt="위치">63:28:32 <em>남은시간</em></strong>
+                </div>
+            </section>
+            <section id="best">
+                <h1>실시간 베스트 | <span> 생생한 리뷰</span></h1>
+                <div class="best__inner">
+                    <div>
+                        <img src="img/best1.jpg" alt="평양식 어복쟁반">
+                        <strong>평양식 어복쟁반 <br>33,800원 <em>/3인분</em></strong>
+                    </div>
+                    <div>
+                        <img src="img/best2.jpg" alt="새우주꾸미삼겹살">
+                        <strong>새우주꾸미삼겹살<br>29,800원 <em>/3인분</em></strong>
+                    </div>
+                    <div>
+                        <img src="img/best3.jpg" alt="방풍나물 아귀찜">
+                        <strong>방풍나물 아귀찜 <br>32,800원 <em>/3인분</em></strong>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- main -->
+    </div>
+    <footer id="footer">
+        <div class="footer__wrap">
+            <h1><img src="img/flogo.jpg" alt="flogo"></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">법적고지</a></li>
+                    <li><a href="#">사업자정보 확인</a></li>
+                </ul>
+            </nav>
+            <address>
+                씨제이제일제당(주) | 대표자:신현재<br>
+                주소:서울 중구 동호로 330 CJ제일제당 센터 (우)04560 | 사업자등록번호:104-86-09535<br>
+                통신판매업신고 중구 제07767호 | 개인정보보호책임자:류화정
+            </address>
+        </div>
+    </footer>
+    <!-- footer -->
+
+    <script>
+    const sliderWrap = document.querySelector("#slider__wrap");
+    const sliderImg = sliderWrap.querySelector(".slider__img");     //보여지는 영역
+    const sliderInner = sliderWrap.querySelector(".slider__inner"); //움직이는 영역
+    const slider = sliderWrap.querySelectorAll(".slider");          //개별 이미지
+
+    let currentIndex = 0;               //현재 보이는 이미지
+    let sliderCount = slider.length;    //전체 이미지 갯수
+    let sliderInterval = 1000;          //이미지 변경 간격 시간
+
+
+    sliderImg.style.transition = "all 0.6s"
+
+    setInterval(() => {
+        currentIndex = (currentIndex + 1) % sliderCount;    //1 2 3 4 0 1 2 3 4 0
+
+        console.log(currentIndex);
+
+        sliderImg.style.transform = "translateX("+ -1000 * currentIndex + "px)";
+    }, sliderInterval);
+    </script>
+</body>
+</html>

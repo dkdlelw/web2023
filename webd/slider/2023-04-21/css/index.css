@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: #000;
+    list-style: none;
+}
+#wrap {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+}
+#aside  {
+    padding: 20px;
+    width: 200px;
+}
+#aside h1 img {
+    width: 150px;
+}
+#aside h2 {
+    margin-top: 40px;
+    color: rgb(35, 94, 255);
+    left: 30px;
+}
+#aside ul {
+    list-style: none;
+    text-align: left;
+}
+#aside li a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    padding: 10px;
+}
+nav ul li {
+    width: 90%;
+    display: inline-block;
+    border-bottom: 1px solid #ccc; /* 회색선 추가 */
+    padding: 0 10px;
+}
+  
+#main {
+    width: 800px;
+}
+#slider__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+    overflow: hidden;
+}
+.slider__inner {
+    position: relative;
+    height: 450px;
+    vertical-align: top;
+    transform: translateY(-300%);
+}
+
+.slider { 
+    position: relative;
+    height: 450px;
+}
+.slider img {
+    height: 450px;
+}
+#service {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#service h1 span {
+    color: #a1a1a1;
+}
+.service__inner {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 500;
+    width: 800px;
+}
+.service__inner > div {
+    margin-top: 30px;
+    padding-left: 30px;
+}
+.service__inner img {
+    width: 100px;
+}
+.service__inner h4 {
+   font-size: 15px;
+   letter-spacing: normal;
+}
+.notice__inner {
+    display: flex;
+    background: #eaeaeb;
+}
+.notice__inner > div {
+    width: 50%;
+    height: 250px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    margin: 20px;
+}
+.notice__inner h3 {
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+}
+.notice__inner img {
+    width: 100px;
+    margin-left: 60px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.notice__inner ul {
+    margin-left: 30px;
+}
+.notice__inner li {
+    font-size: 10px;
+    line-height: 20px;
+    color: #5c5c5c;
+}
+#footer {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+}
+.footer__inner {
+    margin-top: 30px;
+    width: 1000px;
+    background-color: #eef4fcea;
+    display: flex;
+    height: 150px;
+}
+#footer h1 img {
+    height: 150px;
+}
+#footer address {
+    margin: 40px;
+    font-style: normal;
+    margin-left: 20px;
+}
+#footer address strong {
+    display: block;
+    padding-top: 50px;
+    color: #666;
+}
+.footer__social {
+    display: flex;
+    margin-top: 10px;
+    padding-left: 80px;
+}
+.footer__social > div img {
+    margin-top: 30px;
+    width: 80px;
+    height: 60px;
+}

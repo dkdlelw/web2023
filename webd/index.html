@@ -99,7 +99,7 @@
     </div>
     <script>
 
-document.querySelectorAll("#nav ul li").forEach(li => {
+        document.querySelectorAll("#nav ul li").forEach(li => {
             li.addEventListener("click", e => {
                 e.preventDefault();
                 let href = li.querySelector("a").getAttribute("href");
@@ -109,8 +109,8 @@ document.querySelectorAll("#nav ul li").forEach(li => {
                     el.classList.remove("active");
                 });
                 li.classList.add("active");
-            })
-        })
+            });
+        });
 
     </script>
 </body>

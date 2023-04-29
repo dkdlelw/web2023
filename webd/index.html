@@ -10,6 +10,7 @@
         * {
             margin: 0;
             padding: 0;
+            font-family: "SebangGothic";
         }
         a {
             text-decoration: none;
@@ -93,22 +94,23 @@
             </ul>
         </nav>
         <main id="main">
-            <iframe src="layout/B4.html" frameborder="0"></iframe>
+            <iframe src="menu/m1.html" frameborder="0"></iframe>
         </main>
     </div>
     <script>
 
-        document.querySelectorAll("#nav ul li").forEach( li => {
-            li.addEventListener("click", (e) => {
+document.querySelectorAll("#nav ul li").forEach(li => {
+            li.addEventListener("click", e => {
                 e.preventDefault();
                 let href = li.querySelector("a").getAttribute("href");
-                document.querySelector("#main iframe").src = href;
-                document.querySelectorAll("#nav ul li").forEach((el) => {
+                document.querySelector("iframe").src = href;
+
+                document.querySelectorAll("#nav ul li").forEach(el => {
                     el.classList.remove("active");
                 });
                 li.classList.add("active");
-            });
-        });
+            })
+        })
 
     </script>
 </body>

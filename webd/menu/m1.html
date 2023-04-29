@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -177,19 +177,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
-        // $(".nav > ul > li").mouseover(function(){
-        //     $(this).find(".submenu").stop().slideDown();
-        // });
-        // $(".nav > ul > li").mouseout(function(){
-        //     $(this).find(".submenu").stop().slideUp();
-        // });
-
-        //한꺼번에 메뉴가 다 나오게
+        //메뉴 한개씩
         $(".nav > ul > li").mouseover(function(){
-            $(".nav > ul > li").find(".submenu").stop().slideDown();
+            $(this).find(".submenu").stop().slideDown();
         });
         $(".nav > ul > li").mouseout(function(){
-            $(".nav > ul > li").find(".submenu").stop().slideUp();
+            $(this).find(".submenu").stop().slideUp();
         });
 
         document.querySelectorAll("nav > ul >li").forEach(li => {

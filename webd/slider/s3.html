@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 1920px;
+            height: 800px;
+            margin: 0 auto;
+        }
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            display: flex;
+            height: 100px;
+        }
+        .logo {
+            width: 30%;
+            background-color: #b1e2ff;
+        }
+        .nav {
+            width: 70%;
+            background-color: rgb(143, 220, 255);
+            padding: 30px 40px;
+        }
+        .nav > ul {
+            display: flex;
+            justify-content: right;
+        }
+        .nav > ul > li {
+            position: relative;
+
+        }
+        .nav > ul > li > a{
+            background-color: #c6eaff;
+            display: block;
+            padding: 10px 40px;
+        }
+        .nav > ul > li > a:hover {
+            background-color: #607da3;
+        }
+        .nav > ul > li > ul {
+            position: absolute;
+            left: 0;
+            top: 40px;
+            background-color: #ccc;
+            width: 100%;
+            display: none;
+        }
+        .nav > ul > li > ul > li {}
+        .nav > ul > li > ul > li > a{
+            padding: 10px;
+            display: block;
+        }
+        .nav > ul > li > ul > li > a:hover {
+            background-color: #37b9f5;
+        }
+        #main {
+            width: 1200px;
+        }
+        #slider__wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            overflow: hidden;
+        }
+        .slider__inner {
+            position: relative;
+            height: 300px;
+            vertical-align: top;
+            transform: translateY(-200%);
+        }
+        .slider { 
+            position: relative;
+            height: 300px;
+        }
+        .slider img {
+            height: 300px;
+        }
+        #contents {
+            display: flex;
+        }
+        .notice {
+            width: 35%;
+            height: 200px;
+            background-color: #3186f5;
+        }
+        .banner {
+            width: 35%;
+            height: 200px;
+            background-color: rgb(50, 149, 248);
+        }
+        .go {
+            width: 35%;
+            height: 200px;
+            background-color: rgb(8, 134, 252);
+        }
+        #footer {
+            display: flex;
+        }
+        .flogo {
+            width: 20%;
+            height: 100px;
+            background-color: rgb(170, 213, 253);
+        }
+        .copyright {
+            width: 60%;
+            height: 100px;
+            background-color: rgb(151, 197, 250);
+        }
+        .sns {
+            width: 20%;
+            height: 100px;
+            background-color: rgb(113, 185, 253);
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        li {
+            list-style: none;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <header id="header">
+                <div class="logo"></div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#">메뉴1</a>
+                            <ul class="submenu">
+                                <li><a href="#">서브메뉴1-1</a></li>
+                                <li><a href="#">서브메뉴1-2</a></li>
+                                <li><a href="#">서브메뉴1-3</a></li>
+                                <li><a href="#">서브메뉴1-4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">메뉴2</a>
+                            <ul class="submenu">
+                                <li><a href="#">서브메뉴2-1</a></li>
+                                <li><a href="#">서브메뉴2-2</a></li>
+                                <li><a href="#">서브메뉴2-3</a></li>
+                                <li><a href="#">서브메뉴2-4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">메뉴3</a>
+                            <ul class="submenu">
+                                <li><a href="#">서브메뉴3-1</a></li>
+                                <li><a href="#">서브메뉴3-2</a></li>
+                                <li><a href="#">서브메뉴3-3</a></li>
+                                <li><a href="#">서브메뉴3-4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">메뉴4</a>
+                            <ul class="submenu">
+                                <li><a href="#">서브메뉴4-1</a></li>
+                                <li><a href="#">서브메뉴4-2</a></li>
+                                <li><a href="#">서브메뉴4-3</a></li>
+                                <li><a href="#">서브메뉴4-4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main id="main">
+                <section id="slider__wrap">
+                    <div class="slider__img">
+                        <div class="slider__inner">
+                            <div class="slider">
+                                <img src="../img/slider1.jpg" alt="">
+                            </div>
+                            <div class="slider">
+                                <img src="../img/slider2.jpg" alt="">
+                            </div>
+                            <div class="slider">
+                                <img src="../img/slider3.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+                <section id="contents">
+                    <div class="notice"></div>
+                    <div class="banner"></div>
+                    <div class="go"></div>
+                </section>
+            </main>
+            <footer id="footer">
+                <div class="flogo"></div>
+                <div class="copyright"></div>
+                <div class="sns"></div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        //메뉴 한개씩
+        $(".nav > ul > li").mouseover(function(){
+            $(this).find(".submenu").stop().slideDown();
+        });
+        $(".nav > ul > li").mouseout(function(){
+            $(this).find(".submenu").stop().slideUp();
+        });
+
+        document.querySelectorAll("nav > ul >li").forEach(li => {
+            li.addEventListener("mouseover",() => {
+
+            });
+        });
+        //슬라이드
+          //위에서 아래로
+        const sliderWrap = document.querySelector("#slider__wrap");
+        const sliderImg = sliderWrap.querySelector(".slider__img");     //보여지는 영역
+        const sliderInner = sliderWrap.querySelector(".slider__inner"); //움직이는 영역
+        const slider = sliderWrap.querySelectorAll(".slider");          //개별 이미지
+
+        let currentIndex = 0;               
+        let sliderCount = slider.length;    
+        let sliderInterval = 1000;          
+
+        
+        sliderImg.style.transition = "all 0.6s"
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % sliderCount;    
+
+            sliderImg.style.transform = "translateY("+ 300 * currentIndex + "px)";
+        }, sliderInterval);
+    </script>
+</body>
+</html>

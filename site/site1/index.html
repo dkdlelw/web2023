@@ -22,7 +22,10 @@
     <link rel="stylesheet" href="assets/css/font.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+    </style>
 </head>
 <body>
     <div id="skip">
@@ -43,10 +46,63 @@
     <!-- //headerType -->
 
     <main id="mainType">
-        <section id="sliderType" class="nexon hide">
+        <section id="sliderType" class="nexon">
             <h2 class="blind">메인 슬라이드 영역</h2>
             <div class="slider__inner">
-                <div class="slider">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slider img1">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h1 class="title">냥집사들의 커뮤니티 Catt</h1>
+                                    <p class="desc">고양이 케어, 고양이 목욕,고양이 산책. 고양이 패션, 집사 커뮤니티
+                                        고양이와 관련된 모든 정보를 공유합니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img2">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h1 class="title">냥집사들의 커뮤니티 Catt</h1>
+                                    <p class="desc">고양이 케어, 고양이 목욕,고양이 산책. 고양이 패션, 집사 커뮤니티
+                                        고양이와 관련된 모든 정보를 공유합니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img3">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h1 class="title">냥집사들의 커뮤니티 Catt</h1>
+                                    <p class="desc">고양이 케어, 고양이 목욕,고양이 산책. 고양이 패션, 집사 커뮤니티
+                                        고양이와 관련된 모든 정보를 공유합니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button">
+                        <div class="swiper-button-play"><span class="ir">play</span></div>
+                        <div class="swiper-button-stop"><span class="ir">stop</span></div>
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+                <!-- <div class="slider">
                     <div class="slider__info container">
                         <span class="small">event</span>
                         <h1 class="title">냥집사들의 커뮤니티 Catt</h1>
@@ -55,7 +111,7 @@
                         <div class="btn">
                             <a href="#">자세히 보기</a>
                             <a href="#">상담 신청</a>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="slider__arrow">
                         <a href="#"><span class="blind">이전 이미지</span></a>
@@ -295,5 +351,43 @@
        </div>
     </footer>
     <!-- //footerType -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+                direction: 'horizontal',
+                loop: true,
+                autoplay: {
+                    delay: 1000,
+                    disableOnInteraction: false,
+                },
+
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+            const btnStop = document.querySelector(".swiper-button-stop");
+            const btnStart = document.querySelector(".swiper-button-play");
+
+            btnStart.style.display = "none";
+
+            btnStop.addEventListener("click", () => {
+                swiper.autoplay.stop();
+                btnStart.style.display = "block";
+                btnStop.style.display = "none";
+
+            })
+            btnStart.addEventListener("click", () => {
+                swiper.autoplay.start();
+                btnStart.style.display = "none";
+                btnStop.style.display = "block";
+            })
+    </script>
 </body>
 </html>

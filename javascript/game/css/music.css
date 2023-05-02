@@ -121,7 +121,7 @@
     background-position: -160px 0;
 }
 .music__control .control span:nth-child(3) {
-    background-color: #92ddff;
+    background-image: linear-gradient(to bottom, #64a7dd, #92ddff);
     border-radius: 50%;
 }
 .music__control .control span i.next {
@@ -191,7 +191,7 @@
     background-color: rgba(255, 224, 224, 0.4);
 }
 .music__list ul li.playing {
-    background-color: #ffffff4d
+    background-color: rgba(255, 224, 224, 0.5);
 }
 .music__list ul li .img {
     width: 20%;

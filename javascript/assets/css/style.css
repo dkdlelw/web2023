@@ -39,26 +39,26 @@ ul, li, ol {
 #header h1 a {
     font-size: 80px;
     font-weight: 800;
-    color: #0243f1;
+    color: #40acf9;
 
 }
 #header nav ul li {
     display: inline;
 }
 #header nav ul li a {
-    border: 1px dashed #0243f1;
-    color: #0243f1;
+    border: 1px dashed #19aeff;
+    color: #039eff;
     padding: 10px 20px;
     margin: 6px 3px;
     display: inline-block;
     transition: back-ground-color 0.3s color 0.3;
 }
 #header nav ul li a:hover {
-    background-color: #0243f1;
+    background-color: #6cc9ff;
     color: #fff;
 }
 #header nav ul li.active a {
-    background-color: #0243f1;
+    background-color: #6cc9ff;
     color: #fff;
 }
 @media(max-width: 600px){

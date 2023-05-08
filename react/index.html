@@ -173,6 +173,28 @@ root.render(hello);
 </code></pre>
 
                     <h4 id="intro3-3" class="page-header">3. 렌더링</h4>
+<pre><code class="language-js">// function clock(){
+//   let clock = document.getElementById("clock");
+
+//   setInterval(function(){
+//     clock.innerHTML = new Date().toLocaleDateString();
+//   }, 1000);
+// }
+//clock();
+
+function clock(){
+  const element = (
+    <div>
+      <div>hello, dkdlelw</div>
+      <h2>지금은 {new Date().toLocaleDateString()}입니다.</h2>
+    </div>
+  );
+
+  ReactDOM.render(element, document.getElementById('root'));
+}
+
+export default clock
+</code></pre>
                 </div>
                 <!-- //intro2-->
 

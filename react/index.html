@@ -133,107 +133,123 @@ webpack compiled successfully
 </code></pre>
                 </div>
                 <!-- //intro2 -->
-                <div class="bs-docs-section">
-                    <h3 id="intro2" class="page-header">REACT 기본 개념 익히기</h3>
-                    <h4 id="intro3-1" class="page-header">1. Hello World 출력하기</h4>
+                <h3 id="intro3" class="page-header">REACT 기본 개념 익히기</h3>
+                <h4 id="intro3-1" class="page-header">1. hello world 출력하기</h4>
 <pre><code class="language-js">import React from "react";
 import ReactDOM from "react-dom/client";
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(&lth1&gtHello World&lt/h1&gt);
-//Hello World
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(&lt;h1&gt;HELLO WORLD&lt;/h1&gt;);
+//hello world
 </code></pre>
-                    <h4 id="intro3-2" class="page-header">2. JSX</h4>
-                    <p>JSX(JavaScript XML)는 React에서 사용되는 JavaScript의 확장 문법입니다. JSX는 JavaScript 코드 안에 XML과 비슷한 문법을 사용하여 React 컴포넌트의 구조와 모양을 정의하는 데 사용됩니다.</p>
-<pre><code class="language-js">import React from "react";
-import ReactDOM from "react-dom/client";
-const name = "dkdlelw";
-const hello = <h1>Hello {name}</h1>;
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(hello);
-// hello dkdlelw
-</code></pre>
-
-     <p>객체와 함수를 같이 사용한 경우</p>
-<pre><code class="language-js">
-    import React from "react";
-import ReactDOM from "react-dom/client";
-
-function helloname(){
-    return name.nick;
-}
-
-const name = {
-    nick : "dkdlelw"
-}
-const hello = <h1>Hello, {helloname()}</h1>
-
+                <h4 id="intro3-2" class="page-header">2. JSX</h4>
+                <p>JSX는 JavaScript XML의 약어로, React에서 UI를 구성하기 위한 문법입니다. JSX는 JavaScript의 확장 문법으로, XML과 유사한 문법을 사용하여 JavaScript 코드 안에 HTML 요소를 삽입할 수 있게 해줍니다.</p>
+<pre><code class="language-js">const name = "webstoryboy";
+const hello = &lt;h1&gt;hello {name}&lt;/h1&gt;;
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(hello);
-
+//hello webstoryboy
 </code></pre>
-
-                    <h4 id="intro3-3" class="page-header">3. 렌더링</h4>
+                <p>객체와 함수를 같이 사용한 경우</p>
+<pre><code class="language-js">function helloName(){
+return name.nick;
+}
+const name = {
+nick : "webstoryboy",
+}
+const hello = &lt;h1&gt;Hello, {helloName()}&lt;/h1&gt;;
+</code></pre>
+                <h4 id="intro3-3" class="page-header">3. 렌더링</h4>
 <pre><code class="language-js">// function clock(){
 //   let clock = document.getElementById("clock");
-
 //   setInterval(function(){
 //     clock.innerHTML = new Date().toLocaleDateString();
 //   }, 1000);
 // }
-//clock();
-
+// clock();
 function clock(){
-  const element = (
-    <div>
-      <div>hello, dkdlelw</div>
-      <h2>지금은 {new Date().toLocaleDateString()}입니다.</h2>
-    </div>
-  );
-
-  ReactDOM.render(element, document.getElementById('root'));
+const element = (
+&lt;div&gt;
+    &lt;div&gt;hello, webstoryboy&lt;/div&gt;
+    &lt;h2&gt;지금은 {new Date().toLocaleDateString()}입니다. &lt;/h2&gt;
+&lt;/div&gt;
+);
+ReactDOM.render(element, document.getElementById('root'));
 }
-
-export default clock
+export default clock;
 </code></pre>
-                </div>
-                <!-- //intro2-->
-
-                </div>
+                <h4 id="intro3-4" class="page-header">4. 컴퍼넌트</h4>
+<pre><code class="language-js">import React from "react";
+import ReactDOM from "react-dom/client";
+function Hello(){
+return &lt;h1>Hello, webstoryboy&lt;/h1>
+}
+const element = &lt;Hello />;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(element);
+</code></pre>
+<pre><code class="language-js">import React from "react";
+import ReactDOM from "react-dom/client";
+function Welcome(props){
+return &lt;h1>Hello, {props.name}&lt;/h1>
+}
+function App(){
+return (
+&lt;div>
+    &lt;Welcome name = "webs" />
+    &lt;Welcome name = "webstoryboy" />
+    &lt;Welcome name = "webss" />
+&lt;/div>
+)
+}
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(&lt;App />);
+</code></pre>
+                <h4 id="intro3-5" class="page-header">5. props</h4>
+<pre><code class="language-js">import React from "react";
+import ReactDOM from "react-dom/client";
+function Hello(props){
+return &lt;h1>Hello, {props.name}&lt;/h1>
+}
+const element = &lt;Hello name = "webstoryboy" />;
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(element);
+</code></pre>
             </div>
-            <div class="col-md-3">
-                <div class="bs-sidebar hidden-print affix-top" role="complementary">
-                    <ul class="nav bs-sidenav">
-                        <li class="active"><a href="#intro1">REACT 개념</a></li>
-                        <li><a href="#intro2">REACT 설치</a></li>
-                        <li><a href="#intro2">REACT 기본</a>
-                            <ul class="nav">
-                                <li><a href="#intro3-1">출력하기</a></li>
-                                <li><a href="#intro3-2">JSX</a></li>
-                                <li><a href="#intro3-3">렌더링</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+            <!-- //intro3 -->
+        </div>
+        <div class="col-md-3">
+            <div class="bs-sidebar hidden-print affix-top" role="complementary">
+                <ul class="nav bs-sidenav">
+                    <li class="active"><a href="#intro1">REACT 개념</a></li>
+                    <li><a href="#intro2">REACT 설치</a></li>
+                    <li><a href="#intro3">REACT 기본</a>
+                        <ul class="nav">
+                            <li><a href="#intro3-1">출력하기</a></li>
+                            <li><a href="#intro3-2">JSX</a></li>
+                            <li><a href="#intro3-3">렌더링</a></li>
+                            <li><a href="#intro3-4">컴퍼넌트</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
         </div>
-        <!-- //row -->
     </div>
-    <!-- //container -->
-    <!-- Footer -->
-    <footer class="bs-footer" role="contentinfo">
-        <div class="container">
-            <ul class="footer-links muted">
-                <li><a href="http://webstoryboy.co.kr">webstoryboy</a></li>
-            </ul>
-        </div>
-    </footer>
-    <!-- //Footer -->
-    <!-- Bootstrap core JavaScript -->
-    <script src="../assets/js/jquery-1.9.1.min.js"></script>
-    <script src="../assets/js/bootstrap.min.js"></script>
-    <script src="../assets/js/docs.min.js"></script>
-    <script src="../assets/js/prism.js"></script>
-</body>
-</html>
+    <!-- //row -->
+</div>
+<!-- //container -->
+<!-- Footer -->
+<footer class="bs-footer" role="contentinfo">
+    <div class="container">
+        <ul class="footer-links muted">
+            <li><a href="http://webstoryboy.co.kr">webstoryboy</a></li>
+        </ul>
+    </div>
+</footer>
+<!-- //Footer -->
+<!-- Bootstrap core JavaScript -->
+<script src="../assets/js/jquery-1.9.1.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="../assets/js/docs.min.js"></script>
+<script src="../assets/js/prism.js"></script>
 </body>
 </html>

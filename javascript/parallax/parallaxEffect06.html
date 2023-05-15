@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>페럴렉스 이펙트06</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/parallax.css">
+    <style>
+        .split span {
+            display: inline-block;
+            min-width: 1vw;
+            opacity: 0;
+            transform: translateY(100px);
+            transition: all 0.8 cubic-bezier(0.075, 0.82, 0.165, 1);
+        }
+        .split.show span {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .split span:nth-child(1) {transition-delay: 100ms;}
+        .split span:nth-child(2) {transition-delay: 150ms;}
+        .split span:nth-child(3) {transition-delay: 200ms;}
+        .split span:nth-child(4) {transition-delay: 250ms;}
+        .split span:nth-child(5) {transition-delay: 300ms;}
+        .split span:nth-child(6) {transition-delay: 350ms;}
+        .split span:nth-child(7) {transition-delay: 400ms;}
+        .split span:nth-child(8) {transition-delay: 450ms;}
+        .split span:nth-child(9) {transition-delay: 500ms;}
+        .split span:nth-child(10) {transition-delay: 550ms;}
+        .split span:nth-child(11) {transition-delay: 600ms;}
+        .split span:nth-child(12) {transition-delay: 650ms;}
+        .split span:nth-child(13) {transition-delay: 700ms;}
+        .split span:nth-child(14) {transition-delay: 750ms;}
+        .split span:nth-child(15) {transition-delay: 800ms;}
+        .split span:nth-child(16) {transition-delay: 850ms;}
+        .split span:nth-child(17) {transition-delay: 900ms;}
+        .split span:nth-child(18) {transition-delay: 950ms;}
+        .split span:nth-child(19) {transition-delay: 1000ms;}
+        .split span:nth-child(20) {transition-delay: 1050ms;}
+        .split span:nth-child(21) {transition-delay: 1100ms;}
+        .split span:nth-child(22) {transition-delay: 1150ms;}
+        .split span:nth-child(23) {transition-delay: 1200ms;}
+        .split span:nth-child(24) {transition-delay: 1250ms;}
+        .split span:nth-child(25) {transition-delay: 1300ms;}
+        .split span:nth-child(26) {transition-delay: 1350ms;}
+        .split span:nth-child(27) {transition-delay: 1400ms;}
+        .split span:nth-child(28) {transition-delay: 1450ms;}
+        .split span:nth-child(29) {transition-delay: 1500ms;}
+        .split span:nth-child(30) {transition-delay: 1600ms;}
+        .split span:nth-child(31) {transition-delay: 1650ms;}
+        .split span:nth-child(32) {transition-delay: 1700ms;}
+        .split span:nth-child(33) {transition-delay: 1750ms;}
+        .split span:nth-child(34) {transition-delay: 1800ms;}
+        .split span:nth-child(35) {transition-delay: 1850ms;}
+        .split span:nth-child(36) {transition-delay: 1900ms;}
+        .split span:nth-child(37) {transition-delay: 1950ms;}
+        .split span:nth-child(38) {transition-delay: 2000ms;}
+        .split span:nth-child(39) {transition-delay: 2050ms;}
+        .split span:nth-child(40) {transition-delay: 2100ms;}
+        .split span:nth-child(41) {transition-delay: 2150ms;}
+        .split span:nth-child(42) {transition-delay: 2200ms;}
+        .split span:nth-child(43) {transition-delay: 2250ms;}
+        .split span:nth-child(44) {transition-delay: 2300ms;}
+        .split span:nth-child(45) {transition-delay: 2350ms;}
+        .split span:nth-child(46) {transition-delay: 2400ms;}
+        .split span:nth-child(47) {transition-delay: 2450ms;}
+        .split span:nth-child(48) {transition-delay: 2500ms;}
+        .split span:nth-child(49) {transition-delay: 2550ms;}
+        .split span:nth-child(50) {transition-delay: 2600ms;}
+    </style>
+</head>
+
+<body class="img01 bg01 font01">
+    <header id="header">
+        <h1>JavaScript Parallax Effect06</h1>
+        <p>페럴렉스 이펙트 : 텍스트 효과</p>
+        <ul>
+            <li><a href="parallaxEffect01.html">1</a></li>
+            <li><a href="parallaxEffect02.html">2</a></li>
+            <li><a href="parallaxEffect03.html">3</a></li>
+            <li><a href="parallaxEffect04.html">4</a></li>
+            <li><a href="parallaxEffect05.html">5</a></li>
+            <li class="active"><a href="parallaxEffect06.html">6</a></li>
+            <li><a href="parallaxEffect07.html">7</a></li>
+        </ul>
+    </header>
+    <!-- //header-->
+
+    <nav class="parallax__nav">
+        <ul>
+            <li class="active"><a href="#section1">메뉴1</a></li>
+            <li><a href="#section2">메뉴2</a></li>
+            <li><a href="#section3">메뉴3</a></li>
+            <li><a href="#section4">메뉴4</a></li>
+            <li><a href="#section5">메뉴5</a></li>
+            <li><a href="#section6">메뉴6</a></li>
+            <li><a href="#section7">메뉴7</a></li>
+            <li><a href="#section8">메뉴8</a></li>
+            <li><a href="#section9">메뉴9</a></li>
+        </ul>
+    </nav>
+    <main id="main">
+        <div class="parallax__wrap">
+            <section id="section1" class="parallax__item">
+                <span class="parallax__item__num">01</span>
+                <h2 class="parallax__item__title">section1</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc split">불가능은 자신이나 다른 사람의 머릿속에 존재하는 것일 뿐, 현실은 아니다.</p>
+            </section>
+            <!-- //section1 -->
+
+            <section id="section2" class="parallax__item">
+                <span class="parallax__item__num">02</span>
+                <h2 class="parallax__item__title">section2</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc split">성공한 사람들은 실패한 것을 견뎌낸 것이 아니라 실패를 끝까지 포기하지 않은 것이다.</p>
+            </section>
+            <!-- //section2 -->
+
+            <section id="section3" class="parallax__item">
+                <span class="parallax__item__num">03</span>
+                <h2 class="parallax__item__title">section3</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc split">자신의 꿈을 이루기 위해 끊임없이 노력하면 언젠가는 반드시 성공할 것이다.</p>
+            </section>
+            <!-- //section3 -->
+
+            <section id="section4" class="parallax__item">
+                <span class="parallax__item__num">04</span>
+                <h2 class="parallax__item__title">section4</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc split">성공을 위해서는 대담하게 도전해야 합니다. 그리고 실패에 대해서는 당당하게 인정해야 합니다.</p>
+            </section>
+            <!-- //section4 -->
+
+            <section id="section5" class="parallax__item">
+                <span class="parallax__item__num">05</span>
+                <h2 class="parallax__item__title">section5</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc split">가장 어두운 밤이 지나면 해는 떠오른다.</p>
+            </section>
+            <!-- //section5 -->
+
+            <section id="section6" class="parallax__item">
+                <span class="parallax__item__num">06</span>
+                <h2 class="parallax__item__title">section6</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc split">성공의 비밀은 한 가지 비밀이 아니다. 그것은 단순한 노력, 인내와 굳은 의지의 결합이다.</p>
+            </section>
+            <!-- //section6 -->
+
+            <section id="section7" class="parallax__item">
+                <span class="parallax__item__num">07</span>
+                <h2 class="parallax__item__title">section7</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc split">당신이 세상을 바꾸려면 먼저 스스로 바뀌어야 합니다.</p>
+            </section>
+            <!-- //section7 -->
+
+            <section id="section8" class="parallax__item">
+                <span class="parallax__item__num">08</span>
+                <h2 class="parallax__item__title">section8</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc split">성공하기 위해서는 먼저 불가능하다고 생각했던 일을 가능하게 만들어야 합니다.</p>
+            </section>
+            <!-- //section8 -->
+
+            <section id="section9" class="parallax__item">
+                <span class="parallax__item__num">09</span>
+                <h2 class="parallax__item__title">section9</h2>
+                <figure class="parallax__item__imgWrap">
+                    <div class="parallax__item__img"></div>
+                </figure>
+                <p class="parallax__item__desc split">당신이 바라는 것을 이루기 위해 필요한 것은 당신이 가진 것을 최대한 활용하는 것입니다.</p>
+            </section>
+            <!-- //section9 -->
+        </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+        <a href="mailto:1346zany@gmail.com">1346zany@gmail.com</a>
+    </footer>
+    <!-- //footer -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        // 텍스트 분리하기
+        // let text = document.querySelector("#section1 .parallax__item__desc");
+        // let splitText = text.innerText;
+        // let splitWrap = splitText.split('').join('</span><span>');
+        // text.innerHTML = splitWrap = "<span>" + splitWrap + "</span>";
+
+        //모든 텍스트 분리하기
+        document.querySelectorAll(".split").forEach((text) => {
+            let splitText = text.innerText;
+            let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
+            splitWrap = splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+            text.innerHTML = splitWrap;
+            text.setAttribute("aria-label", splitText);
+        });
+
+
+       // 스크롤 이펙트
+       function scroll(){
+            let scrollTop = window.pageYOffset || window.scrollY;
+
+            // CSS 클래스 추가
+            document.querySelectorAll(".parallax__item").forEach(item => {
+                if(scrollTop > item.offsetTop - 200){
+                    item.querySelector(".split").classList.add("show");
+                }
+            });
+            requestAnimationFrame(scroll);
+        }
+        scroll()
+    </script>
+    
+</body>
+</html>

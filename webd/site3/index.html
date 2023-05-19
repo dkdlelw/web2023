@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="script/script.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        li {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        #wrap {
+            width: 1000px;
+            height: 650px;
+            display: flex;
+    
+        }
+        #aside {
+            width: 20%;
+            height: 650px;
+            background-color: #ccc;
+        }
+        #aside .logo {
+            height: 100px;
+        }
+        #aside .nav {
+            padding: 20px 20px;
+        }
+        .nav > ul > li {
+            position: relative;
+
+        }
+        .nav > ul > li > a{
+            border: 1px solid #000;
+            display: block;
+            text-align: center;
+            padding: 10px 40px;
+        }
+        .nav > ul > li > a:hover {
+            background-color: #000000;
+            color: #fff;
+        }
+        .nav > ul > li > ul {
+            position: absolute;
+            left: 0;
+            top: 40px;
+            background-color: #ccc;
+            width: 100%;
+            display: none;
+        }
+        .nav > ul > li > ul > li > a{
+            padding: 10px;
+            display: block;
+        }
+        .nav > ul > li > ul > li > a:hover {
+            background-color: #000;
+        }
+        #main {
+            width: 80%;
+        }
+        #slider {
+            width: 100%;
+            height: 350px;
+            background-color: #123;
+        }
+        #contents {
+            width: 100%;
+            height: 200px;
+            display: flex;
+        }
+        #contents .cont {
+            width: 80%;
+            height: 10px;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            margin: 10px 10px;
+            background-color: #212635;
+            align-items: center;
+            
+        }
+        #contents .cont h3,
+        #contents .cont a {
+            color: #fff;
+        }
+        #contents .cont a::after{
+            content: '+';
+        }
+        #contents .notice {
+            background-color: #F2EBFF;
+            width: 45%;
+        }
+        #contents .gallery{
+            width: 30%;
+            background-color: #E4D7FE;
+        }
+        #contents .gallery ul {
+            display: flex;
+            justify-content: space-between;
+        }
+        #contents .banner {
+            width: 25%;
+            background-image: url(images/banner.jpg);
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #555;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <aside id="aside">
+            <h1 class="logo"><a href="#">Vally Festival</a></h1>
+            <nav class="nav">
+                <ul>
+                    <li>
+                        <a href="#">축제소개</a>
+                        <ul class="submenu">
+                            <li><a href="#">Festival소개</a></li>
+                            <li><a href="">행사장 안내</a></li>
+                            <li><a href="">조직위원회</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">예약안내</a>
+                        <ul class="submenu">
+                            <li><a href="#">예약하기</a></li>
+                            <li><a href="#">예약확인/취소</a></li>
+                            <li><a href="#">단체예약문의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">아티스트</a>
+                        <ul class="submenu">
+                            <li><a href="#">고릴라즈</a></li>
+                            <li><a href="#">메이저 레이저</a></li>
+                            <li><a href="#">아우스게인</a></li>
+                            <li><a href="#">타임로드</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">커뮤니티</a>
+                        <ul class="submenu">
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">사진갤러리</a></li>
+                            <li><a href="#">영상갤러리</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        <main id="main">
+            <div id="slider">
+                <div class="sliderWrap">
+                    <div class="slider__img">
+                        <div class="slider">
+                            <img src="images/slider01.jpg" alt="Vally Fesival">
+                        </div>
+                        <!-- <div class="slider">
+                            <img src="images/slider02.jpg" alt="Vally Fesival">
+                        </div>
+                        <div class="slider">
+                            <img src="images/slider03.jpg" alt="Vally Fesival">
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div id="contents">
+                <div class="notice">
+                    <div class="cont">
+                        <h3>공지사항</h3>
+                        <a href="#">더보기</a>
+                    </div>
+                    <ul>
+                        <li><a href="#">티켓 예매 일정 변경 안</a><span>2023.04.01</span></li>
+                        <li><a href="#">지역 축제 소개 안내</a><span>2023.04.01</span></li>
+                        <li><a href="#">예약 접수 방법 안내</a><span>2023.04.01</span></li>
+                        <li><a href="#">숙박시설 안내 및 주차</a><span>2023.04.01</span></li>
+                    </ul>
+                </div>
+                <div class="gallery">
+                    <div class="cont">
+                        <h3>갤러리</h3>
+                        <a href="#">더보기</a>
+                    </div>
+                    <ul>
+                        <li><a href="#"><img src="images/gallary01.jpg" alt=""></a></li>
+                        <li><a href="#"><img src="images/gallary02.jpg" alt=""></a></li>
+                    </ul>
+                </div>
+                <div class="banner">
+                    <h3>축제<br>신청하기</h3>
+                </div>
+            </div>
+            </div>
+            <footer id="footer">
+                <div class="f1">
+                    <a href="#">로고</a>
+                </div>
+                <div class="f2">
+                    발레리 페스티벌
+                </div>
+                <div class="f3">
+                    <select name="familySite" id="familySite">
+                        <option value="familySite">패밀리 사이트</option>
+                    </select>
+                </div>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>

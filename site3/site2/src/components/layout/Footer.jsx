@@ -6,7 +6,7 @@ function Footer(props) {
           <h5>dkdlelw</h5>
           <p>
             궁금한 사항은 <br />
-            메일로 연락주세요!
+            메일로 연락주세요!<br />
             <a href="mailto:1346zany@gmail.com">1346zany@gmail.com</a>
           </p>
           <ul className="sns">

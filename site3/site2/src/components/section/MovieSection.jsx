@@ -5,9 +5,9 @@ function MovieSection(props) {
         <div className="movie__text container">
           <h3>SF 추천 영화</h3>
           <p>
-            SF 장르를 다룬
+            SF장르를 기반으로 한 영화들을 추천합니다.
             <br />
-            영화들을 추천합니다.
+            더 많은 정보들은 자세히 보기를 눌러주세요.
           </p>
           <a href="#" className="button-green">
             자세히 보기

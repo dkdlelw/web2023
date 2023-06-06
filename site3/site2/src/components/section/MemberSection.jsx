@@ -6,7 +6,7 @@ function MemberSection(props) {
       <div className="member__inner container">
         <div className="member">
           <figure className="member__header">
-            <img src="./assets/images/member/member-1.svg" alt="" />
+            <img src="./assets/images/member/member01.jpg" alt="작가" />
           </figure>
           <div className="member_body">
             <h4>아이작 아시모프 (Isaac Asimov)</h4>
@@ -17,7 +17,7 @@ function MemberSection(props) {
         </div>
         <div className="member">
           <figure className="member__header">
-            <img src="./assets/images/member/member-2.svg" alt="입양하기" />
+            <img src="./assets/images/member/member02.jpg" alt="작가" />
           </figure>
           <div className="member_body">
             <h4>필립 K. 딕 (Philip K. Dick):</h4>
@@ -28,7 +28,7 @@ function MemberSection(props) {
         </div>
         <div className="member">
           <figure className="member__header">
-            <img src="./assets/images/member/member-3.svg" alt="입양하기" />
+            <img src="./assets/images/member/member03.jpg" alt="감독" />
           </figure>
           <div className="member_body">
             <h4>스탠리 큐브릭 (Stanley Kubrick)</h4>

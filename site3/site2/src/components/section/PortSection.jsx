@@ -27,7 +27,7 @@ function PortSection(props) {
             </figure>
             <div className="port__body">
               <span className="pic">
-                <img src="./assets/images/member/member-1.svg" alt="멤버" />
+                <img src="./assets/images/member/member01.jpg" alt="멤버" />
               </span>
               <div className="title">
                 <h4>아이, 로봇</h4>
@@ -41,7 +41,7 @@ function PortSection(props) {
             </figure>
             <div className="port__body">
               <span className="pic">
-                <img src="./assets/images/member/member-2.svg" alt="멤버" />
+                <img src="./assets/images/member/member02.jpg" alt="멤버" />
               </span>
               <div className="title">
                 <h4>안드로이드는 전기양을 꿈꾸는가?</h4>
@@ -55,11 +55,11 @@ function PortSection(props) {
             </figure>
             <div className="port__body">
               <span className="pic">
-                <img src="./assets/images/member/member-3.svg" alt="멤버" />
+                <img src="./assets/images/member/member03.jpg" alt="멤버" />
               </span>
               <div className="title">
                 <h4>스페이스 오디세이 2001</h4>
-                <span>스탠리 큐브릭 (Stanley Kubrick)</span>
+                <span>아서 C. 클라크 (Stanley Kubrick)</span>
               </div>
             </div>
           </div>
@@ -69,11 +69,11 @@ function PortSection(props) {
             </figure>
             <div className="port__body">
               <span className="pic">
-                <img src="./assets/images/member/member-4.svg" alt="멤버" />
+                <img src="./assets/images/member/member04.jpg" alt="멤버" />
               </span>
               <div className="title">
-                <h4>김김김 포트폴리오</h4>
-                <span>프론트앤드 개발자 포트폴리오</span>
+                <h4>1984</h4>
+                <span>조지 오웰(George Orwell)</span>
               </div>
             </div>
           </div>
@@ -83,11 +83,11 @@ function PortSection(props) {
             </figure>
             <div className="port__body">
               <span className="pic">
-                <img src="./assets/images/member/member-5.svg" alt="멤버" />
+                <img src="./assets/images/member/member05.jpg" alt="멤버" />
               </span>
               <div className="title">
-                <h4>김김김 포트폴리오</h4>
-                <span>프론트앤드 개발자 포트폴리오</span>
+                <h4>듄</h4>
+                <span>프랭크 허버트(Frank Herbert)</span>
               </div>
             </div>
           </div>
@@ -97,11 +97,11 @@ function PortSection(props) {
             </figure>
             <div className="port__body">
               <span className="pic">
-                <img src="./assets/images/member/member-6.svg" alt="멤버" />
+                <img src="./assets/images/member/member06.jpg" alt="멤버" />
               </span>
               <div className="title">
-                <h4>김김김 포트폴리오</h4>
-                <span>프론트앤드 개발자 포트폴리오</span>
+                <h4>11/22/63</h4>
+                <span>스티븐 킹(Stephen King)</span>
               </div>
             </div>
           </div>

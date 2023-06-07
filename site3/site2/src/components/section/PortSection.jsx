@@ -55,7 +55,7 @@ function PortSection(props) {
             </figure>
             <div className="port__body">
               <span className="pic">
-                <img src="./assets/images/member/member03.jpg" alt="멤버" />
+                <img src="./assets/images/member/member04.jpg" alt="멤버" />
               </span>
               <div className="title">
                 <h4>스페이스 오디세이 2001</h4>
@@ -69,7 +69,7 @@ function PortSection(props) {
             </figure>
             <div className="port__body">
               <span className="pic">
-                <img src="./assets/images/member/member04.jpg" alt="멤버" />
+                <img src="./assets/images/member/member05.jpg" alt="멤버" />
               </span>
               <div className="title">
                 <h4>1984</h4>
@@ -83,7 +83,7 @@ function PortSection(props) {
             </figure>
             <div className="port__body">
               <span className="pic">
-                <img src="./assets/images/member/member05.jpg" alt="멤버" />
+                <img src="./assets/images/member/member06.jpg" alt="멤버" />
               </span>
               <div className="title">
                 <h4>듄</h4>
@@ -97,7 +97,7 @@ function PortSection(props) {
             </figure>
             <div className="port__body">
               <span className="pic">
-                <img src="./assets/images/member/member06.jpg" alt="멤버" />
+                <img src="./assets/images/member/member07.jpg" alt="멤버" />
               </span>
               <div className="title">
                 <h4>11/22/63</h4>

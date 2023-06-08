@@ -146,7 +146,10 @@
                 <!-- //section6 -->
                 <section id="section7" class="parallaxs__item">
                     <span class="parallaxs__item__num">07</span>
-                    <div class="parallaxs__item__img"></div>
+                    <div class="parallaxs__item__img i1"></div>
+                    <div class="parallaxs__item__img i2"></div>
+                    <div class="parallaxs__item__img i3"></div>
+                    <div class="parallaxs__item__img i4"></div>
                 </section>
                 <!-- //section7 -->
                 <section id="section8" class="parallaxs__item">
@@ -172,15 +175,21 @@
         <script>
             const box1 = document.querySelector("#section1 .parallaxs__item__img");
             const box2 = document.querySelector("#section2 .parallaxs__item__text");
-            const box3 = document.querySelector("#section3 .parallaxs__item__img.i1");
-            const box4 = document.querySelector("#section3 .parallaxs__item__img.i2");
-            const box5 = document.querySelector("#section3 .parallaxs__item__img.i3");
-            const box6 = document.querySelector("#section4 .parallaxs__item__img");
-            const box7 = document.querySelector("#section5 .parallaxs__item__img");
-            const box8 = document.querySelector("#section6 .parallaxs__item__img");
-            const box9 = document.querySelector("#section7 .parallaxs__item__img");
-            const box10 = document.querySelector("#section8 .parallaxs__item__img");
-            const box11 = document.querySelector("#section9 .parallaxs__item__img");
+            const box3_1 = document.querySelector("#section3 .parallaxs__item__img.i1");
+            const box3_2 = document.querySelector("#section3 .parallaxs__item__img.i2");
+            const box3_3 = document.querySelector("#section3 .parallaxs__item__img.i3");
+            const box4_1 = document.querySelector("#section4 .parallaxs__item__img.i1");
+            const box4_2 = document.querySelector("#section4 .parallaxs__item__img.i2");
+            const box4_3 = document.querySelector("#section4 .parallaxs__item__img.i3");
+            const box4_4 = document.querySelector("#section4 .parallaxs__item__img.i4");
+            const box5 = document.querySelector("#section5 .parallaxs__item__img");
+            const box6 = document.querySelector("#section6 .parallaxs__item__img");
+            const box7_1 = document.querySelector("#section7 .parallaxs__item__img.i1");
+            const box7_2 = document.querySelector("#section7 .parallaxs__item__img.i2");
+            const box7_3 = document.querySelector("#section7 .parallaxs__item__img.i3");
+            const box7_4 = document.querySelector("#section7 .parallaxs__item__img.i4");
+            const box8 = document.querySelector("#section8 .parallaxs__item__img");
+            const box9 = document.querySelector("#section9 .parallaxs__item__img");
             
             // gsap.to("#section1 .parallaxs__item__img", {
             //     duration: 2,
@@ -226,9 +235,9 @@
             });
 
             const ani3 = gsap.timeline();
-            ani3.from(box3, {y: -200, duration:1}, "a")
-                .from(box4, {y: 200, duration:1}, "a")
-                .from(box5, {y: -200, duration:1}, "a")
+            ani3.from(box3_1, {y: -200, duration:1}, "a")
+                .from(box3_2, {y: 200, duration:1}, "a")
+                .from(box3_3, {y: -200, duration:1}, "a")
                 
            
             ScrollTrigger.create({
@@ -243,24 +252,113 @@
             });
 
             const ani4 = gsap.timeline();
-            ani3.from("#section4 .parallaxs__item__img.i1", {y: -200, duration:1}, "a")
-                .from("#section4 .parallaxs__item__img.i2", {y: 200, duration:1}, "a")
-                .from("#section4 .parallaxs__item__img.i3", {y: -200, duration:1}, "a")
-                .from("#section4 .parallaxs__item__img.i4", {y: -200, duration:1}, "a")
+            ani3.from(box4_1, {x: -200, duration:1}, "a")
+                .from(box4_2, {x: 200, duration:1}, "a")
+                .from(box4_3, {x: -200, duration:1}, "a")
+                .from(box4_4, {x: 200, duration:1}, "a")
                 
            
             ScrollTrigger.create({
                 animation: ani4,
                 trigger: "#section4",
-                start:"top top",
-                end: "+=4000",
+                start: "top top",
+                end: "+=6000",
                 scrub: true,
                 pin: true,
-                anricipatePin: 1,
+                anticipatePin: 1,
                 markers: true
             });
 
-           
+            const ani5 = gsap.timeline();
+            ani5.to(box5, {xPercent: -300, rotation: 720, duration: 2, autoAlpha: 0})
+                .to(box5, {xPercent: 200, rotation: 360, autoAlpha: 0.5})
+                .to(box5, {xPercent: 0, rotation: 0, autoAlpha: 1})
+
+            ScrollTrigger.create({
+                animation: ani5,
+                trigger: "#section5",
+                start: "top top",
+                end: "+=4000",
+                scrub: true,
+                pin: true,
+                anticipatePin: 1,
+                markers: true
+            });
+
+            const ani6 = gsap.timeline();
+            ani6.to(box6, {xPercent: 0, yPercent: -300, rotation: 360, duration: 2, autoAlpha: 0})
+                .to(box6, {xPercent: -500, yPercent: 300, rotation: 720, duration: 2, autoAlpha: 0.2})
+                .to(box6, {xPercent: 500, yPercent: 0, rotation: 1080, duration: 2, autoAlpha: 0.4})
+                .to(box6, {xPercent: -500, yPercent: 0, rotation: 1440, duration: 2, autoAlpha: 0.6})
+                .to(box6, {xPercent: 500, yPercent: 300, rotation: 1800, duration: 2, autoAlpha: 0.8})
+                .to(box6, {xPercent: 0, yPercent: -300, rotation: 2160, duration: 2, autoAlpha: 0.8})
+                .to(box6, {xPercent: 0, yPercent: 0, rotation: 2520, duration: 2, autoAlpha: 1})
+
+            ScrollTrigger.create({
+                animation: ani6,
+                trigger: "#section6",
+                start: "top top",
+                end: "+=4000",
+                scrub: true,
+                pin: true,
+                anticipatePin: 1,
+                markers: true
+            });
+
+        
+
+            const ani7 = gsap.timeline();
+            ani7.fromTo(box7_1, {x: -100,y: -100, duration: 1, autoAlpha: 0}, {x: 0,y: 0, autoAlpha: 1}, "a")
+            ani7.fromTo(box7_2, {y: 100, rotation: 360, duration: 1, autoAlpha: 0}, {y: 0, rotation: 0, autoAlpha: 1}, "a")
+            ani7.fromTo(box7_3, {y: -100, rotation: -360, duration: 1, autoAlpha: 0}, {y: 0, rotation: 0, autoAlpha: 1}, "a")
+            ani7.fromTo(box7_4, {x: 100, y: 100, duration: 1, autoAlpha: 0}, {x: 0, y: 0, autoAlpha: 1}, "a")
+
+            ScrollTrigger.create({
+                animation: ani7,
+                trigger: "#section7",
+                start: "top top",
+                end: "+=4000",
+                scrub: true,
+                pin: true,
+                anticipatePin: 1,
+                markers: true
+            });
+
+            const ani8 = gsap.timeline();
+            ani8.to(box8, {xPercent: 0, yPercent: -300, rotation: 360, duration: 2, autoAlpha: 0})
+                .to(box8, {xPercent: -500, yPercent: 0, rotation: 720, duration: 2, autoAlpha: 0.2})
+                .to(box8, {xPercent: 0, yPercent: 300, rotation: 1080, duration: 2, autoAlpha: 0.5})
+                .to(box8, {xPercent: 500, yPercent: 0, rotation: 1440, duration: 2, autoAlpha: 0.8})
+                .to(box8, {xPercent: 0, yPercent: 0, rotation: 0, duration: 2, autoAlpha: 1})
+
+            ScrollTrigger.create({
+                animation: ani8,
+                trigger: "#section8",
+                start: "top top",
+                end: "+=4000",
+                scrub: true,
+                pin: true,
+                anticipatePin: 1,
+                markers: true
+            });
+        
+
+            const ani9 = gsap.timeline();
+            ani9.to(box9, {xPercent: -1000, yPercent: 0, duration: 2, scale:10, autoAlpha: 0})
+                .to(box9, {xPercent: -1000, yPercent: -800, duration: 2, scale:10, autoAlpha: 1})
+                .to(box9, {xPercent: 0, yPercent: -800, duration: 2, scale:10, autoAlpha: 1})
+                .to(box9, {xPercent: 0, yPercent: 0, duration: 2, scale:1, autoAlpha: 1})
+
+            ScrollTrigger.create({
+                animation: ani9,
+                trigger: "#section9",
+                start: "top top",
+                end: "+=4000",
+                scrub: true,
+                pin: true,
+                anticipatePin: 1,
+                markers: true
+            });
            
         </script>
     </body>

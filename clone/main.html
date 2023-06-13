@@ -60,6 +60,7 @@
                 <div class="slider s1"></div>
                 <div class="slider s2"></div>
             </div>
+            <div class="slider__dot"></div>
         </section>
         <!-- // slider -->
         <section id="desc">
@@ -302,6 +303,48 @@
 
             });
         });
+
+        const sliderWrap = document.querySelector('#slider .sliderWrap');
+const sliderImg = sliderWrap.querySelectorAll(".slider");
+const sliderDot = document.querySelector(".slider__dot");
+
+let currentIndex = 0;
+let sliderCount = sliderImg.length;
+let sliderInterval = 2000;
+let sliderWidth = sliderImg[0].offsetWidth;
+let dotIndex = "";
+
+function init() {
+  sliderImg.forEach(() => dotIndex += "<a href='#' class='dot'></a>");
+  sliderDot.innerHTML = dotIndex;
+  sliderDot.firstChild.classList.add("active");
+}
+init();
+
+function gotoSlider(num) {
+  currentIndex = num;
+  sliderWrap.style.transform = "translateX(" + -sliderWidth * currentIndex + "px)";
+
+  // 닷메뉴 활성화 하기
+  let dotActive = document.querySelectorAll(".slider__dot .dot");
+  dotActive.forEach((active) => active.classList.remove("active"));
+  dotActive[num].classList.add("active");
+}
+
+// 닷 메뉴 클릭 시 슬라이드 이동
+document.querySelectorAll(".slider__dot .dot").forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    gotoSlider(index);
+  });
+});
+
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % sliderCount;
+  gotoSlider(currentIndex);
+}, sliderInterval);
+
+
+
     </script>
 </body>
 </html>

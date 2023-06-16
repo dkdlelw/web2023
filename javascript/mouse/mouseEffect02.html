@@ -1,175 +1,198 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>01. 마우스 이펙트</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>02. 마우스 이펙트</title>
 
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/mouse.css">
-    <style>
-        .mouse__wrap {
-            cursor: none;
-        }
-        .mouse__text {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            overflow: hidden;
-        }
-        
-        .mouse__text p {
-            font-size: 2vw;
-            line-height: 1.9;
-        }
-        .mouse__text p:last-child {
-            font-size: 4vw;
-        }
-        .mouse__text span {
-            color: rgb(80, 149, 252);
-        }
-        .mouse__cursor {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 10px;
-            height: 10px;
-            z-index: 9999;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.3);
-            user-select: none;
-            pointer-events: none;
-            transition: transform 0.3s;
-        }
-        .mouse__cursor2 {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 30px;
-            height: 30px;
-            z-index: 9998;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.5);
-            user-select: none;
-            pointer-events: none;
-            transition: transform 0.3s;
-        }
-        .mouse__cursor.active {
-            transform: scale(0);
-        }
-        .mouse__cursor2.active {
-            transform: scale(5);
-            background-color: rgba(255, 166, 0, 0.5);
-        }
-        .mouse__cursor.active2 {
-            transform: scale(2);
-        }
-        .mouse__cursor2.active2 {
-            transform: scale(5);
-            background-color: rgba(0, 255, 76, 0.5);
-        }
-        .mouse__cursor.active3 {
-            transform: scale(1);
-        }
-        .mouse__cursor2.active3 {
-            transform: scale(8);
-            background-color: rgba(0, 132, 255, 0.5);
-        }
-    </style>
-</head>
-<body class="img06 bg09 font02">
-    <header id="header">
-        <h1>JavaScript Mouse Effect02</h1>
-        <p>마우스 이펙트 - 마우스 따라다니기</p>
-        <ul>
-            <li><a href="mouseEffect01.html">1</a></li>
-            <li class="active"><a href="mouseEffect02.html">2</a></li>
-            <li><a href="mouseEffect03.html">3</a></li>
-            <li><a href="mouseEffect04.html">4</a></li>
-            <li><a href="mouseEffect05.html">5</a></li>
-        </ul>
-    </header>
-    <!-- //header-->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/mouse.css" />
+        <style>
+            .mouse__wrap {
+                cursor: none;
+            }
+            .mouse__text {
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                overflow: hidden;
+            }
 
-    <main id="main">
-        <div class="mouse__wrap">
-            <div class="mouse__cursor"></div>
-            <div class="mouse__cursor2"></div>
-            <div class="mouse__text">
-                <p>Success is the ability to go from one <span>failure</span> to another with no loss of enthusiasm.</p>
-                <p> 성공이란 열정을 잃지 않고 <span>실패</span>를 거듭할 수 있는 능력이다.</p>
+            .mouse__text p {
+                font-size: 2vw;
+                line-height: 1.9;
+            }
+            .mouse__text p:last-child {
+                font-size: 4vw;
+            }
+            .mouse__text span {
+                color: rgb(80, 149, 252);
+            }
+            .mouse__cursor {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 10px;
+                height: 10px;
+                z-index: 9999;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.3);
+                user-select: none;
+                pointer-events: none;
+                transition: transform 0.3s;
+            }
+            .mouse__cursor2 {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 30px;
+                height: 30px;
+                z-index: 9998;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, 0.5);
+                user-select: none;
+                pointer-events: none;
+                transition: transform 0.3s;
+            }
+            .mouse__cursor.active {
+                transform: scale(0);
+            }
+            .mouse__cursor2.active {
+                transform: scale(5);
+                background-color: rgba(255, 166, 0, 0.5);
+            }
+            .mouse__cursor.active2 {
+                transform: scale(2);
+            }
+            .mouse__cursor2.active2 {
+                transform: scale(5);
+                background-color: rgba(0, 255, 76, 0.5);
+            }
+            .mouse__cursor.active3 {
+                transform: scale(1);
+            }
+            .mouse__cursor2.active3 {
+                transform: scale(8);
+                background-color: rgba(0, 132, 255, 0.5);
+            }
+        </style>
+    </head>
+    <body class="img06 bg09 font02">
+        <header id="header">
+            <h1>JavaScript Mouse Effect02</h1>
+            <p>마우스 이펙트 - 마우스 따라다니기</p>
+            <ul>
+                <li><a href="mouseEffect01.html">1</a></li>
+                <li class="active"><a href="mouseEffect02.html">2</a></li>
+                <li><a href="mouseEffect03.html">3</a></li>
+                <li><a href="mouseEffect04.html">4</a></li>
+                <li><a href="mouseEffect05.html">5</a></li>
+            </ul>
+        </header>
+        <!-- //header-->
+
+        <main id="main">
+            <div class="mouse__wrap">
+                <div class="mouse__cursor"></div>
+                <div class="mouse__cursor2"></div>
+                <div class="mouse__text">
+                    <p>
+                        Success is the ability to go from one
+                        <span>failure</span> to another with no loss of
+                        enthusiasm.
+                    </p>
+                    <p>
+                        성공이란 열정을 잃지 않고 <span>실패</span>를 거듭할 수
+                        있는 능력이다.
+                    </p>
+                </div>
             </div>
-        </div>
-    </main>
-    <!-- //main-->
+        </main>
+        <!-- //main-->
 
-    <footer id="footer">
-        <a href="1346zany@gmail.com">1346zany@gmail.com</a>
-    </footer>
-    <!-- //footer-->
+        <footer id="footer">
+            <a href="1346zany@gmail.com">1346zany@gmail.com</a>
+        </footer>
+        <!-- //footer-->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-    <script>
-        //선택자
-        const cursor = document.querySelector(".mouse__cursor");
-        const cursor2 = document.querySelector(".mouse__cursor2");
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+        <script>
+            //선택자
+            const cursor = document.querySelector(".mouse__cursor");
+            const cursor2 = document.querySelector(".mouse__cursor2");
 
-        //커서 좌표값 할당
-        window.addEventListener("mousemove",e => {
-            // cursor.style.left = e.pageX + "px";
-            // cursor.style.top = e.pageY + "px";
-            // cursor2.style.left = e.pageX + "px";
-            // cursor2.style.top = e.pageY + "px";
+            //커서 좌표값 할당
+            window.addEventListener("mousemove", (e) => {
+                // cursor.style.left = e.pageX + "px";
+                // cursor.style.top = e.pageY + "px";
+                // cursor2.style.left = e.pageX + "px";
+                // cursor2.style.top = e.pageY + "px";
 
-            //gsap //커서에 gsap애니메이션을 주겠다
-            gsap.to(cursor, {duration : 0.3, left: e.pageX -5, top: e.pageY -5});
-            gsap.to(cursor2, {duration : 0.8, left: e.pageX -15, top: e.pageY -15});
-
-            //오버효과
-            // document.querySelector(".mouse__text span").addEventListener("mouseenter", () => {
-            //     cursor.classList.add("active");
-            //     cursor2.classList.add("active");
-            // });
-            // document.querySelector(".mouse__text span").addEventListener("mouseleave", () => {
-            //     cursor.classList.remove("active");
-            //     cursor2.classList.remove("active");
-            // });
-
-            //forEach
-            document.querySelectorAll(".mouse__text span").forEach(span => {
-                span.addEventListener("mouseenter", () => {
-                    cursor.classList.add("active");
-                    cursor2.classList.add("active");
+                //gsap //커서에 gsap애니메이션을 주겠다
+                gsap.to(cursor, {
+                    duration: 0.3,
+                    left: e.pageX - 5,
+                    top: e.pageY - 5,
                 });
-                span.addEventListener("mouseleave", () => {
-                    cursor.classList.remove("active");
-                    cursor2.classList.remove("active");
-                })
-            });
-            document.querySelector("#header h1").addEventListener("mouseenter", () => {
-                    cursor.classList.add("active2");
-                    cursor2.classList.add("active2");
+                gsap.to(cursor2, {
+                    duration: 0.8,
+                    left: e.pageX - 15,
+                    top: e.pageY - 15,
                 });
-            document.querySelector("#header h1").addEventListener("mouseleave", () => {
-                cursor.classList.remove("active2");
-                cursor2.classList.remove("active2");
-            });
 
-            document.querySelector("#footer").addEventListener("mouseenter", () => {
-                    cursor.classList.add("active3");
-                    cursor2.classList.add("active3");
-                });
-            document.querySelector("#footer").addEventListener("mouseleave", () => {
-                cursor.classList.remove("active3");
-                cursor2.classList.remove("active3");
-            });
-            
-        });
-    </script>
+                //오버효과
+                // document.querySelector(".mouse__text span").addEventListener("mouseenter", () => {
+                //     cursor.classList.add("active");
+                //     cursor2.classList.add("active");
+                // });
+                // document.querySelector(".mouse__text span").addEventListener("mouseleave", () => {
+                //     cursor.classList.remove("active");
+                //     cursor2.classList.remove("active");
+                // });
 
-</body>
+                //forEach
+                document
+                    .querySelectorAll(".mouse__text span")
+                    .forEach((span) => {
+                        span.addEventListener("mouseenter", () => {
+                            cursor.classList.add("active");
+                            cursor2.classList.add("active");
+                        });
+                        span.addEventListener("mouseleave", () => {
+                            cursor.classList.remove("active");
+                            cursor2.classList.remove("active");
+                        });
+                    });
+                document
+                    .querySelector("#header h1")
+                    .addEventListener("mouseenter", () => {
+                        cursor.classList.add("active2");
+                        cursor2.classList.add("active2");
+                    });
+                document
+                    .querySelector("#header h1")
+                    .addEventListener("mouseleave", () => {
+                        cursor.classList.remove("active2");
+                        cursor2.classList.remove("active2");
+                    });
+
+                document
+                    .querySelector("#footer")
+                    .addEventListener("mouseenter", () => {
+                        cursor.classList.add("active3");
+                        cursor2.classList.add("active3");
+                    });
+                document
+                    .querySelector("#footer")
+                    .addEventListener("mouseleave", () => {
+                        cursor.classList.remove("active3");
+                        cursor2.classList.remove("active3");
+                    });
+            });
+        </script>
+    </body>
 </html>

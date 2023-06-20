@@ -1,6 +1,6 @@
 #load {
     width: 100%;
-    height: 100%;
+    height: 100vh;
   
     .load__bg {
       position: relative;
@@ -12,8 +12,8 @@
     .load__wrap {
       width: 60vw;
       height: 60vh;
-      background-color: #F9F8F6;
-      margin: 1vw auto;
+      background-color: var(--bg_section);
+      margin: 0 auto;
       padding: 10vw;
       position: absolute;
       left: 50%;
@@ -38,12 +38,8 @@
         transform: translate(-50%, -50%);
   
         .load__letter {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -20%);
+            margin: 0 auto;
+            padding: 10px;
         }
   
         .load__btn {
@@ -51,6 +47,12 @@
           display: flex;
           justify-content: center;
           margin-top: 20px;
+          
+          a {
+            color: #4B8FB6;
+            border-bottom: 1px solid #4B8FB6;
+            padding-bottom: 8px;
+          }
         }
       }
     }

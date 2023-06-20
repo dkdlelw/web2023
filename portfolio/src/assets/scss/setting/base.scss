@@ -93,3 +93,7 @@ fieldset,
 button {
     border: 0;
 }
+#main {
+    display: flex;
+    flex-wrap: wrap;
+}

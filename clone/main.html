@@ -274,7 +274,7 @@
                     </ul>
                     <p>로쏘 주식회사<span></span>대표. 임영진<span></span>사업자등록번호. 305-81-48738<span class="mobr"></span>주소. 대전광역시 중구 대종로 480번길 15</p>
                     <p>Tel. 1588-8069<span></span>Fax. (042) 257-2984<span class="mobr"></span>E-mail. bread@sungsimdang.co.kr</p>
-                    <p>COPYRIGHT&copy; SUNG SIM DANG Co.,Ltd. ALL RIGHT RESERVED<a href="https://www.sungsimdang.co.kr/bbs/login.php">.</a>				</p>
+                    <p>COPYRIGHT&copy; SUNG SIM DANG Co.,Ltd. ALL RIGHT RESERVED<a href="https://www.sungsimdang.co.kr/bbs/login.php">.</a></p>
                 </div>
                 <div class="right">
                     <h3>1588-8069</h3>
@@ -305,45 +305,43 @@
         });
 
         const sliderWrap = document.querySelector('#slider .sliderWrap');
-const sliderImg = sliderWrap.querySelectorAll(".slider");
-const sliderDot = document.querySelector(".slider__dot");
+        const sliderImg = sliderWrap.querySelectorAll(".slider");
+        const sliderDot = document.querySelector(".slider__dot");
 
-let currentIndex = 0;
-let sliderCount = sliderImg.length;
-let sliderInterval = 2000;
-let sliderWidth = sliderImg[0].offsetWidth;
-let dotIndex = "";
+        let currentIndex = 0;
+        let sliderCount = sliderImg.length;
+        let sliderInterval = 2000;
+        let sliderWidth = sliderImg[0].offsetWidth;
+        let dotIndex = "";
 
-function init() {
-  sliderImg.forEach(() => dotIndex += "<a href='#' class='dot'></a>");
-  sliderDot.innerHTML = dotIndex;
-  sliderDot.firstChild.classList.add("active");
-}
-init();
+        function init() {
+        sliderImg.forEach(() => dotIndex += "<a href='#' class='dot'></a>");
+        sliderDot.innerHTML = dotIndex;
+        sliderDot.firstChild.classList.add("active");
+        }
+        init();
 
-function gotoSlider(num) {
-  currentIndex = num;
-  sliderWrap.style.transform = "translateX(" + -sliderWidth * currentIndex + "px)";
+        function gotoSlider(num) {
+        currentIndex = num;
+        sliderWrap.style.transform = "translateX(" + -sliderWidth * currentIndex + "px)";
 
-  // 닷메뉴 활성화 하기
-  let dotActive = document.querySelectorAll(".slider__dot .dot");
-  dotActive.forEach((active) => active.classList.remove("active"));
-  dotActive[num].classList.add("active");
-}
+        // 닷메뉴 활성화 하기
+        let dotActive = document.querySelectorAll(".slider__dot .dot");
+        dotActive.forEach((active) => active.classList.remove("active"));
+        dotActive[num].classList.add("active");
+        }
 
-// 닷 메뉴 클릭 시 슬라이드 이동
-document.querySelectorAll(".slider__dot .dot").forEach((dot, index) => {
-  dot.addEventListener("click", () => {
-    gotoSlider(index);
-  });
-});
+        // 닷 메뉴 클릭 시 슬라이드 이동
+        document.querySelectorAll(".slider__dot .dot").forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+            gotoSlider(index);
+        });
+        });
 
-setInterval(() => {
-  currentIndex = (currentIndex + 1) % sliderCount;
-  gotoSlider(currentIndex);
-}, sliderInterval);
-
-
+        setInterval(() => {
+        currentIndex = (currentIndex + 1) % sliderCount;
+        gotoSlider(currentIndex);
+        }, sliderInterval);
 
     </script>
 </body>

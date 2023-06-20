@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+a {
+    color: #333;
+    text-decoration: none;
+
+}
+img {
+    vertical-align: top;
+}
+
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+/* header */
+#header {
+   width: 100%;
+   height: 100px;
+   display: flex;
+   flex-wrap: wrap;
+   background-color: #c8f4ff;
+}
+#header .header__logo{
+    width: 20%;
+    height: inherit;
+    background-color: #abdfed;
+}
+/* nav */
+#header nav{
+    width: 80%;
+    height: inherit;
+    text-align: center;
+    background-color: rgb(122, 216, 242);
+}
+#header nav > ul {
+    display: flex;
+    justify-content: right;
+}
+#header nav > ul > li {
+    position: relative;
+}
+#header nav > ul > li > a {
+    display: block;
+    padding: 15px 14px;
+    background-color: #4fd5e1;
+}
+#header nav > ul > li > a:hover {
+    background: #48c2ce;
+}
+#header nav > ul > li > ul {
+    position: absolute;
+    left: 0;
+    top: 50px;
+    text-align: center;
+    width: 100%;
+}
+#header nav > ul > li > ul > li {}
+#header nav > ul > li > ul > li > a {
+    padding: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+/* main */
+#main {
+    width: 100%;
+    height: 500px;
+    background-color: #b5eefd;
+}
+/* footer */
+#footer {
+    width: 100%;
+    height: 100px;
+    background-color: #a1ebff;
+}

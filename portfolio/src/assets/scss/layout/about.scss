@@ -1,9 +1,16 @@
 #about {
     width: 100%;
-    margin-top: 40%;
-    #about__wrap {
-        #about__inner {
-            .about__text {
+    margin-top: 30%;
+    position: relative;
+    .about__wrap{
+        
+        .about__inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            p {
                 width: 40vw;
                 text-align: center;
                 text-transform: uppercase;
@@ -12,6 +19,35 @@
                 font-size: 1.2vw;
                 font-weight: 400;
                 line-height: 120%;
+             
+            }
+            .about__letter {
+               
+                .aboutl1 {
+                    position: absolute;
+                    width: 60vw;
+                    height: 10vw;
+                    background-image: url(../assets/images/aboutMe01.svg);
+                    background-repeat: no-repeat;
+                    align-items: center;
+           
+                }
+                .aboutl2 {
+                    width: 100vw;
+                    height: 10vw;
+                    background-image: url(../assets/images/aboutMe02.svg);
+                    background-repeat: no-repeat;
+                }
+
+            }
+            .about__desc {
+                margin-top: 30px;
+                p {
+                    font-family: 'Chosunilbo_myungjo';
+                    font-size: 20px;
+                    word-break: keep-all;
+                    
+                }
             }
         }
 

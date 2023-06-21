@@ -1,42 +1,36 @@
 #load {
+    position: relative;
     width: 100%;
-    height: 100vh;
-  
-    .load__bg {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../assets/images/start.png);
+    
+
     .load__wrap {
-      width: 60vw;
-      height: 60vh;
-      background-color: var(--bg_section);
-      margin: 0 auto;
-      padding: 10vw;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-  
-      p {
-        width: 40vw;
-        text-align: center;
-        text-transform: uppercase;
-        font-family: "DM Sans";
-        letter-spacing: -0.04em;
-        font-size: 1.2vw;
-        font-weight: 400;
-        line-height: 120%;
-      }
-  
+
       .load__inner {
-        position: relative;
-        top: 50%;
+        width: 60vw;
+        height: 60vh;
+        background-color: var(--bg_section);
+        margin: 0 auto;
+        padding: 10vw;
+        position: absolute;
         left: 50%;
+        top: 50%;
         transform: translate(-50%, -50%);
-  
+     
+        p {
+          width: 40vw;
+          text-align: center;
+          text-transform: uppercase;
+          font-family: "DM Sans";
+          letter-spacing: -0.04em;
+          font-size: 1.2vw;
+          font-weight: 400;
+          line-height: 120%;
+        }
         .load__letter {
             margin: 0 auto;
             padding: 10px;

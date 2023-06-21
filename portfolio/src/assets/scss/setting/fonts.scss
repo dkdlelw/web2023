@@ -5,40 +5,43 @@
     font-style: normal;
 }
 @font-face {
-    font-family: "DMSans";
+    font-family: 'DMSans';
     font-style: normal;
     font-weight: 400;
     src: url("../../fonts/DMSans-Regular.woff") format("woff");
   }
   @font-face {
-    font-family: "DMSans";
+    font-family: 'DMSans';
     font-style: normal;
     font-weight: 500;
     src: url("../../fonts/DMSans-Medium.woff") format("woff");
   }
 
 @font-face {
-    font-family: "DMSans";
+    font-family: 'DMSans';
     font-style: normal;
     font-weight: 700;
     src: url("../../fonts/DMSans-Bold.woff") format("woff");
   }
-  @font-face {
-    font-family: "Questrial";
+@font-face {
+    font-family: 'Questrial';
     font-style: normal;
     font-weight: 400;
+    src: url("../../fonts/Questrial-Regular.eot");
+    src: url("../../fonts/Questrial-Regular.eot?#iefix") format('embedded-opentype');
     src: url("../../fonts/Questrial-Regular.woff") format("woff");
-  }
-  @font-face {
-    font-family: 'Poppins';
-    font-weight: 100;
-    font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Thin.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Thin.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Thin.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Thin.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Thin.ttf') format("truetype");
-    font-display: swap;
+    src: url("../../fonts/Questrial-Regular.ttf") format("truetype");
+}
+@font-face {
+font-family: 'Poppins';
+font-weight: 100;
+font-style: normal;
+src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Thin.eot');
+src: url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Thin.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Thin.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Thin.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/Poppins/Poppins-Thin.ttf') format("truetype");
+font-display: swap;
 } 
 @font-face {
     font-family: 'Poppins';

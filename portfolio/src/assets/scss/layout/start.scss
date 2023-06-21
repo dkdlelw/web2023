@@ -1,0 +1,61 @@
+#start {
+    width: 100%;
+    background-color: var(--bg_section);
+    position: relative;
+
+    .start__inner {
+        margin-top: 30px;
+       
+        nav {
+            text-align: right;
+            display: inline-block;
+            position: absolute;
+            right: 1%;
+            top: 1%;
+            padding: 35px 30px 30px 0;
+
+            ul {
+    
+                li {
+    
+                    a {
+                        font-family: "Questrial";
+                        font-size: 20px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+        .start__leaf { 
+            height: 32vw;
+            background-image: url(../assets/images/leaf01.svg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: left;
+          
+        }
+        .start__letter {
+            display: block;
+            width: 30vw;
+            height: 10vw;
+            position: absolute;
+            background-image: url(../assets/images/webPublisher_blue.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            left: 50%;
+            top: 40%;
+            transform: translate(-50%, -50%);
+        }
+        .start__text {
+            font-family: "Questrial";
+            text-transform: uppercase;
+            font-size: 180px;
+            line-height: 1;
+            margin-left: 30px;
+            margin-bottom: 40px;
+            white-space: normal;
+          }
+          
+    }
+
+}

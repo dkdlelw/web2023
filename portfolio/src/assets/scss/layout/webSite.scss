@@ -1,0 +1,64 @@
+#webSite {
+    width: 100%;
+    .web__wrap {
+        .web__header {
+            padding-bottom: 0.5%;
+            border-bottom: 1px solid #000;
+
+            p {
+                font-family: "Roboto";
+                text-transform: uppercase;
+            }
+        }
+        .web__inner {
+            padding-top: 1%;
+            .web__img {
+                width: 70vw;
+                display: flex;
+                justify-content: space-between;
+                .web__img1 {
+                    width: 40vw;
+                    height: 50vw;
+                    box-sizing: cover;
+                    background-image: url(../assets/images/website01.png);
+                    background-position: center center;
+                    background-repeat: no-repeat; /* 이미지 반복 없이 한 번만 보여줍니다 */
+                    background-size: auto 100%;
+                }
+                .web__img2 {
+                    .web__img2-1 {
+                        width: 25vw;
+                        height: 33vw;
+                        box-sizing: cover;
+                        background-image: url(../assets/images/website02.jpg);
+                        background-position: center center;
+                        background-repeat: no-repeat; /* 이미지 반복 없이 한 번만 보여줍니다 */
+                        background-size: auto 100%;
+                        display: block;
+                        
+                    }
+                    .link__box {
+                        border: 1px solid #C9C7C5;
+                        padding: 2%;
+                        background-image: url(../assets/images/link.svg);
+                        background-repeat: no-repeat;
+                        background-position: right ;
+                        background-origin: padding-box; 
+                       a {
+                        h4 {
+                            font-family: "poppins";
+                            font-weight: 300;
+                            font-size: 2vw;
+                            text-transform: uppercase;
+                        }
+                       }
+                    }
+
+                }
+                .web__img3 {
+                    background-image: url(../assets/images/leaf02);
+                }
+            }
+        }
+    }
+}

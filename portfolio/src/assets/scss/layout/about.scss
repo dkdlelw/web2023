@@ -1,7 +1,6 @@
 #about {
     width: 100%;
-    margin-top: 30%;
-    position: relative;
+   padding: 30% 0 10% 0;
     .about__wrap{
         
         .about__inner {
@@ -22,7 +21,11 @@
              
             }
             .about__letter {
-               
+               padding: 6vw;
+               position: relative;
+               top: 1vw;
+               left: 40vw;
+               justify-content: space-between;
                 .aboutl1 {
                     position: absolute;
                     width: 60vw;
@@ -30,13 +33,21 @@
                     background-image: url(../assets/images/aboutMe01.svg);
                     background-repeat: no-repeat;
                     align-items: center;
-           
+                    right: 3vw;
+                    top: 1vw;
+                   
                 }
                 .aboutl2 {
-                    width: 100vw;
+                    position: absolute;
+                    width: 60vw;
                     height: 10vw;
                     background-image: url(../assets/images/aboutMe02.svg);
                     background-repeat: no-repeat;
+                    align-items: center;
+                    right: 11vw;
+                    top: 6vw;
+
+                  
                 }
 
             }

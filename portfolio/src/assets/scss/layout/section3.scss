@@ -1,0 +1,66 @@
+#setion3 {
+    width: 100%;
+   padding: 30% 0 10% 0;
+    .sec3__wrap{
+        
+        .sec3__inner {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            p {
+                width: 40vw;
+                text-align: center;
+                text-transform: uppercase;
+                font-family: "DM Sans";
+                letter-spacing: -0.04em;
+                font-size: 1.2vw;
+                font-weight: 400;
+                line-height: 120%;
+             
+            }
+            .sec3__letter {
+               padding: 6vw;
+               position: relative;
+               top: 1vw;
+               left: 40vw;
+               justify-content: space-between;
+                .sec3l1 {
+                    position: absolute;
+                    width: 60vw;
+                    height: 10vw;
+                    background-image: url(../assets/images/sec3Me01.svg);
+                    background-repeat: no-repeat;
+                    align-items: center;
+                    right: 3vw;
+                    top: 1vw;
+                   
+                }
+                .sec3l2 {
+                    position: absolute;
+                    width: 60vw;
+                    height: 10vw;
+                    background-image: url(../assets/images/sec3Me02.svg);
+                    background-repeat: no-repeat;
+                    align-items: center;
+                    right: 11vw;
+                    top: 6vw;
+
+                  
+                }
+
+            }
+            .sec3__desc {
+                margin-top: 30px;
+                p {
+                    font-family: 'Chosunilbo_myungjo';
+                    font-size: 20px;
+                    word-break: keep-all;
+                    
+                }
+            }
+        }
+
+    }
+}

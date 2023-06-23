@@ -1,0 +1,41 @@
+#section1 {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/images/start.png);
+  background-position: center;
+  position: relative;
+  
+  .sec1__wrap {
+    position: absolute;
+    width: 60vw;
+    height: 60vh;
+    background-color: #F9F8F6;
+    left: calc(50vw - 30vw);
+    top: calc(50vh - 30vh);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    div {
+      text-align: center;
+      text-transform: uppercase;
+      font-family: "Questrial";
+    }
+    
+    img {
+      margin: 0 auto;
+      padding: 5%;
+    }
+    
+    .sec1__btn {
+        border: 1px solid #4B8FB6;
+        padding: 1%;
+      a {
+        color: #4B8FB6;
+        
+      }
+    }
+  }
+}

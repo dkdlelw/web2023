@@ -4,12 +4,29 @@
 	background-color: #F9F8F6;
 	position: relative;
 	z-index: 1000;
-    .sec2-img {
-        height: 65vh;
-        background-image: url(../assets/images/leaf01.svg);
-        background-repeat: no-repeat;
-       
-    }
+	.sec2-img {
+		display: flex;
+		flex-wrap: wrap;
+		.sec2-img1 {
+			width: 55vw;
+			height: 55vh;
+			background-image: url(../assets/images/leaf01.svg); 
+			background-repeat: no-repeat;
+			background-size: contain;
+		  }
+				
+		.sec2-img2 {
+			width: 30vw;
+			height: 25vh;
+			background-image: url(../assets/images/WebPublisher_blue.svg);
+			background-repeat: no-repeat;
+			background-position: center center;
+			position: absolute;
+			left: 40vw;
+			height: 40vw;
+	
+		}
+	}
 	.menu {
 		position: absolute;
 		right: 0;
@@ -26,6 +43,7 @@
 			}
 		}
 	}
+	
 	.sec2-text {
 		font-size: 10vw;
 		font-family: 'NeueMontreal';
@@ -45,3 +63,4 @@
 		margin: 0 auto;
 	}
 }
+
